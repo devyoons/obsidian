@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e8f2f7f40bc47ff5",
+        "id": "f68dd9741b5b376a",
         "type": "tabs",
         "children": [
           {
-            "id": "b40f68a968b6b2cc",
+            "id": "1017f23d5435fefc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -164,7 +164,17 @@
             }
           },
           {
-            "id": "6c4f8ec49d3f9558",
+            "id": "e04460295f29c9a5",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "701731dfe4c2b4a8",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -174,7 +184,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -189,16 +199,48 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "6c4f8ec49d3f9558",
+  "active": "1017f23d5435fefc",
   "lastOpenFiles": [
+    "Excalidraw/하핫.md",
+    "04 - META/templates/면접 질문.md",
+    "04 - META/templates/이력서·경력기술서.md",
+    "04 - META/templates/업무 문서.md",
+    "04 - META/templates/서버 정보.md",
+    "04 - META/templates/강의 노트.md",
+    "04 - META/보안",
+    "03 - 프로젝트/회의록",
+    "03 - 프로젝트/기타 업무 (전략사업부·제안·교육)",
+    "03 - 프로젝트/보관함/인트라넷 평가관리 시스템/서버정보",
+    "03 - 프로젝트/보관함/인트라넷 평가관리 시스템",
+    "03 - 프로젝트/보관함/전기차 충전 플랫폼/회의록",
+    "03 - 프로젝트/보관함/전기차 충전 플랫폼/서버정보",
+    "03 - 프로젝트/보관함/전기차 충전 플랫폼/업무문서",
+    "03 - 프로젝트/보관함/전기차 충전 플랫폼",
+    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/회의록",
+    "04 - META/templates/회의록.md",
+    "03 - 프로젝트/진행중/안전톡2.0/안전톡 2.0.md",
+    "02 - 학습/옵시디언/아이콘 다운로드.md",
+    "01 - 개인 기록 및 일상/임시 메모/무제.md",
+    "Excalidraw/Drawing 2026-11-03 14.31.52.excalidraw.md",
     "2026-11-03.md",
-    "무제.base",
+    "Excalidraw/Drawing 2026-11-03 14.32.42.excalidraw.md",
+    "03 - 프로젝트/진행중/안전톡2.0/2026-11-03 회의.md",
+    "04 - META/templates/프로젝트 노트.md",
+    "04 - META/templates/회고 노트.md",
+    "안전톡2.0.md",
+    "04 - META/templates/ddd.md",
+    "04 - META/templates/목차 노트.md",
+    "04 - META/templates/임시 메모.md",
+    "04 - META/templates/지식 · 학습 메모.md",
+    "04 - META/templates/일일 기록.md",
+    "03 - 프로젝트/무제.md",
     "무제.canvas",
-    "무제",
-    "무제 1.base",
     "환영합니다!.md"
   ]
 }

@@ -1,3 +1,11 @@
 [
+  "obsidian-kanban",
+  "calendar",
+  "dataview",
+  "templater-obsidian",
+  "keyboard-analyzer",
+  "canvas-minimap",
+  "obsidian-linter",
+  "obsidian-excalidraw-plugin",
   "obsidian-git"
 ]
