@@ -11,13 +11,10 @@
             "id": "b40f68a968b6b2cc",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "무제.base",
-                "viewName": "뷰"
-              },
-              "icon": "lucide-table",
-              "title": "무제"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -195,13 +192,13 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "4617f182c054b6eb",
+  "active": "6c4f8ec49d3f9558",
   "lastOpenFiles": [
-    "무제",
-    "무제.canvas",
     "2026-11-03.md",
-    "무제 1.base",
     "무제.base",
+    "무제.canvas",
+    "무제",
+    "무제 1.base",
     "환영합니다!.md"
   ]
 }
