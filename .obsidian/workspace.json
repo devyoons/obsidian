@@ -11,10 +11,14 @@
             "id": "1017f23d5435fefc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03 - 프로젝트/진행중/안전톡2.0/안전톡 2.0.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "안전톡 2.0"
             }
           }
         ]
@@ -207,11 +211,13 @@
   },
   "active": "1017f23d5435fefc",
   "lastOpenFiles": [
+    "03 - 프로젝트/진행중/안전톡2.0/2026-11-03 회의.md",
+    "04 - META/templates/서버 정보.md",
+    "02 - 학습/옵시디언/아이콘 다운로드.md",
     "Excalidraw/하핫.md",
     "04 - META/templates/면접 질문.md",
     "04 - META/templates/이력서·경력기술서.md",
     "04 - META/templates/업무 문서.md",
-    "04 - META/templates/서버 정보.md",
     "04 - META/templates/강의 노트.md",
     "04 - META/보안",
     "03 - 프로젝트/회의록",
@@ -225,12 +231,10 @@
     "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/회의록",
     "04 - META/templates/회의록.md",
     "03 - 프로젝트/진행중/안전톡2.0/안전톡 2.0.md",
-    "02 - 학습/옵시디언/아이콘 다운로드.md",
     "01 - 개인 기록 및 일상/임시 메모/무제.md",
     "Excalidraw/Drawing 2026-11-03 14.31.52.excalidraw.md",
     "2026-11-03.md",
     "Excalidraw/Drawing 2026-11-03 14.32.42.excalidraw.md",
-    "03 - 프로젝트/진행중/안전톡2.0/2026-11-03 회의.md",
     "04 - META/templates/프로젝트 노트.md",
     "04 - META/templates/회고 노트.md",
     "안전톡2.0.md",
