@@ -1,0 +1,24 @@
+---
+별칭:
+  - "학습 - 메인 (GIF)"
+태그:
+  - type/study
+  - context/studies
+  - theme/dev
+  - status/completed
+생성일: 
+수정일: 2026-11-04
+노션원본: https://www.notion.so/f270d709d3bf499cb4e22ff0f2ac63a4
+---
+
+# 학습: 메인 (GIF)
+
+## 세부 내용
+
+진행상황: 시작전
+보관: No
+우선순위: 1순위
+
+## 관련 노트
+
+- 상위: [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/프로젝트 및 할 일 관리/주요업무/주요업무|주요업무]]

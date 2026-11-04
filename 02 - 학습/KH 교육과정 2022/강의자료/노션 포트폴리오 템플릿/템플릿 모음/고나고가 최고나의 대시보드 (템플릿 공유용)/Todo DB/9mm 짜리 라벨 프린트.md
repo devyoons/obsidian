@@ -1,0 +1,24 @@
+---
+별칭:
+  - "학습 - 9mm 짜리 라벨 프린트"
+태그:
+  - type/study
+  - context/studies
+  - theme/dev
+  - status/completed
+생성일: 
+수정일: 2026-11-04
+노션원본: https://www.notion.so/87a39ef199d04ff39e697549a1904f4a
+---
+
+# 학습: 9mm 짜리 라벨 프린트
+
+## 세부 내용
+
+데드라인: January 18, 2022
+Done: Yes
+PIC: 고나고
+
+## 관련 노트
+
+- 상위: [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/고나고가 최고나의 대시보드 (템플릿 공유용)/Todo DB/Todo DB|Todo DB]]

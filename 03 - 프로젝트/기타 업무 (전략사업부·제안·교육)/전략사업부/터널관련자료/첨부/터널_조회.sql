@@ -1,0 +1,216 @@
+-- 본부, 지사, 터널 정보
+SELECT DISTINCT BBCD.INTG_DPTCD BBCODE
+    , REPLACE(BBCD.KOR_DPTNM, '본부', '') BBNAME
+    , JSCD.INTG_DPTCD JSCODE
+    , REPLACE(REPLACE(JSCD.KOR_DPTNM, '지사', ''), '도로관리소', '') JSNAME
+    , TCD.TUNL_CD TNCODE
+    , REPLACE(TCD.TUNL_NM, '터널', '') TNNAME
+ FROM T_AFMF_TNRM_TUNL01M1 TCD
+    , (SELECT TB.*, TBC.SORT_TORD FROM V_CNKC_INTG_DPRT01C1 TB, T_AFMF_DPRT_SORT01M1 TBC WHERE TB.INTG_DPTCD = TBC.RSNT_DPTCD) BBCD
+    , (SELECT TB.*, TBC.SORT_TORD FROM V_CNKC_INTG_DPRT01C1 TB, T_AFMF_DPRT_SORT01M1 TBC WHERE TB.INTG_DPTCD = TBC.RSNT_DPTCD) JSCD
+WHERE 1=1
+  AND TCD.HDQR_CD  = BBCD.INTG_DPTCD
+  AND TCD.MTNOF_CD = JSCD.INTG_DPTCD
+  AND BBCD.INTG_DPTCD   = JSCD.IMDT_HGRN_DPTCD
+  AND TNRM_TUNL_TYPE_CD = 'L' -- 터널 타입(L:장터널, M:중터널, S:단터널)  
+  AND TUNL_CD IN (60501,70108,70111)
+;
+select *
+from T_AFMF_TNRM_TUNL01M1
+
+/**
+ * 개통 시 조회용 쿼리
+*/
+--지사별 중계기 정보
+SELECT *
+  FROM T_AFMF_RPTR01M1
+ WHERE 1=1
+  AND (HDQR_CD = 'N01798' AND MTNOF_CD = 'N01988')
+  --AND (HDQR_CD = 'N01799' AND MTNOF_CD = 'N02033')
+  --AND (HDQR_CD = 'N01797' AND MTNOF_CD = 'N02025')
+;
+
+--터널별 중계기 매핑 정보
+SELECT *
+  FROM T_AFMF_RPTR_MPNG01M1
+ WHERE 1=1
+  AND (MTNOF_CD = 'N01988' AND TUNL_CD = '40608')
+  --AND (MTNOF_CD = 'N02033' AND TUNL_CD = '50504')
+  --AND (MTNOF_CD = 'N02025' AND TUNL_CD = '30516')
+;
+
+--터널별 개통 기기 개수
+SELECT *
+  FROM T_AFMF_OPND_INSR_TRCN01M1
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 마달
+  --AND TUNL_CD = '50504' -- 몽탄2
+  --AND TUNL_CD = '30516' -- 구봉
+  --AND TO_CHAR(FSTTM_RGST_DTTM, 'YYYYMMDD') = TO_CHAR(SYSDATE-2, 'YYYYMMDD')
+ ORDER BY TUNL_CD, TNRM_MCHN_CLSS_CD, TNRM_INSL_LOCT_MCLSS_CD
+;
+
+
+
+-- 터널 정보
+SELECT *
+WHERE 1=1
+ FROM T_AFMF_TNRM_TUNL01M1
+--  AND MTNOF_CD = '' -- 지사코드
+  --AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+  --AND TUNL_NM like '%남원%' -- 터널이름
+  --AND TUNL_CD IN (60501,70108,70111)
+;
+ 
+
+--터널 상세 정보
+SELECT *
+  FROM T_AFMF_TNRM_TUNL01P1
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--터널별 기기별 정보
+SELECT  *
+  FROM T_AFMF_TNRM_INSR01M1
+ WHERE 1=1
+   --AND TNRM_EQPMT_CLSS_CD = '07'
+   --AND TNRM_MCHN_CLSS_cD IN (0706)
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+  --AND TNRM_MCHN_CLSS_CD IN ('0101', '0202', '0706', '0803', '0808', 0422, 0423)
+  --AND TNRM_MCHN_CLSS_CD IN ('0426')
+ ORDER BY TUNL_CD, TNRM_EQPMT_CLSS_CD, TNRM_MCHN_CLSS_CD, TNRM_MCHN_SQNO; 
+
+--터널별 기기별 매핑 정보
+SELECT *
+  FROM T_AFMF_OPND_INSR_MPNG01M1
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--터널별 기기별 특이사항
+SELECT *
+  FROM T_AFMF_TNRM_INSR_PRTR01L1
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--터널별 계측기 정보
+SELECT *
+  FROM T_AFMF_TNRM_MSIS_STUP01M1
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+
+--터널별 개통 기기 기본
+SELECT *
+  FROM T_AFMF_OPND_INSR01M1
+ WHERE 1=1
+  --AND TUNL_CD = '40608' -- 터널코드
+  AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--터널별 cctv 개수
+SELECT *
+  FROM T_AFMF_CCTV01M1
+ WHERE 1=1
+  --AND TUNL_CD = '40608' -- 터널코드
+  AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--이벤트 정보(master)
+SELECT *
+  FROM T_AFMF_EVNT01M1
+ WHERE 1=1
+   AND TNRM_MCHN_CLSS_CD = '0426'
+ ORDER BY TNRM_EQPMT_CLSS_CD, TNRM_MCHN_CLSS_CD, TNRM_TAG_ID
+;
+
+--포인트 정보(master)
+SELECT *
+  FROM T_AFMF_TNRM_INSR_PONT01M1
+ WHERE 1=1
+   AND TNRM_MCHN_CLSS_CD = '0426'
+ ORDER BY TNRM_EQPMT_CLSS_CD, TNRM_MCHN_CLSS_CD, TNRM_TAG_ID 
+;
+
+--터널별 ttms 매핑 정보
+SELECT *
+  FROM T_AFMF_TTMS_MPNG01M1
+ WHERE 1=1
+  --AND TUNL_CD = '40608' -- 터널코드
+  AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드 
+;
+
+--터널별 기기 sms 팝업 정보
+SELECT *
+  FROM T_AFMF_SMS_STUP01M1
+ WHERE 1=1
+  --AND TUNL_CD = '40608' -- 터널코드
+  AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--터널결 기기 제어 정보
+SELECT *
+  FROM TB_CONTROL_OPR
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+ order by control_time desc
+;
+
+select *
+from TB_LOG_CTRL
+where 1=1
+--and TUNL_CD = '50504' -- 터널코드
+--and machine_code = 0808
+ order by control_time desc;
+
+--터널별 기기 장애 이력
+SELECT *
+  FROM TB_LOG_ALARM
+ WHERE 1=1
+  --AND TUNL_CD = '40608' -- 터널코드
+  AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+;
+
+--터널별 기기 상태 정보
+--SELECT *
+--  FROM TB_POINTOPR
+EDIT TB_POINTOPR
+ WHERE 1=1
+  AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+  --AND MACHINE_CODE IN ('0101', '0202', '0706', '0803', '0808', 0422, 0423)
+  and machine_code = '0808'
+ORDER BY MACHINE_CODE, DEVICE_CODE, POINT_CODE
+;
+
+--터널별 기기 scale 정보
+SELECT *
+  FROM T_AFMF_AI_SCLS01M1
+ WHERE 1=1
+  --AND TUNL_CD = '40608' -- 터널코드
+  --AND TUNL_CD = '50504' -- 터널코드
+  --AND TUNL_CD = '30516' -- 터널코드
+  and tnrm_insr_id like '808%'
