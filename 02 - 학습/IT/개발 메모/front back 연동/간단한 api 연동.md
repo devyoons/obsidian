@@ -79,4 +79,4 @@ axios.get("/api/items").then(({data}) => {
 
 ## 관련 노트
 
-- 상위: [[02 - 학습/IT/개발 메모/front back 연동/front back 연동|front back 연동]]
+- 상위: [[02 - 학습/IT/개발 메모/개발 메모|개발 메모]]

@@ -441,4 +441,4 @@ $ sudo certbot certonly --manual -d "*.try-code.com" -d "try-code.com" --preferr
 
 ## 관련 노트
 
-- 상위: [[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/개발서버 구축 가이드 (WAS·Docker·Nginx)|개발서버 구축 가이드 (WAS·Docker·Nginx)]]
+- 상위: [[02 - 학습/IT/개발 메모/개발 메모|개발 메모]]

@@ -59,9 +59,9 @@
 
 ---
 
-[[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/회의록/회의록|회의록]]
+회의록
 
-[[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/일정관리/일정관리|일정관리]]
+일정관리
 
 [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/프로젝트 및 할 일 관리/프로젝트 및 할 일 관리|프로젝트 및 할 일 관리]]
 
@@ -139,7 +139,7 @@ Collaboration tool  `notion`  `Git` `Github` `ERDcloud`  `Google Spread Sheet`
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/오라클 클라우드 협업을 위한 준비|오라클 클라우드 협업을 위한 준비]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/요구사항 정의서|요구사항 정의서]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/유스케이스|유스케이스]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/일정관리/일정관리|일정관리]]
+- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/일정관리/타임라인 프로젝트/타임라인 프로젝트|타임라인 프로젝트]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/참고 사이트 모음|참고 사이트 모음]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/최종발표|최종발표]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/코드 참고|코드 참고]]
@@ -147,7 +147,7 @@ Collaboration tool  `notion`  `Git` `Github` `ERDcloud`  `Google Spread Sheet`
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/코드리뷰|코드리뷰]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/프로젝트 및 할 일 관리/프로젝트 및 할 일 관리|프로젝트 및 할 일 관리]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/협업을 위한 Git|협업을 위한 Git]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/회의록/회의록|회의록]]
+- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/회의록/회의록/회의록|회의록]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/팀원 DB/팀원 DB|팀원 DB]]
 
 ## 관련 노트

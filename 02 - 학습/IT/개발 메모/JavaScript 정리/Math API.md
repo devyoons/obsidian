@@ -138,4 +138,4 @@ function test2(){
 
 ## 관련 노트
 
-- 상위: [[02 - 학습/IT/개발 메모/JavaScript 정리/JavaScript 정리|JavaScript 정리]]
+- 상위: [[02 - 학습/IT/개발 메모/개발 메모|개발 메모]]

@@ -788,4 +788,4 @@ public class Lambda05WithCollection {
 
 ## 관련 노트
 
-- 상위: [[02 - 학습/KH 교육과정 2022/수업 필기/JDK8 API/JDK8 API|JDK8 API]]
+- 상위: [[02 - 학습/KH 교육과정 2022/수업 필기/KH 수업 필기|KH 수업 필기]]

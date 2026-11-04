@@ -169,4 +169,4 @@ JSONObject response = ApiUtil.get((String)param.get("webToken"), apiUrl+"/field/
 
 ## 관련 노트
 
-- 상위: [[02 - 학습/IT/업무 공통 기술 메모/소스분석/소스분석|소스분석]]
+- 상위: [[02 - 학습/IT/업무 공통 기술 메모/공통 기술 메모 (Spring·타임리프·DB·SSL 등)|공통 기술 메모 (Spring·타임리프·DB·SSL 등)]]
