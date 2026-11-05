@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 귀염뽕짝한 팀원 DB"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

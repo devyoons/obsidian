@@ -1,15 +1,20 @@
 ---
 별칭:
   - "업무 - Python 커넥션"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 노션원본: https://www.notion.so/0f6582da07c24fa48e210c35df9341a1
+주제:
+  - "[[00 - 대시보드/주제/Python|Python]]"
+  - "[[00 - 대시보드/주제/Redis|Redis]]"
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
 ---
 
 # 업무: Python 커넥션
@@ -30,17 +35,17 @@
 
 - 모듈 설치
     
-    ```bash
-    //pip3 
-    pip3 install redis
-    
-    //pip
-    pip install redis
-    
-    //python 특정 버전을 명시하여 설치
-    python3.11 -m pip install redis
-    ```
-    
+```bash
+//pip3 
+pip3 install redis
+
+//pip
+pip install redis
+
+//python 특정 버전을 명시하여 설치
+python3.11 -m pip install redis
+```
+
 
 ---
 

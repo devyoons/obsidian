@@ -1,16 +1,19 @@
 ---
 별칭:
   - "서버 - AS-IS GIT정보"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/중소기업중앙회 통합 플랫폼 (2026.02~)|중소기업중앙회 통합 플랫폼 (2026.02~)]]"
 환경: 
 노션원본: https://www.notion.so/2fe24612498b80ffb7e4c5efa18a899f
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 서버: AS-IS GIT정보

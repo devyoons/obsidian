@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - Vue3 프로젝트 생성"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/16324612498b80f99f9ed5cd402ab434
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
 ---
 
 # 학습: Vue3 프로젝트 생성
@@ -33,11 +36,11 @@
     
     ![[02 - 학습/IT/공부기록/공부기록/Vue3/첨부/e377d0f1_image.png]]
     
-    ```bash
-    cd C:\project\study\2024_12_toy_project
-    vue create frontend
-    ```
-    
+```bash
+cd C:\project\study\2024_12_toy_project
+vue create frontend
+```
+
 2. vue3 default 를 선택한다.
     - Vue 프로젝트를 어떻게 구성할 건지 preset(프리셋 : 사전 설정)합니다.
     - 키보드의 화살 키로 위/아래로 이동할 수 있습니다.

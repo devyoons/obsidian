@@ -1,7 +1,7 @@
 ---
 별칭:
   - "업무 - FP"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev

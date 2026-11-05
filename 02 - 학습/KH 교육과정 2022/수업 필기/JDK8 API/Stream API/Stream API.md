@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Stream API"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/ee3a2f50e9b54b37b59cd650ac9197fd
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Stream API
@@ -1063,12 +1066,11 @@ private void test5() {
 
 ---
 
-[[02 - 학습/KH 교육과정 2022/수업 필기/JDK8 API/Stream API/Find Last Element Of Stream|Find Last Element Of Stream]]
+Find Last Element Of Stream
 
 ## 하위 노트
 
 - [[02 - 학습/KH 교육과정 2022/수업 필기/JDK8 API/Stream API/@실습문제 Product|@실습문제 Product]]
-- [[02 - 학습/KH 교육과정 2022/수업 필기/JDK8 API/Stream API/Find Last Element Of Stream|Find Last Element Of Stream]]
 
 ## 관련 노트
 

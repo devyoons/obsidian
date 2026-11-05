@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Java Prigraming"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/0c99f521c5d149e3bb2902744b7b8cbe
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Java Prigraming

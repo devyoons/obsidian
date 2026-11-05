@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 프로젝트 소스 코드 및 youtube"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

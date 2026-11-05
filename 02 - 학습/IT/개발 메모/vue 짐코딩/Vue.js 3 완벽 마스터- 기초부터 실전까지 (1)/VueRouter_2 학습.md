@@ -1,14 +1,19 @@
 ---
 별칭:
   - "학습 - VueRouter_2 학습"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b81289a37d7da31aad2db
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
+  - "[[00 - 대시보드/주제/HTML·CSS|HTML·CSS]]"
 ---
 
 # 학습: VueRouter_2 학습
@@ -360,20 +365,20 @@ const routes = [
 - **`/`로 시작하는 중첩 경로는 루트 경로로 처리됩니다. 이를 통해 중첩 URL을 사용하지 않고도 컴포넌트 중첩을 활용할 수 있습니다.**
 - 위 routes 설정으로 보면 `/users/alice`로 방문 했을 때 `User 컴포넌트`에 있는 중첩된 `<router-view>`에는 아무것도 렌더링 되지 않습니다.  이러한 경우 빈 중첩 경로를 제공할 수 있습니다.
     
-    ```jsx
-    const routes = [
-      {
-        path: '/user/:id',
-        component: User,
-        children: [
-          { path: '', component: UserHome },
-    
-          // ...other sub routes
-        ],
-      },
-    ]
-    ```
-    
+```jsx
+const routes = [
+  {
+    path: '/user/:id',
+    component: User,
+    children: [
+      { path: '', component: UserHome },
+
+      // ...other sub routes
+    ],
+  },
+]
+```
+
 
 ### 라우트 컴포넌트에 속성 전달
 

@@ -1,15 +1,20 @@
 ---
 별칭:
   - "강의 - Spring Security"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/f26716a54a9e4179ba286cf491eb1b20
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
+  - "[[00 - 대시보드/주제/보안|보안]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Spring Security
@@ -109,66 +114,66 @@ security filter chain은 강력하고, 유연해서 처리할 필터의 종류�
 
 - log
     
-    ```
-      ...
-    	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-    	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-    	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-    	java.base/java.lang.reflect.Method.invoke(Method.java:566)
-    	org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
-    	org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-    	org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-    	org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-    	org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
-    	org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-    	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
-    	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-    	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-    	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
-    	javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-    	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-    	javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-    	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
-    	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
-    	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
-    	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
-    	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
-    	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-    	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-    	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-    	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
-    	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-    	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
-    	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
-    	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-    	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-    ```
-    
+```
+  ...
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+```
+
 
 ## Authentication
 
@@ -430,84 +435,84 @@ public class SecurityService implements UserDetailsService {
 
 1. member, authorties 테이블에 대한 쿼리 각각 작성
     
-    ```xml
-    <select id="loadUserByUsername" resultMap="memberMap">
-    	SELECT
-    		*
-    	FROM
-    		MEMBER
-    	WHERE
-    		ID = #{ username }
-    </select>
-    <!--
-    javaType="arraylist"는 생략가능
-    column속성값은 nestedResultSet에 인수로 전달할 컬럼값이다. parent key로 사용될 컬럼값을 명시한다.
-    simpleGrantedAuthority는 별도로 typealias 지정할 것
-    -->
-    <resultMap id="memberMap" type="member">
-    	<id column="member_id" property="memberId" />
-    	<collection property="authorities"
-    							javaType="arraylist"
-    							column="member_id"
-    							ofType="simpleGrantedAuthority"
-    							select="selectAuthorities" />
-    </resultMap>
-    
-    <select id="selectAuthorities" resultMap="simpleGrantedAuthorityMap" >
-    	SELECT
-    		*
-    	FROM
-    		AUTHORITIES
-    	WHERE
-    		MEMBER_ID = #{id}
-    </select>
-    
-    <!-- constructor에 대한 처리는 resultMap통해서 할 것. resultType으로 처리불가 -->
-    <resultMap type="simpleGrantedAuthority"
-    					 id="simpleGrantedAuthorityMap">
-    	<constructor>
-    		<arg column="authority" javaType="string" />
-    	</constructor>
-    </resultMap>
-    ```
-    
+```xml
+<select id="loadUserByUsername" resultMap="memberMap">
+	SELECT
+		*
+	FROM
+		MEMBER
+	WHERE
+		ID = #{ username }
+</select>
+<!--
+javaType="arraylist"는 생략가능
+column속성값은 nestedResultSet에 인수로 전달할 컬럼값이다. parent key로 사용될 컬럼값을 명시한다.
+simpleGrantedAuthority는 별도로 typealias 지정할 것
+-->
+<resultMap id="memberMap" type="member">
+	<id column="member_id" property="memberId" />
+	<collection property="authorities"
+							javaType="arraylist"
+							column="member_id"
+							ofType="simpleGrantedAuthority"
+							select="selectAuthorities" />
+</resultMap>
+
+<select id="selectAuthorities" resultMap="simpleGrantedAuthorityMap" >
+	SELECT
+		*
+	FROM
+		AUTHORITIES
+	WHERE
+		MEMBER_ID = #{id}
+</select>
+
+<!-- constructor에 대한 처리는 resultMap통해서 할 것. resultType으로 처리불가 -->
+<resultMap type="simpleGrantedAuthority"
+					 id="simpleGrantedAuthorityMap">
+	<constructor>
+		<arg column="authority" javaType="string" />
+	</constructor>
+</resultMap>
+```
+
 2. member, authorities 테이블 조인 처리
 collection[column_id] 생략가능
     
-    ```xml
-    <select id="loadUserByUsername" resultMap="memberMap">
-    	select
-    		*
-    	from
-    		member M
-    	 left join auth A
-    		on M.member_id = A.member_id
-    	where
-    		M.member_id = #{ username }
-    </select>
-    
-    <!-- collection태그를 사용할때 result태그는 생략할 수 없다. -->
-    <resultMap id="memberMap" type="member">
-    	<id column="member_id" property="memberId"/>
-    	<result column="password" property="password"/>
-    	<result column="name" property="name"/>
-    	<result column="gender" property="gender"/>
-    	<result column="birthday" property="birthDay"/>
-    	<result column="email" property="email"/>
-    	<result column="phone" property="phone"/>
-    	<result column="address" property="address"/>
-    	<result column="hobby" property="hobby"/>
-    	<result column="enroll_date" property="enrollDate"/>
-    	<result column="enabled" property="enabled"/>
-    	<collection property="authorities"
-    							ofType="simpleGrantedAuthority">
-    		<constructor>
-    			<arg column="authority" javaType="string"/>
-    		</constructor>
-    	</collection>
-    </resultMap>
-    ```
-    
+```xml
+<select id="loadUserByUsername" resultMap="memberMap">
+	select
+		*
+	from
+		member M
+	 left join auth A
+		on M.member_id = A.member_id
+	where
+		M.member_id = #{ username }
+</select>
+
+<!-- collection태그를 사용할때 result태그는 생략할 수 없다. -->
+<resultMap id="memberMap" type="member">
+	<id column="member_id" property="memberId"/>
+	<result column="password" property="password"/>
+	<result column="name" property="name"/>
+	<result column="gender" property="gender"/>
+	<result column="birthday" property="birthDay"/>
+	<result column="email" property="email"/>
+	<result column="phone" property="phone"/>
+	<result column="address" property="address"/>
+	<result column="hobby" property="hobby"/>
+	<result column="enroll_date" property="enrollDate"/>
+	<result column="enabled" property="enabled"/>
+	<collection property="authorities"
+							ofType="simpleGrantedAuthority">
+		<constructor>
+			<arg column="authority" javaType="string"/>
+		</constructor>
+	</collection>
+</resultMap>
+```
+
 
 ## 사용자정보 가져오기
 
@@ -517,76 +522,76 @@ collection[column_id] 생략가능
 
 1. `SecurityContextHolderBean`
     
-    ```java
-    @GetMapping("/memberDetail.do")
-    public void memberDetail() {
-      //SecurityContextHolder로부터 가져오기
-    	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-    	Member principal = (Member) authentication.getPrincipal();
-    	
-    	log.debug("authentication = {}", authentication);
-    	// authentication = org.springframework.security.authentication.UsernamePasswordAuthenticationToken@23abe407: Principal: Member(id=honggd, password=$2a$10$qHHeJGgQ9teamJyIJFXbyOBtl7nIsQ37VP2jrz89dnDA7LgzS.nYi, name=카길동, gender=M, birthday=2021-05-04, email=honggd@naver.com, phone=01012341234, address=서울시 강남구, hobby=[운동,  등산], enrollDate=2021-05-20, authorities=[ROLE_USER], enabled=true); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@166c8: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: B95C1041773474D93729781512D4490A; Granted Authorities: ROLE_USER
-    	log.debug("principal = {}", principal);
-    
-    	Member principal = (Member) authentication.getPrincipal();
-    	Object credential = authentication.getCredentials();
-    	Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) authentication.getAuthorities();
-    	
-    	log.debug("principal = {}", principal);
-    	log.debug("credential = {}", credential); // null
-    	log.debug("authorities = {}", authorities);
-    	
-    }
-    ```
-    
+```java
+@GetMapping("/memberDetail.do")
+public void memberDetail() {
+  //SecurityContextHolder로부터 가져오기
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	Member principal = (Member) authentication.getPrincipal();
+	
+	log.debug("authentication = {}", authentication);
+	// authentication = org.springframework.security.authentication.UsernamePasswordAuthenticationToken@23abe407: Principal: Member(id=honggd, password=$2a$10$qHHeJGgQ9teamJyIJFXbyOBtl7nIsQ37VP2jrz89dnDA7LgzS.nYi, name=카길동, gender=M, birthday=2021-05-04, email=honggd@naver.com, phone=01012341234, address=서울시 강남구, hobby=[운동,  등산], enrollDate=2021-05-20, authorities=[ROLE_USER], enabled=true); Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@166c8: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: B95C1041773474D93729781512D4490A; Granted Authorities: ROLE_USER
+	log.debug("principal = {}", principal);
+
+	Member principal = (Member) authentication.getPrincipal();
+	Object credential = authentication.getCredentials();
+	Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) authentication.getAuthorities();
+	
+	log.debug("principal = {}", principal);
+	log.debug("credential = {}", credential); // null
+	log.debug("authorities = {}", authorities);
+	
+}
+```
+
 2. `Authentication` 타입으로 요청
     
-    ```java
-    @GetMapping("/memberDetail.do")
-    public void memberDetail(Authentication authentication) {
-    	// handler의 매개인자로 authentication객체 요청
-    	// UsernamePasswordAuthenticationToken
-    	log.debug("authentication = {}", authentication); 
-    	
-    }
-    ```
-    
+```java
+@GetMapping("/memberDetail.do")
+public void memberDetail(Authentication authentication) {
+	// handler의 매개인자로 authentication객체 요청
+	// UsernamePasswordAuthenticationToken
+	log.debug("authentication = {}", authentication); 
+	
+}
+```
+
 3. `Principal`타입으로 요청 : Principal은 Authentication이 상속하는 인터페이스이다.
     - `Authentication` 혹은 `UsernamePasswordAuthenticationToken` 으로 형변환 가능
     
-    ```java
-    
-    @GetMapping("/memberDetail.do")
-    public void memberDetail(Printcipal principal) {
-    	UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken)principal;
-    	Object _principal = authentication.getPrincipal();
-    	Member loginMember = (Member)_principal;	
-    	
-    }
-    ```
-    
+```java
+
+@GetMapping("/memberDetail.do")
+public void memberDetail(Printcipal principal) {
+	UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken)principal;
+	Object _principal = authentication.getPrincipal();
+	Member loginMember = (Member)_principal;	
+	
+}
+```
+
 4. `@AuthenticationPrincipal` 인증된 사용자 객체를 직접 요청
     
-    ```xml
-    <!-- @servlet-context.xml -->
-    
-    <annotation-driven>
-      <argument-resolvers>
-    		<!-- spring-security @AuthenticationPrincipal DI받기위한 argumentResolver 등록 -->
-        <beans:bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver"/>
-      </argument-resolvers>
-    </annotation-driven>
-    ```
-    
-    ```java
-    import org.springframework.security.core.annotation.AuthenticationPrincipal 
-    
-    @GetMapping("/memberDetail.do")
-    public void memberDetail(@AuthenticationPrincipal Member member) {
-    	log.debug("member = {}", member);
-    }
-    ```
-    
+```xml
+<!-- @servlet-context.xml -->
+
+<annotation-driven>
+  <argument-resolvers>
+		<!-- spring-security @AuthenticationPrincipal DI받기위한 argumentResolver 등록 -->
+    <beans:bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver"/>
+  </argument-resolvers>
+</annotation-driven>
+```
+
+```java
+import org.springframework.security.core.annotation.AuthenticationPrincipal 
+
+@GetMapping("/memberDetail.do")
+public void memberDetail(@AuthenticationPrincipal Member member) {
+	log.debug("member = {}", member);
+}
+```
+
 
 ### jsp : security-taglibs
 

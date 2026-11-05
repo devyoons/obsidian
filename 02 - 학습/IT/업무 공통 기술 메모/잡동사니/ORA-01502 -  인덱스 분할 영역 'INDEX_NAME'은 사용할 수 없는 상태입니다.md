@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - ORA-01502 :  인덱스 분할 영역 'INDEX_NAME'은 사용할 수 없는 상태입니다."
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/b2cf5ca9db53468da5ef1cfce9349307
+주제:
+  - "[[00 - 대시보드/주제/Oracle|Oracle]]"
 ---
 
 # 학습: ORA-01502 :  인덱스 분할 영역 'INDEX_NAME'은 사용할 수 없는 상태입니다.

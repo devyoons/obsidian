@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Filter"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/1fe5d4e798d34e1fa690a7526fdd5c8e
+주제:
+  - "[[00 - 대시보드/주제/JSP·Servlet|JSP·Servlet]]"
 ---
 
 # 강의: Filter

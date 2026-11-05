@@ -1,15 +1,20 @@
 ---
 별칭:
   - "강의 - hello-spring:첨부파일 트랜젝션"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/37324ee568414c8dbb71ecb75aa3b12b
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/웹 기능 구현|웹 기능 구현]]"
 ---
 
 # 강의: hello-spring:첨부파일 트랜젝션
@@ -158,10 +163,10 @@ aop관련 어노테이션 등록한 태그가 이 역할도 해줌!
     - #11.2. aop관련 어노테이션 등록처리
     - #13.3. root-context의 transaction aop설정을 servlet-context에 적용
     
-    ```xml
-    <aop:aspectj-autoproxy />
-    ```
-    
+```xml
+<aop:aspectj-autoproxy />
+```
+
 
 ### ✔ 알아야할 내용
 

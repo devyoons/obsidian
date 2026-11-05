@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - jquery-ui"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/8e5033a1663a426d995abe1332d7f641
+주제:
+  - "[[00 - 대시보드/주제/jQuery·Ajax|jQuery·Ajax]]"
 ---
 
 # 강의: jquery-ui

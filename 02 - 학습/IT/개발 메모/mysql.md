@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - mysql"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/3c52c70c9d424186bbd8a638869bbe78
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/MariaDB·MySQL|MariaDB·MySQL]]"
 ---
 
 # 학습: mysql

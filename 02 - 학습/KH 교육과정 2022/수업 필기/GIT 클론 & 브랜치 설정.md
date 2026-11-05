@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - GIT 클론 & 브랜치 설정"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/4348ae4f2e1842d8853f3e1da07fb451
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 강의: GIT 클론 & 브랜치 설정

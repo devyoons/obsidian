@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - after_2nf_class"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/7983c3f375114619a81f85552928cd91
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 강의: after_2nf_class
@@ -22,15 +25,12 @@
 
 | class_id | class_name |
 |---|---|
-| [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/after_2nf_class/c101|c101]] | Oracle |
-| [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/after_2nf_class/c102|c102]] | JDBC |
-| [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/after_2nf_class/c103|c103]] | Servlet/JSP |
+| c101 | Oracle |
+| c102 | JDBC |
+| c103 | Servlet/JSP |
 
 ## 하위 노트
 
-- [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/after_2nf_class/c101|c101]]
-- [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/after_2nf_class/c102|c102]]
-- [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/after_2nf_class/c103|c103]]
 
 ## 관련 노트
 

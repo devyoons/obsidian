@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - SQLD 문제풀이"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/05ba94b040b14652b25c754f75dd32ec
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/자격증|자격증]]"
 ---
 
 # 학습: SQLD 문제풀이
@@ -41,31 +45,31 @@
     
 - 7.. 아래와 같이 데이터가 들어있지 않은 왼쪽의 기관분류 테이블(가)를 오른쪽 기관분류 테이블 (나)처럼 변경하고자 할 때 다음 중 올바른 SQL문장은? (단, DBMS는 SQL Server로 가정한다.)
     
-    ```sql
-    분류ID VARCHAR(10) NOT NULL
-    분류명 VARCHAR(10) NOT NULL
-    등록일자 VARCHAR(10) NULL
-    ```
-    
-    ```sql
-    분류ID VARCHAR(10) NOT NULL
-    분류명 VARCHAR(30) NOT NULL
-    등록일자 DATE NOT NULL
-    ```
-    
-    <aside>
-    💡 SQL 서버는 여러 컬럼을 동시에 변경할 수 없다.
-    
-    </aside>
-    
-    ```sql
-    -- 오라클
-    ALTER TABLE 테이블명 MODIFY 컬럼이름 데이터유형 NOT NULL/NULL
-    
-    -- SQL Server
-    ALTER TABLE 테이블명 ALTER 컬럼이름 데이터유형 NOT NULL/NULL
-    ```
-    
+```sql
+분류ID VARCHAR(10) NOT NULL
+분류명 VARCHAR(10) NOT NULL
+등록일자 VARCHAR(10) NULL
+```
+
+```sql
+분류ID VARCHAR(10) NOT NULL
+분류명 VARCHAR(30) NOT NULL
+등록일자 DATE NOT NULL
+```
+
+<aside>
+💡 SQL 서버는 여러 컬럼을 동시에 변경할 수 없다.
+
+</aside>
+
+```sql
+-- 오라클
+ALTER TABLE 테이블명 MODIFY 컬럼이름 데이터유형 NOT NULL/NULL
+
+-- SQL Server
+ALTER TABLE 테이블명 ALTER 컬럼이름 데이터유형 NOT NULL/NULL
+```
+
 - 14.. 다음 중 외래키에 대한 설명으로 가장 부적절한 것을 2개 고르시오.
     - 테이블 생성시 설정할 수 있다.
     - 외래키 값을 널 값을 가질 수 없다.

@@ -1,0 +1,51 @@
+{
+  "collapse-filter": true,
+  "search": "-path:\"02 - 학습/KH 교육과정 2022/강의자료\" -path:\"04 - META\"",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:\"00 - 대시보드\"",
+      "color": {
+        "a": 1,
+        "rgb": 15028557
+      }
+    },
+    {
+      "query": "path:\"02 - 학습\"",
+      "color": {
+        "a": 1,
+        "rgb": 3900150
+      }
+    },
+    {
+      "query": "path:\"03 - 프로젝트\"",
+      "color": {
+        "a": 1,
+        "rgb": 3066993
+      }
+    },
+    {
+      "query": "path:\"01 - 개인 기록 및 일상/커리어\"",
+      "color": {
+        "a": 1,
+        "rgb": 16089632
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.36288736930120985,
+  "close": false
+}

@@ -1,15 +1,19 @@
 ---
 별칭:
   - "업무 - Untitled"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/completed
+  - domain/기초-자격증
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 노션원본: https://www.notion.so/7ef2a4d1e8eb4d33bc1fc8d54a7b5e1e
+주제:
+  - "[[00 - 대시보드/주제/소프트웨어 설계|소프트웨어 설계]]"
+  - "[[00 - 대시보드/주제/OCPP·EV 충전|OCPP·EV 충전]]"
 ---
 
 # 업무: Untitled

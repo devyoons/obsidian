@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - Spring Security 설정 - legacy"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/12308d91779744619f0599328d613bb9
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
+  - "[[00 - 대시보드/주제/보안|보안]]"
 ---
 
 # 강의: Spring Security 설정 - legacy

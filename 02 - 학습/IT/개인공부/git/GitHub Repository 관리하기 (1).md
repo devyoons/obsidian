@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - GitHub Repository 관리하기 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/0d8147a7e8f54432b0f85f2bb59586de
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: GitHub Repository 관리하기 (1)

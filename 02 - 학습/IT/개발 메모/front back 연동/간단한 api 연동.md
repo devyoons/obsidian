@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 간단한 api 연동"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
@@ -35,16 +35,16 @@ public class ItemController {
 
 1. 프론트엔드에서 package.json 파일에 serve 에 `--port 3000`를 추가한다. 
     
-    ```json
-    // package.json
-    
-      "scripts": {
-        "serve": "vue-cli-service serve --port 3000",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
-      },
-    ```
-    
+```json
+// package.json
+
+  "scripts": {
+    "serve": "vue-cli-service serve --port 3000",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+```
+
 2. vue.config.js 에서 우회 스크립트를 추가해준다.
 
 ```jsx
@@ -71,11 +71,11 @@ axios.get("/api/items").then(({data}) => {
 
 - 3번 설정을 안하게된 경우에는
     
-    ```jsx
-    axios.get("http://localhost:8080/api/items").then(({data}) => {
-      state.items = data;
-    })
-    ```
+```jsx
+axios.get("http://localhost:8080/api/items").then(({data}) => {
+  state.items = data;
+})
+```
 
 ## 관련 노트
 

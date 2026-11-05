@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - Untitled"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
@@ -136,8 +136,6 @@
 ## 하위 노트
 
 - [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/Untitled/팀 개발새발 (1)/팀 개발새발 (1)|팀 개발새발 (1)]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/Untitled/Untitled c28a-510e/기획|기획]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/Untitled/Untitled c28a-510e/디자인|디자인]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/Untitled/Untitled c28a-510e/백엔드/백엔드|백엔드]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/Untitled/Untitled c28a-510e/프론트엔드|프론트엔드]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/Untitled/Untitled Database|Untitled Database]]

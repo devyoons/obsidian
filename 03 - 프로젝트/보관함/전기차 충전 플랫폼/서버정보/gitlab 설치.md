@@ -1,16 +1,19 @@
 ---
 별칭:
   - "서버 - gitlab 설치"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 환경: 
 노션원본: https://www.notion.so/e9ef8ec6598640f0908414cff8f10fca
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 서버: gitlab 설치

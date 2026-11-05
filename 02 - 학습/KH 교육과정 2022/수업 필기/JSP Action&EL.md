@@ -1,15 +1,20 @@
 ---
 별칭:
   - "강의 - JSP Action&EL"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/aea0f4c41d264c2bae1269c92d461ec3
+주제:
+  - "[[00 - 대시보드/주제/JSP·Servlet|JSP·Servlet]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 강의: JSP Action&EL
@@ -260,16 +265,16 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/d6420e0d_Untitled.png]]
     
-    ```
-    서버 overview → configuration → arguments → Dcatalina주소 복사 
-    → 탐색기에서 복사한 주소로 이동 → work(jsp는 work디렉토리 하위에 있음) 
-    → Catalina → localhost → application이름폴더 → 쭉 타고들어가서 WEB-INF폴더 찾기 
-    → main_jsp.java 내용확인
-    ```
-    
-    - include지시어와는 내용이 다르다 그때는 include할 head.jsp내용이 들어오는데
-    jsp태그는 호출코드로 변경됨. out으로 직접 출력을 하고 있음.
-    
+```
+서버 overview → configuration → arguments → Dcatalina주소 복사 
+→ 탐색기에서 복사한 주소로 이동 → work(jsp는 work디렉토리 하위에 있음) 
+→ Catalina → localhost → application이름폴더 → 쭉 타고들어가서 WEB-INF폴더 찾기 
+→ main_jsp.java 내용확인
+```
+
+- include지시어와는 내용이 다르다 그때는 include할 head.jsp내용이 들어오는데
+jsp태그는 호출코드로 변경됨. out으로 직접 출력을 하고 있음.
+
 
 ### 4-1. EL scope 내장객체(page,request,response,session,application)
 

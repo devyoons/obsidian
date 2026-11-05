@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - Command Line"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/acfe5896c2204410868484764c7bab35
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Command Line

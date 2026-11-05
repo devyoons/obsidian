@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 테이블 POS 프로그램"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

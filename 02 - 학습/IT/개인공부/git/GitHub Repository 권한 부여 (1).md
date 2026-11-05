@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - GitHub Repository 권한 부여 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/a6007664fd4c4bc19bd1155ab7d68630
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
+  - "[[00 - 대시보드/주제/보안|보안]]"
 ---
 
 # 학습: GitHub Repository 권한 부여 (1)

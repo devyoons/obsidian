@@ -1,7 +1,7 @@
 ---
 별칭:
   - "서버 - 새로 awa"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev

@@ -1,16 +1,19 @@
 ---
 별칭:
   - "서버 - GetUserInfo"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 환경: 
 노션원본: https://www.notion.so/15824612498b8028a6cfde78a3cc402c
+주제:
+  - "[[00 - 대시보드/주제/OCPP·EV 충전|OCPP·EV 충전]]"
 ---
 
 # 서버: GetUserInfo

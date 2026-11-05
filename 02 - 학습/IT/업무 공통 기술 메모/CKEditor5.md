@@ -1,14 +1,19 @@
 ---
 별칭:
   - "학습 - CKEditor5"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/6879976bd3994920b4678dd58f41ba91
+주제:
+  - "[[00 - 대시보드/주제/HTML·CSS|HTML·CSS]]"
+  - "[[00 - 대시보드/주제/Thymeleaf|Thymeleaf]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: CKEditor5

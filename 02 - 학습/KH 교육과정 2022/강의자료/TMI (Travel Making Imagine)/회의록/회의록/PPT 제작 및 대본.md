@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - PPT 제작 및 대본"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

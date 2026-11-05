@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - JSTL(custom action)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/583d2d84f03e47058916fc8d54315446
+주제:
+  - "[[00 - 대시보드/주제/JSP·Servlet|JSP·Servlet]]"
 ---
 
 # 강의: JSTL(custom action)
@@ -46,10 +49,10 @@ JSP 개발을 단순화하기 위한 태그 library
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a6b43042_Untitled.png]]
     
-    ```java
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    ```
-    
+```java
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+```
+
 
 **장점**
 
@@ -113,39 +116,39 @@ JSP expression tag와 비슷하지만 expression에서만 사용할 수 있다.<
     > **out을 사용하지 않았을 때**
     > 
     
-    ```java
-    request.setAttribute("xss1", "<style>* {color: red}</style>");
-    request.setAttribute("xss2", "<script>alert('메롱!');</script>");
-    ```
-    
-    ```html
-    <ul>
-    	<li>${xss1}</li> 
-    	<li>${xss2}</li>
-    </ul>
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fcf0bee7_Untitled.png]]
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/3f41e15f_Untitled.png]]
-    
-    > `c:out`태그와 `<fn:escapeXml>`태그를 사용했을때
-    > 
-    - escapeXml 기본값이 true이기 때문에 생략가능함.
-    
-    ```html
-    <ul>
-    		<li>${fn:escapeXml(xss1)}</li>
-    		<li>${fn:escapeXml(xss2)}</li>
-    		<li><c:out value="${xss1}" escapeXml="true"/></li>
-    		<li><c:out value="${xss2}" escapeXml="true"/></li>
-    </ul>
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/cbf37bc9_Untitled.png]]
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/69717702_Untitled.png]]
-    
+```java
+request.setAttribute("xss1", "<style>* {color: red}</style>");
+request.setAttribute("xss2", "<script>alert('메롱!');</script>");
+```
+
+```html
+<ul>
+	<li>${xss1}</li> 
+	<li>${xss2}</li>
+</ul>
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fcf0bee7_Untitled.png]]
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/3f41e15f_Untitled.png]]
+
+> `c:out`태그와 `<fn:escapeXml>`태그를 사용했을때
+> 
+- escapeXml 기본값이 true이기 때문에 생략가능함.
+
+```html
+<ul>
+		<li>${fn:escapeXml(xss1)}</li>
+		<li>${fn:escapeXml(xss2)}</li>
+		<li><c:out value="${xss1}" escapeXml="true"/></li>
+		<li><c:out value="${xss2}" escapeXml="true"/></li>
+</ul>
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/cbf37bc9_Untitled.png]]
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/69717702_Untitled.png]]
+
 
 #### <c:set> Tag : 변수 선언
 
@@ -650,16 +653,16 @@ JSTL 함수 라이브러리를 포함시키는 데 사용되는 구문
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/6ef34e9a_Untitled.png]]
     
-    ```html
-    <%
-    	request.setAttribute("str1", "Hello world, Hello jstl");
-    	request.setAttribute("str2", "Hello EL");
-    %>
-    ~~<li>${str1 + str2}</li>~~  -> numberFormatException 발생!
-    <li>${str1}, ${str2}</li>
-    <li>${str1.concat(", ").concat(str2)}</li>
-    ```
-    
+```html
+<%
+	request.setAttribute("str1", "Hello world, Hello jstl");
+	request.setAttribute("str2", "Hello EL");
+%>
+~~<li>${str1 + str2}</li>~~  -> numberFormatException 발생!
+<li>${str1}, ${str2}</li>
+<li>${str1.concat(", ").concat(str2)}</li>
+```
+
 
 #### <fn:toUpperCase()> Tag :  대문자 변환
 
@@ -815,38 +818,38 @@ request.setAttribute("str1", "Hello world, Hello jstl");
     > **out을 사용하지 않았을 때**
     > 
     
-    ```java
-    request.setAttribute("xss1", "<style>* {color: red}</style>");
-    request.setAttribute("xss2", "<script>alert('메롱!');</script>");
-    ```
-    
-    ```html
-    <ul>
-    	<li>${xss1}</li>
-    	<li>${xss2}</li>
-    </ul>
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fcf0bee7_Untitled.png]]
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/3f41e15f_Untitled.png]]
-    
-    > `c:out`태그와 `<fn:escapeXml>`태그를 사용했을때
-    > 
-    
-    ```html
-    <ul>
-    		<li>${fn:escapeXml(xss1)}</li>
-    		<li>${fn:escapeXml(xss2)}</li>
-    		<li><c:out value="${xss1}" escapeXml="true"/></li>
-    		<li><c:out value="${xss2}" escapeXml="true"/></li>
-    </ul>
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/cbf37bc9_Untitled.png]]
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/69717702_Untitled.png]]
-    
+```java
+request.setAttribute("xss1", "<style>* {color: red}</style>");
+request.setAttribute("xss2", "<script>alert('메롱!');</script>");
+```
+
+```html
+<ul>
+	<li>${xss1}</li>
+	<li>${xss2}</li>
+</ul>
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fcf0bee7_Untitled.png]]
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/3f41e15f_Untitled.png]]
+
+> `c:out`태그와 `<fn:escapeXml>`태그를 사용했을때
+> 
+
+```html
+<ul>
+		<li>${fn:escapeXml(xss1)}</li>
+		<li>${fn:escapeXml(xss2)}</li>
+		<li><c:out value="${xss1}" escapeXml="true"/></li>
+		<li><c:out value="${xss2}" escapeXml="true"/></li>
+</ul>
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/cbf37bc9_Untitled.png]]
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/69717702_Untitled.png]]
+
 - 이스케이핑처리를 알아서 해주기 때문에 `<style>, <script>` 태그가 적용될 수 없게 함.
 - 사용자 입력값 부분에 이 기능을 적용해주면 공격을 막을 수있다.
 

@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - SUB QUERY (서브쿼리)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/892268a90c12461ba8e367312f2930fb
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 강의: SUB QUERY (서브쿼리)

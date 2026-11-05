@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - springboot.txt"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/d0c25f7474ed4818bebcbe42bf1ae67e
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: springboot.txt
@@ -133,16 +136,16 @@ yml파일 특징 [yml? yaml?](http://kangmyounghun.blogspot.com/2018/11/yml-yam
 - key-value : `:` 로 key-value구분. 공백반드시 필요
 - 들여쓰기로 부모-자식을 구분 `spring.main.web-environment`은 deprecated
     
-    ```
-      spring:
-        main:
-          web-application-type: SERVLET
-      # OpenType - WebApplicatoinType클래스에 enum중에 선택가능.
-    
-      server:
-        port: 9999
-    ```
-    
+```
+  spring:
+    main:
+      web-application-type: SERVLET
+  # OpenType - WebApplicatoinType클래스에 enum중에 선택가능.
+
+  server:
+    port: 9999
+```
+
 
 프로젝트 root directory에서 build하기 (gradlewrapper.jar파일에 의해서 build됨)
 

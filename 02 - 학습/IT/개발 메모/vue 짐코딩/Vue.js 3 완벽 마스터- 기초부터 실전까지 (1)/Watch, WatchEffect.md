@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - Watch, WatchEffect"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b81a590d0ecceaa81940c
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: Watch, WatchEffect
@@ -178,23 +182,23 @@ reverseFn();
 
 - **computed**
     
-    ```jsx
-    const reverseMessage = computed(() =>
-      message.value.split('').reverse().join('')
-    );
-    ```
-    
+```jsx
+const reverseMessage = computed(() =>
+  message.value.split('').reverse().join('')
+);
+```
+
 - **watch**
     
-    ```jsx
-    watch(
-      message,
-      (newValue) => {
-        reverseMessage.value = newValue.split('').reverse().join('');
-      }
-    );
-    ```
-    
+```jsx
+watch(
+  message,
+  (newValue) => {
+    reverseMessage.value = newValue.split('').reverse().join('');
+  }
+);
+```
+
 
 #### 어떻게 사용할 것인가
 

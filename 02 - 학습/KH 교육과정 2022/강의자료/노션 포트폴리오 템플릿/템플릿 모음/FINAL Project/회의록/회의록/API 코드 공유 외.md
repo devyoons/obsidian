@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - API 코드 공유 외"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

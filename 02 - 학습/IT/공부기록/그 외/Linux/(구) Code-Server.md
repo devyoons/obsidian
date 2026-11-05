@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - (구) Code-Server"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/16024612498b816f8a30dc4d209a7f86
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
 ---
 
 # 학습: (구) Code-Server
@@ -41,38 +44,38 @@
 - mkdir data extensions
 - nano /etc/systemd/system/code-server.service
     
-    ```jsx
-    [Unit]
-    
-    Description=Visual Studio Code Server
-    
-     
-    
-    [Service]
-    
-    Environment="PASSWORD=비밀번호"
-    
-    Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/code-server"
-    
-    WorkingDirectory=/opt/code-server
-    
-    User=root
-    
-    Group=root
-    
-    Type=simple
-    
-    ExecStart=/opt/code-server/code-server --auth password --extensions-dir /opt/code-server/extensions --user-data-dir /opt/code-server/data --locale ko-KR --cert --host 0.0.0.0 --port 포트번호
-    
-    Restart=always
-    
-     
-    
-    [Install]
-    
-    WantedBy=multi-user.target
-    ```
-    
+```jsx
+[Unit]
+
+Description=Visual Studio Code Server
+
+ 
+
+[Service]
+
+Environment="PASSWORD=비밀번호"
+
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/code-server"
+
+WorkingDirectory=/opt/code-server
+
+User=root
+
+Group=root
+
+Type=simple
+
+ExecStart=/opt/code-server/code-server --auth password --extensions-dir /opt/code-server/extensions --user-data-dir /opt/code-server/data --locale ko-KR --cert --host 0.0.0.0 --port 포트번호
+
+Restart=always
+
+ 
+
+[Install]
+
+WantedBy=multi-user.target
+```
+
 - systemctl daemon-reload
     
     

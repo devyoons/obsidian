@@ -1,16 +1,19 @@
 ---
 별칭:
   - "서버 - db"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
   - status/in-progress
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/중소기업중앙회 통합 플랫폼 (2026.02~)|중소기업중앙회 통합 플랫폼 (2026.02~)]]"
 환경: 
 노션원본: https://www.notion.so/31124612498b80008c02e5fa330bc861
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 서버: db

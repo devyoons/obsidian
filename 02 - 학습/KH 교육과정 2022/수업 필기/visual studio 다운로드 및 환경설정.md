@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - visual studio 다운로드 및 환경설정"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/0428625ab2794748be9edcdfb165e2c5
+주제:
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
 ---
 
 # 강의: visual studio 다운로드 및 환경설정

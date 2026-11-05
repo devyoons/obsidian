@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - AES256Util"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/5b4af2f533d54c089138eeaf0a91f989
+주제:
+  - "[[00 - 대시보드/주제/보안|보안]]"
 ---
 
 # 학습: AES256Util

@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - Slots"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b81ce926efb0a04af9eed
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: Slots
@@ -30,18 +34,18 @@ HTML 요소와 마찬가지로 우리가 만든 컴포넌트에 콘텐츠를 전
 
 - Style
     
-    ```css
-    .fancy-btn {
-    	color: #fff;
-    	background: linear-gradient(315deg, #42d392 25%, #647eff);
-    	border: none;
-    	padding: 5px 12px;
-    	margin: 5px;
-    	border-radius: 8px;
-    	cursor: pointer;
-    }
-    ```
-    
+```css
+.fancy-btn {
+	color: #fff;
+	background: linear-gradient(315deg, #42d392 25%, #647eff);
+	border: none;
+	padding: 5px 12px;
+	margin: 5px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+```
+
 
 위에 정의한 컴포넌트를 부모 컴포넌트에서 사용해보겠습니다.
 

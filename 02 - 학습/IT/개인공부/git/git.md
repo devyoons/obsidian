@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - git"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/8ed79e313e254793835365ca0674c5d5
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: git
@@ -39,7 +42,7 @@
 
 [[02 - 학습/IT/개인공부/git/잔디가 심겨지지 않을 경우 확인사항 (1)|잔디가 심겨지지 않을 경우 확인사항 (1)]]
 
-[[02 - 학습/IT/개인공부/git/GitHub cheat sheet (1)|GitHub cheat sheet (1)]]
+GitHub cheat sheet (1)
 
 [[02 - 학습/IT/개인공부/git/GitHub Action (관련자료 링크 제공) (1)|GitHub Action (관련자료 링크 제공) (1)]]
 
@@ -49,7 +52,6 @@
 - [[02 - 학습/IT/개인공부/git/GitHub Action (관련자료 링크 제공) (1)|GitHub Action (관련자료 링크 제공) (1)]]
 - [[02 - 학습/IT/개인공부/git/GitHub Repository 관리하기 (1)|GitHub Repository 관리하기 (1)]]
 - [[02 - 학습/IT/개인공부/git/GitHub Repository 권한 부여 (1)|GitHub Repository 권한 부여 (1)]]
-- [[02 - 학습/IT/개인공부/git/GitHub cheat sheet (1)|GitHub cheat sheet (1)]]
 - [[02 - 학습/IT/개인공부/git/GitHub 꾸미기 (1)|GitHub 꾸미기 (1)]]
 - [[02 - 학습/IT/개인공부/git/GitHub로 협업하기 (1)|GitHub로 협업하기 (1)]]
 - [[02 - 학습/IT/개인공부/git/Git에 관한 잡다한 이야기들 (1)|Git에 관한 잡다한 이야기들 (1)]]

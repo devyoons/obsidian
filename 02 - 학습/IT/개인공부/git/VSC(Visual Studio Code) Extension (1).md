@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - VSC(Visual Studio Code) Extension (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/0ad8b48600664be8b30b5ca92883a8b7
+주제:
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: VSC(Visual Studio Code) Extension (1)

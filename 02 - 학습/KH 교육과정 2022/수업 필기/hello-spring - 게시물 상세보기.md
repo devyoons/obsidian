@@ -1,15 +1,20 @@
 ---
 별칭:
   - "강의 - hello-spring : 게시물 상세보기"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/74f2648f8f384f3ca075821ba7454124
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
+  - "[[00 - 대시보드/주제/웹 기능 구현|웹 기능 구현]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 강의: hello-spring : 게시물 상세보기

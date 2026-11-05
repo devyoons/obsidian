@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - 링크 - Thymeleaf 템플릿·Setter vs Builder"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/16224612498b8002a3d8d80fc98b4bb6
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
+  - "[[00 - 대시보드/주제/Thymeleaf|Thymeleaf]]"
 ---
 
 # 학습: 링크 - Thymeleaf 템플릿·Setter vs Builder

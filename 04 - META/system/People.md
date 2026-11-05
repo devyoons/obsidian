@@ -1,7 +1,7 @@
 ---
 별칭:
   - "목차 - People"
-태그:
+tags:
   - type/moc
   - context/personal
   - theme/dev

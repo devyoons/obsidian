@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - 네트워크 & URL"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/e40cc303e9754e66afd1d0ee1a5feaa1
+주제:
+  - "[[00 - 대시보드/주제/Network|Network]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 네트워크 & URL
@@ -183,109 +187,109 @@ naver.com/223.130.195.95
 | String gerRef | 참조 반환 |
 - **URL에 대한 parsing 처리 실습예제**
     
-    ```java
-    private void test1() {
-    		String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html#String--";
-    		
-    		try {
-    			URL url = new URL(str);
-    		} catch (MalformedURLException e) {
-    			e.printStackTrace();
-    		}
-    	}
-    }
-    ```
-    
-    ```java
-    private void test1() {
-    		String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html#String--";
-    		
-    		try {
-    			URL url = new URL(str);
-    			
-    			System.out.println(url.getProtocol()); //https 프로토콜(통신규약)
-    			System.out.println(url.getHost());//docs.oracle.com (host-docs,domain-oracle.com)
-    			System.out.println(url.getPort());//443 포트(특정서비스) 80(http), 443(https) 웹서버 기본포트
-    			System.out.println(url.getPath());//특정파일경로(실제 디렉토리구조일수도 아닐수도 있다)
-    			System.out.println(url.getRef());//String-- bookmark(anchor) 닷
-    			System.out.println(url.getQuery());//name=abcde&lang=kr 사용자입력값
-    	} catch (MalformedURLException e) {
-    			e.printStackTrace();
-    		}
-    	}
-    }
-    
-    //결과
-    https
-    docs.oracle.com
-    443
-    /javase/8/docs/api/java/lang/String.html
-    String--
-    ```
-    
-    ```java
-    ?name=abcde&lang=kr 추가 -> 사용자 입력 값
-    
-    private void test1() {
-    		String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html?name=abcde&lang=kr#String--";
-    		
-    		try {
-    			URL url = new URL(str);
-    			
-    			System.out.println(url.getQuery());
-    		} catch (MalformedURLException e) {
-    			e.printStackTrace();
-    		}
-    	}
-    }
-    
-    //결과
-    name=abcde&lang=kr
-    ```
-    
+```java
+private void test1() {
+		String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html#String--";
+		
+		try {
+			URL url = new URL(str);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```
+
+```java
+private void test1() {
+		String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html#String--";
+		
+		try {
+			URL url = new URL(str);
+			
+			System.out.println(url.getProtocol()); //https 프로토콜(통신규약)
+			System.out.println(url.getHost());//docs.oracle.com (host-docs,domain-oracle.com)
+			System.out.println(url.getPort());//443 포트(특정서비스) 80(http), 443(https) 웹서버 기본포트
+			System.out.println(url.getPath());//특정파일경로(실제 디렉토리구조일수도 아닐수도 있다)
+			System.out.println(url.getRef());//String-- bookmark(anchor) 닷
+			System.out.println(url.getQuery());//name=abcde&lang=kr 사용자입력값
+	} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+//결과
+https
+docs.oracle.com
+443
+/javase/8/docs/api/java/lang/String.html
+String--
+```
+
+```java
+?name=abcde&lang=kr 추가 -> 사용자 입력 값
+
+private void test1() {
+		String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html?name=abcde&lang=kr#String--";
+		
+		try {
+			URL url = new URL(str);
+			
+			System.out.println(url.getQuery());
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+//결과
+name=abcde&lang=kr
+```
+
 - **URLConnection 실습예제**
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/42d92801_Untitled.png]]
     
-    ```java
-    public class URLStudy {
-    	String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html?name=abcde&lang=kr#String--";
-    
-    	public static void main(String[] args) {
-    		URLStudy study = new URLStudy();
-    		study.test2();
-    	}
-    
-    private void test2() {
-    		try {
-    			URL url = new URL(str);
-    			URLConnection conn = url.openConnection();
-    			InputStream is = conn.getInputStream();// 바이트기반 입력스트림
-    			
-    			try(BufferedReader br = new BufferedReader(new InputStreamReader(is));
-    				BufferedWriter bw = new BufferedWriter(new FileWriter("String.html"))){
-    				String data = null;
-    				while((data = br.readLine()) != null) {
-    					System.out.println(data);
-    					bw.write(data);
-    					bw.write("\n");
-    				}
-    			}
-    			
-    			System.out.println("응답완료!");
-    		} catch (MalformedURLException e) {
-    			e.printStackTrace();
-    		} catch (IOException e) {
-    			e.printStackTrace();
-    		}
-    	}
-    // 패키지안에 html파일이 생김
-    인터넷 검색창에 파일 드래그앤드랍하면 열림
-    
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/15c5afc2_Untitled.png]]
-    
+```java
+public class URLStudy {
+	String str = "https://docs.oracle.com:443/javase/8/docs/api/java/lang/String.html?name=abcde&lang=kr#String--";
+
+	public static void main(String[] args) {
+		URLStudy study = new URLStudy();
+		study.test2();
+	}
+
+private void test2() {
+		try {
+			URL url = new URL(str);
+			URLConnection conn = url.openConnection();
+			InputStream is = conn.getInputStream();// 바이트기반 입력스트림
+			
+			try(BufferedReader br = new BufferedReader(new InputStreamReader(is));
+				BufferedWriter bw = new BufferedWriter(new FileWriter("String.html"))){
+				String data = null;
+				while((data = br.readLine()) != null) {
+					System.out.println(data);
+					bw.write(data);
+					bw.write("\n");
+				}
+			}
+			
+			System.out.println("응답완료!");
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+// 패키지안에 html파일이 생김
+인터넷 검색창에 파일 드래그앤드랍하면 열림
+
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/15c5afc2_Untitled.png]]
+
 
 ---
 

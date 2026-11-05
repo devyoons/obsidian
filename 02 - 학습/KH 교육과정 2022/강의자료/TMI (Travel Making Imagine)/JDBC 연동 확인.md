@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - JDBC 연동 확인"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

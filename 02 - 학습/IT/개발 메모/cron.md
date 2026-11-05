@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - cron"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/1e024612498b80a98457fbd505a9da1e
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
 ---
 
 # 학습: cron
@@ -17,10 +20,10 @@
 
 - 1분마다
     
-    ```java
-    0 */1 * * * ?
-    ```
-    
+```java
+0 */1 * * * ?
+```
+
 
 | 위치 | 값 | 뜻 |
 | --- | --- | --- |

@@ -1,15 +1,19 @@
 ---
 별칭:
   - "업무 - ocpp-file-tree"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 노션원본: https://www.notion.so/c90997e2e6e944e9b80c4584254cab20
+주제:
+  - "[[00 - 대시보드/주제/OCPP·EV 충전|OCPP·EV 충전]]"
+  - "[[00 - 대시보드/주제/소프트웨어 설계|소프트웨어 설계]]"
 ---
 
 # 업무: ocpp-file-tree

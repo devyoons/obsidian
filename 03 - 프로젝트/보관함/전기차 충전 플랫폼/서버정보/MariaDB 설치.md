@@ -1,16 +1,20 @@
 ---
 별칭:
   - "서버 - MariaDB 설치"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 환경: 
 노션원본: https://www.notion.so/9809f0dd79944914999afbe5b5a041e7
+주제:
+  - "[[00 - 대시보드/주제/MariaDB·MySQL|MariaDB·MySQL]]"
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
 ---
 
 # 서버: MariaDB 설치

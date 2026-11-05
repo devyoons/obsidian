@@ -1,7 +1,7 @@
 ---
 별칭:
   - "보안 - GitHub 2FA 복구 코드"
-태그:
+tags:
   - type/secret
   - context/personal
   - theme/dev

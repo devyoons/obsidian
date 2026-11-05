@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Functional Dependency"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/2550748821dc4521b95f9e04febe029f
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 강의: Functional Dependency
@@ -22,15 +25,12 @@
 
 | STUDENT_NM | DEPARTMENT | STUDENT_ID |
 |---|---|---|
-| [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/Functional Dependency/신사임당|신사임당]] | 경영학부 | s209 |
-| [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/Functional Dependency/홍길동|홍길동]] | 컴퓨터공학부 | s208 |
-| [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/Functional Dependency/윤봉길|윤봉길]] | 기계공학부 | s210 |
+| 신사임당 | 경영학부 | s209 |
+| 홍길동 | 컴퓨터공학부 | s208 |
+| 윤봉길 | 기계공학부 | s210 |
 
 ## 하위 노트
 
-- [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/Functional Dependency/신사임당|신사임당]]
-- [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/Functional Dependency/윤봉길|윤봉길]]
-- [[02 - 학습/KH 교육과정 2022/수업 필기/DB정규화/Functional Dependency/홍길동|홍길동]]
 
 ## 관련 노트
 

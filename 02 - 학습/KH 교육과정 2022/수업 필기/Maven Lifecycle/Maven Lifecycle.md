@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Maven Lifecycle"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/1bc55c9758424397a806770def0ceb7b
+주제:
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
 ---
 
 # 강의: Maven Lifecycle

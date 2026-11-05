@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - C언어"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 과목: ""
 노션원본: https://www.notion.so/ffb2e45604bd4c829ae0db47c8699534
+주제:
+  - "[[00 - 대시보드/주제/C언어|C언어]]"
 ---
 
 # 강의: C언어
@@ -189,35 +192,35 @@ int main(void){
     
     ![[02 - 학습/학교/첨부/0f6eb999_Untitled.png]]
     
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("\n\n\n\n");
-    	printf("          **********\n");
-    	printf("          *hello world!*\n");
-    	printf("          **********\n");
-    	printf("\n\n\n\n");
-    
-    	return 0;
-    }
-    ```
-    
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("\n\n\n\n");
+	printf("          **********\n");
+	printf("          *hello world!*\n");
+	printf("          **********\n");
+	printf("\n\n\n\n");
+
+	return 0;
+}
+```
+
 - 예제 2.2
     
     다음의 출력 결과를 보이도록 프로그램을 작성해보자.
     
     ![[02 - 학습/학교/첨부/d7b9806a_Untitled.png]]
     
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("\"hello world\"\n");
-    	return 0;
-    }
-    ```
-    
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("\"hello world\"\n");
+	return 0;
+}
+```
+
 - 예제 2.3
     
     다음의 출력 결과를 보이도록 프로그램을 작성해보자.
@@ -231,20 +234,20 @@ int main(void){
     
     ![[02 - 학습/학교/첨부/cd601e7f_Untitled.png]]
     
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("%d x %d = %2d\n", 5, 1, 5 * 1);
-    	printf("%d x %d = %2d\n", 5, 2, 5 * 2);
-    	printf("%d x %d = %2d\n", 5, 3, 5 * 3);
-    	printf("%d x %d = %2d\n", 5, 4, 5 * 4);
-    	printf("%d x %d = %2d\n", 5, 5, 5 * 5);
-    
-    	return 0;
-    }
-    ```
-    
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("%d x %d = %2d\n", 5, 1, 5 * 1);
+	printf("%d x %d = %2d\n", 5, 2, 5 * 2);
+	printf("%d x %d = %2d\n", 5, 3, 5 * 3);
+	printf("%d x %d = %2d\n", 5, 4, 5 * 4);
+	printf("%d x %d = %2d\n", 5, 5, 5 * 5);
+
+	return 0;
+}
+```
+
 - 예제 2.4
     
     다음의 출력 결과를 보이도록 프로그램을 작성해보자.
@@ -258,35 +261,35 @@ int main(void){
     
     ![[02 - 학습/학교/첨부/00780815_Untitled.png]]
     
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("%lf x %2d = %lf\n", 3.14, 1, 3.14 * 1);
-    	printf("%lf x %2d = %lf\n", 3.14, 5, 3.14 * 5);
-    	printf("%lf x %2d = %lf\n", 3.14, 10, 3.14 * 10);
-    
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/48833078_Untitled.png]]
-    
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("%5.2lf x %2d = %5.2lf\n", 3.14, 1, 3.14 * 1);
-    	printf("%5.2lf x %2d = %5.2lf\n", 3.14, 5, 3.14 * 5);
-    	printf("%5.2lf x %2d = %5.2lf\n", 3.14, 10, 3.14 * 10);
-    
-    	return 0;
-    }
-    ```
-    
-    - 5 : 5칸의 공간
-    - .2 : 소수점 둘째자리까지
-    - .0 으로 표현하면 소수점자리 표현안함
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("%lf x %2d = %lf\n", 3.14, 1, 3.14 * 1);
+	printf("%lf x %2d = %lf\n", 3.14, 5, 3.14 * 5);
+	printf("%lf x %2d = %lf\n", 3.14, 10, 3.14 * 10);
+
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/48833078_Untitled.png]]
+
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("%5.2lf x %2d = %5.2lf\n", 3.14, 1, 3.14 * 1);
+	printf("%5.2lf x %2d = %5.2lf\n", 3.14, 5, 3.14 * 5);
+	printf("%5.2lf x %2d = %5.2lf\n", 3.14, 10, 3.14 * 10);
+
+	return 0;
+}
+```
+
+- 5 : 5칸의 공간
+- .2 : 소수점 둘째자리까지
+- .0 으로 표현하면 소수점자리 표현안함
 - 예제 2.5
     
     다음의 출력 결과를 보이도록 프로그램을 작성해보자.
@@ -295,15 +298,15 @@ int main(void){
     
     ![[02 - 학습/학교/첨부/7a23e1b3_Untitled.png]]
     
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("%s\n","hello world");
-    	return 0;
-    }
-    ```
-    
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("%s\n","hello world");
+	return 0;
+}
+```
+
 - 예제 2.6
     
     다음의 출력 결과를 보이도록 프로개름을 작성해보자.
@@ -317,32 +320,32 @@ int main(void){
     
     ![[02 - 학습/학교/첨부/97e44668_Untitled.png]]
     
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("%s\n", "a");
-    	printf("%s\n", "ab");
-    	printf("%s\n", "abc");
-    
-    return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/c8cf0999_Untitled.png]]
-    
-    ```c
-    %include <stdio.h>
-    
-    int main(void) {
-    	printf("%3s\n", "a");
-    	printf("%3s\n", "ab");
-    	printf("%3s\n", "abc");
-    
-    return 0;
-    }
-    ```
-    
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("%s\n", "a");
+	printf("%s\n", "ab");
+	printf("%s\n", "abc");
+
+return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/c8cf0999_Untitled.png]]
+
+```c
+%include <stdio.h>
+
+int main(void) {
+	printf("%3s\n", "a");
+	printf("%3s\n", "ab");
+	printf("%3s\n", "abc");
+
+return 0;
+}
+```
+
 
 ### 변수 자료형
 
@@ -545,51 +548,51 @@ int num1, num2;
     
     ![[02 - 학습/학교/첨부/4224dbed_Untitled.png]]
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	int a = 6, b = 2;
-    	printf("%d %d\n", a - b, a * b); 
-    
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	int a = 6, b = 2;
+	printf("%d %d\n", a - b, a * b); 
+
+	return 0;
+}
+```
+
 - 예제 3.3
     
     세 개의 변수 a, b, c에 각각 정수 2, 4, 6을 저장하고, a + b * c 연산의 결과를 출력하는 프로그램을 작성해보자.
     
     ![[02 - 학습/학교/첨부/2c847679_Untitled.png]]
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	int a = 2, b = 4, c = 6
-    	printf ("%d\n", a + b * c);
-    
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	int a = 2, b = 4, c = 6
+	printf ("%d\n", a + b * c);
+
+	return 0;
+}
+```
+
 - 예제 3.4
     
     두 개의 변수 a, b에 각각 정수 7, 3를 저장하고, a 나누기 b의 몫과 나머지를 각각 출력하는 프로그램을 작성해보자.
     
     ![[02 - 학습/학교/첨부/f622e9da_Untitled.png]]
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	int a = 7, b = 3;
-    	printf("몫:%d, 나머지:%d", a / b, a % b);
-    
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	int a = 7, b = 3;
+	printf("몫:%d, 나머지:%d", a / b, a % b);
+
+	return 0;
+}
+```
+
 
 ### 데이터 입력 : 데이터 입력의 필요성
 
@@ -623,47 +626,47 @@ int num1, num2;
     
     ![[02 - 학습/학교/첨부/7bc6d609_Untitled.png]]
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	int num1, num2;
-    	
-    	printf("정수 2개 입력: ");
-    	
-    	scanf("%d %d", &num1, &num2);
-    
-    	printf("%d - %d = %d\n", num1, num2, num1 - num2);
-    	printf("%d * %d = %d\n", num1, num2, num1 * num2);	
-    
-    	return 0;
-    }
-    ```
-    
-    - `scanf` 사용할 때에는 반드시 변수 앞에 ‘&’을 붙여줘야한다.
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	int num1, num2;
+	
+	printf("정수 2개 입력: ");
+	
+	scanf("%d %d", &num1, &num2);
+
+	printf("%d - %d = %d\n", num1, num2, num1 - num2);
+	printf("%d * %d = %d\n", num1, num2, num1 * num2);	
+
+	return 0;
+}
+```
+
+- `scanf` 사용할 때에는 반드시 변수 앞에 ‘&’을 붙여줘야한다.
+
 - 예제 3.6
     
     하나의 정수를 입력 받아서, 입력 받은 수의 제곱을 출력하는 프로그램을 작성해보자.
     
     ![[02 - 학습/학교/첨부/50f678a0_Untitled.png]]
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	int a;
-    	
-    	printf("정수 입력: ");
-    	
-    	scanf("%d", &a);
-    
-    	printf("%d의 제곱: %d\n", a, a * a);
-    
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	int a;
+	
+	printf("정수 입력: ");
+	
+	scanf("%d", &a);
+
+	printf("%d의 제곱: %d\n", a, a * a);
+
+	return 0;
+}
+```
+
 - 예제 3.7
     
     가로, 세로, 높이를 차례로 입력 받아서, 직육면체의 부피를 구하는 프로그램을 작성해보자.
@@ -675,31 +678,31 @@ int num1, num2;
     
     </aside>
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	int width, length, height, volume = 0;
-    	
-    	printf("직육면체의 부피를 계산하는 프로그램\n");
-    
-    	printf("가로: ");
-    	scanf("%d", &width);
-    
-    	printf("세로: ");
-    	scanf("%d", &length);
-    
-    	printf("높이: ");
-    	scanf("%d", &height);
-    
-    	volume = width * length * height;
-    
-    	printf("직육면체의 부피 : %d\n", volume);
-    
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	int width, length, height, volume = 0;
+	
+	printf("직육면체의 부피를 계산하는 프로그램\n");
+
+	printf("가로: ");
+	scanf("%d", &width);
+
+	printf("세로: ");
+	scanf("%d", &length);
+
+	printf("높이: ");
+	scanf("%d", &height);
+
+	volume = width * length * height;
+
+	printf("직육면체의 부피 : %d\n", volume);
+
+	return 0;
+}
+```
+
 
 ## 🔷 4주차
 
@@ -897,11 +900,11 @@ int num1, num2;
     - 요청의 예시
         - 정수를 저장하고 싶은데요. 크기는 **4바이트**로 해주세요. 그리고 변수의 이름은 **num**으로 할게요
             
-            ```c
-            // c언어에서의 예
-            int num;
-            ```
-            
+```c
+// c언어에서의 예
+int num;
+```
+
 
 ![[02 - 학습/학교/첨부/1ede9cf0_Untitled.png]]
 
@@ -1185,19 +1188,19 @@ int main(void) {
 
 - 따옴표는 문자열의 시작과 끝으로 해석이 됨
     
-    ```c
-    printf("따옴표 사용 "안녕"");
-    ```
-    
+```c
+printf("따옴표 사용 "안녕"");
+```
+
 
 **따옴표 표시의 올바른 사용 예**
 
 - 따옴표의 출력을 위해서는 따옴표 앞에 \ 문자를 삽입함
     
-    ```c
-    printf("따옴표 사용 \"안녕\"");
-    ```
-    
+```c
+printf("따옴표 사용 \"안녕\"");
+```
+
 
 #### printf 함수 : 주요 특수 문자의 종류
 
@@ -1342,123 +1345,123 @@ int main(void) {
 
 - 구구단 7단 역순으로 출력하기
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int dan = 7, i = 9;
-    	
-    	printf("%d 구구단 역순 출력\n, dan");
-    	
-    	while (i >= 1) {
-    		
-    		printf("%d * %d = %d\n", dan, i, 7 * i);
-    		i--;
-    	}		
-    	return 0;
-    }
-    ```
-    
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int dan = 7, i = 9;
-    	
-    	printf("정수 입력: "); //입력 받아서 원하는 단출
-    	scanf("%d", &dan);
-    	
-    	while (i >= 1) {
-    		
-    		printf("%d * %d = %d\n", dan, i, 7 * i);
-    		i--;
-    	}		
-    	return 0;
-    }
-    ```
-    
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int dan = 9, i = 9;
-    	while (dan >= 2) {
-    	
-    		i = 9;
-    		
-    		while (i >= 1) {
-    			
-    			printf("%d * %d = %d\n", dan, i, dan * i);
-    			i--;
-    		}		
-    		printf("\n");
-    		dan--;
-    	
-    	}
-    	
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int dan = 7, i = 9;
+	
+	printf("%d 구구단 역순 출력\n, dan");
+	
+	while (i >= 1) {
+		
+		printf("%d * %d = %d\n", dan, i, 7 * i);
+		i--;
+	}		
+	return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int dan = 7, i = 9;
+	
+	printf("정수 입력: "); //입력 받아서 원하는 단출
+	scanf("%d", &dan);
+	
+	while (i >= 1) {
+		
+		printf("%d * %d = %d\n", dan, i, 7 * i);
+		i--;
+	}		
+	return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int dan = 9, i = 9;
+	while (dan >= 2) {
+	
+		i = 9;
+		
+		while (i >= 1) {
+			
+			printf("%d * %d = %d\n", dan, i, dan * i);
+			i--;
+		}		
+		printf("\n");
+		dan--;
+	
+	}
+	
+	return 0;
+}
+```
+
 - 입력 받을 정수의 평균값
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int input, sum = 0, temp, num;
-    	
-    	printf("입력 받을 정수의 갯수: ");
-    	scanf("%d", &input);
-    	
-    	num = input;
-    	
-    	while(input > 0) {
-    		
-    		printf("정수 입력: ");
-    		scanf("%d", &temp);
-    		
-    		sum += temp;
-    		
-    		input--;
-    	}
-    
-    	printf("입력의 평균 : %lf\n", (double)sum / num);	 
-    	
-    	return 0;
-    }
-    ```
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int input, sum = 0, temp, num;
+	
+	printf("입력 받을 정수의 갯수: ");
+	scanf("%d", &input);
+	
+	num = input;
+	
+	while(input > 0) {
+		
+		printf("정수 입력: ");
+		scanf("%d", &temp);
+		
+		sum += temp;
+		
+		input--;
+	}
+
+	printf("입력의 평균 : %lf\n", (double)sum / num);	 
+	
+	return 0;
+}
+```
+
 - 입력 받은 양의 정수의 값보다 작은 짝수 출력
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int num, i = 2;
-    	
-    	printf("양의 정수 입력: ");
-    	scanf("%d", &num);
-    	
-    	printf("입력받은 정수 %d 보다 작은 짝수: ", num);
-    	
-    	while (i < num){
-    		
-    		printf("%d ", i);
-    		i += 2; // i = i + 2;
-    	} 
-    	
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/8039a467_Untitled.png]]
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int num, i = 2;
+	
+	printf("양의 정수 입력: ");
+	scanf("%d", &num);
+	
+	printf("입력받은 정수 %d 보다 작은 짝수: ", num);
+	
+	while (i < num){
+		
+		printf("%d ", i);
+		i += 2; // i = i + 2;
+	} 
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/8039a467_Untitled.png]]
+
 
 ### do ~ while문
 
@@ -1501,57 +1504,57 @@ int main(void) {
 
 - 구구단 역순으로 전체 출력
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int dan = 9, i;
-    	do {
-    		i = 9;
-    		do {
-    		printf("%d * %d = %d\n", dan, i, dan * i);
-    		
-    		i--;
-    		} while (i >= 1);
-    		
-    		printf("\n");
-    		
-    		dan--;
-    	}while (dan >= 2);
-    	
-    	
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/3cbd91a7_Untitled.png]]
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int dan = 9, i;
+	do {
+		i = 9;
+		do {
+		printf("%d * %d = %d\n", dan, i, dan * i);
+		
+		i--;
+		} while (i >= 1);
+		
+		printf("\n");
+		
+		dan--;
+	}while (dan >= 2);
+	
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/3cbd91a7_Untitled.png]]
+
 - 1 ~ 100 의 정수중에서 홀수의 합을 출력
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int sum = 0, i = 1;
-    	
-    	do {
-    		
-    		sum += i; // sum = sum + i;
-    		
-    		i+=2; // i = i + 2;
-    		
-    	}while (i < 100);
-    	
-    	printf("sum: %d\n", sum);
-    	
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/693e523b_Untitled.png]]
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int sum = 0, i = 1;
+	
+	do {
+		
+		sum += i; // sum = sum + i;
+		
+		i+=2; // i = i + 2;
+		
+	}while (i < 100);
+	
+	printf("sum: %d\n", sum);
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/693e523b_Untitled.png]]
+
 
 ### for문
 
@@ -1599,127 +1602,127 @@ int main(void) {
     
     - 정답
         
-        ```c
-        #include <stdio.h>
-        
-        int main(void) {
-        	
-        	int i = 0, j = 0;
-        	
-        	while (i < 5) {
-        		
-        		while(j <= i){
-        			j++;
-        			printf("*");
-        		}
-        		printf("\n");
-        		i++;
-        		j = 0;
-        	}
-        	
-        	return 0;
-        }
-        ```
-        
-        ![[02 - 학습/학교/첨부/d3899249_Untitled.png]]
-        
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int i = 0, j = 0;
+	
+	while (i < 5) {
+		
+		while(j <= i){
+			j++;
+			printf("*");
+		}
+		printf("\n");
+		i++;
+		j = 0;
+	}
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/d3899249_Untitled.png]]
+
 - **퀴즈 6.2** for문 중첩 사용해보기
     
     ![[02 - 학습/학교/첨부/26916607_Untitled.png]]
     
     - 정답
         
-        ```c
-        #include <stdio.h>
-        
-        int main(void) {
-        	
-        	int i, j;
-        	
-        	for(i = 0; i < 5; i++) {
-        		
-        		for(j = 0; j <= i; j++) {
-        			printf("%d", j);
-        		}
-        		printf("\n");
-        	}
-        	
-        	return 0;
-        }
-        ```
-        
-        ![[02 - 학습/학교/첨부/b26570c2_Untitled.png]]
-        
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int i, j;
+	
+	for(i = 0; i < 5; i++) {
+		
+		for(j = 0; j <= i; j++) {
+			printf("%d", j);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/b26570c2_Untitled.png]]
+
 
 #### 실습문제
 
 - 1단부터 9단까지 출력하는 for문
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int dan, i;
-    	
-    	for(dan = 1; dan <= 9; dan++){
-    		for(i = 1; i <= 9; i++){
-    			printf("%d * %d = %d\n", dan, i, dan * i);
-    		}
-    		printf("\n");
-    	}
-    	
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/a42d69a2_Untitled.png]]
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int dan, i;
+	
+	for(dan = 1; dan <= 9; dan++){
+		for(i = 1; i <= 9; i++){
+			printf("%d * %d = %d\n", dan, i, dan * i);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/a42d69a2_Untitled.png]]
+
 - 9단부터 1단까지 출력하는 for문
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int dan, i;
-    	
-    	for(dan = 9; dan >= 2; dan--){
-    		for(i = 9; i >= 1; i--){
-    			printf("%d * %d = %d\n", dan, i, dan * i);
-    		}
-    		printf("\n");
-    	}
-    	
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/0f1977fc_Untitled.png]]
-    
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int dan, i;
+	
+	for(dan = 9; dan >= 2; dan--){
+		for(i = 9; i >= 1; i--){
+			printf("%d * %d = %d\n", dan, i, dan * i);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/0f1977fc_Untitled.png]]
+
 - 계승 (팩토리얼)
     
-    ```c
-    #include <stdio.h>
-    
-    int main(void) {
-    	
-    	int result = 1, num, i;
-    	
-    	printf("정수 입력: ");
-    	scanf("%d", &num);
-    	
-    	for(i = 1; i <= num; i++)
-    		result *= i; // result = result * i;
-    		
-    	printf("%d! = %d\n", num, result);
-    	return 0;
-    }
-    ```
-    
-    ![[02 - 학습/학교/첨부/33177e8b_Untitled.png]]
-    
-    - i 값은 처음에 1이어야한다. 곱셈이라 0으로 시작하면 안됀다.
+```c
+#include <stdio.h>
+
+int main(void) {
+	
+	int result = 1, num, i;
+	
+	printf("정수 입력: ");
+	scanf("%d", &num);
+	
+	for(i = 1; i <= num; i++)
+		result *= i; // result = result * i;
+		
+	printf("%d! = %d\n", num, result);
+	return 0;
+}
+```
+
+![[02 - 학습/학교/첨부/33177e8b_Untitled.png]]
+
+- i 값은 처음에 1이어야한다. 곱셈이라 0으로 시작하면 안됀다.
 
 ## 관련 노트
 

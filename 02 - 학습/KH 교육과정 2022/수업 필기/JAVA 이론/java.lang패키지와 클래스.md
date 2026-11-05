@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - java.lang패키지와 클래스"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/bf7c1bb333e4468593a5c32030f3ea88
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: java.lang패키지와 클래스
@@ -48,11 +51,11 @@ public class Object {
 - 객체마다 다른 해시코드 반환
 - 코드보기
     
-    ```java
-    System.out.println(System.identityHashCode(str1)); //3526198
-    System.out.println(System.identityHashCode(str1)); //7699183
-    ```
-    
+```java
+System.out.println(System.identityHashCode(str1)); //3526198
+System.out.println(System.identityHashCode(str1)); //7699183
+```
+
 
 <aside>
 💡 **equals오버라이딩시 선언부가 동일해야한다.** 
@@ -395,16 +398,16 @@ System.out.println(s.equals(s2)); //true
 - 멀티 쓰레드 프로그램이 아닌 경우, 동기화는 불필요한 성능저하
     - 이럴땐 StringBuffer 대신 StringBuilder를 사용하면 성능향상
     
-    ```java
-    StringBuffer sb;
-    sb = new StringBuffer();
-    sb.append("abc");
-    
-    -> StringBuffer부분만 StringBuilder 로 바꿔주면된다.
-    ```
-    
-    - StringBuffer 멀티쓰레드일 때 사용하면 좋고
-    - StringBuilder는 싱글쓰레드일 때 사용하면 좋다.
+```java
+StringBuffer sb;
+sb = new StringBuffer();
+sb.append("abc");
+
+-> StringBuffer부분만 StringBuilder 로 바꿔주면된다.
+```
+
+- StringBuffer 멀티쓰레드일 때 사용하면 좋고
+- StringBuilder는 싱글쓰레드일 때 사용하면 좋다.
 
 ---
 

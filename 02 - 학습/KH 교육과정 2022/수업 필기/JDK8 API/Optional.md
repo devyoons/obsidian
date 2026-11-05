@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Optional"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/9e7373decc0e46b6b3c5eac319b71309
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Optional
@@ -44,25 +47,25 @@ Optional는 "존재할 수도 있지만 안 할 수도 있는 객체", 즉, "nul
 
 1. `Optional.empty()` : 비어있는 Optional객체
     
-    ```java
-    Optional<Member> maybeMember = Optional.empty();
-    ```
-    
+```java
+Optional<Member> maybeMember = Optional.empty();
+```
+
 2. `Optional.of(value)` : null이 아닌 객체를 담은 Optional객체 (null이면 NPE를 던짐)
     
-    ```java
-    Optional<Member> maybeMember = Optional.of(aMember);
-    ```
-    
+```java
+Optional<Member> maybeMember = Optional.of(aMember);
+```
+
 3. `Optional.ofNullable(value)` : null일수도 있는 Optional객체
     - not null : `Optional.of(value)`
     - null : `Optional.empty()`
     
-    ```java
-    Optional<Member> maybeMember = Optional.ofNullable(aMember);
-    Optional<Member> maybeNotMember = Optional.ofNullable(null);
-    ```
-    
+```java
+Optional<Member> maybeMember = Optional.ofNullable(aMember);
+Optional<Member> maybeNotMember = Optional.ofNullable(null);
+```
+
 
 ### Optional 객체가 감싼 객체 제어
 

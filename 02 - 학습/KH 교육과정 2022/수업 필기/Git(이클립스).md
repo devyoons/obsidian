@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - Git(이클립스)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/68a5fedefd25424db5da16ac2d95fbc1
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
 ---
 
 # 강의: Git(이클립스)

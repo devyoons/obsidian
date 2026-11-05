@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - Untitled"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/17424612498b8057b8e5d87fd93ccdec
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 학습: Untitled

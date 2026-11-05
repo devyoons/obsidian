@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - VSC(Visual Studio Code) GitHub 연동하기, VSC 바로 사용하기 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/71361435fc614a45bedccaed1dc0ec7f
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
 ---
 
 # 학습: VSC(Visual Studio Code) GitHub 연동하기, VSC 바로 사용하기 (1)

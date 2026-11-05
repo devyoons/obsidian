@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Map : Key&Value저장, Key중복X, Value중복 O"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/dd60d74e045e4deda296bc0e81a801af
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Map : Key&Value저장, Key중복X, Value중복 O
@@ -197,85 +200,85 @@ Iterator<K> keyIterator = keySet.iterator();
 1. **keySet() : key를 별도의 Set으로 반환 → key값은 중복이 없기 때문에 값 유실이 없음**
     - **while문**으로 저장된 **모든 key 리턴**
         
-        ```java
-        Map<Integer, String> map = new HashMap<>();
-        		map.put(1, "홍길동");
-        		map.put(2, "신사임당");
-        		map.put(3, "세종대왕");
-        		
-        		Set<Integer> keySet = map.keySet(); //Integer는 map 키타입을 가져온것
-        		Iterator<Integer> iter = keySet.iterator();
-        		while(iter.hasNext()) {
-        			Integer no = iter.next();
-        			String value = map.get(no);
-        			System.out.println(no + " = " + value);
-        		}
-        
-        //결과 
-        1 = 홍길동
-        2 = 신사임당
-        3 = 세종대왕
-        ```
-        
-    - **foreach문**으로 저장된 **모든 key 리턴**
-        
-        ```java
-        Map<Integer, String> map = new HashMap<>();
-        		map.put(1, "홍길동");
-        		map.put(2, "신사임당");
-        		map.put(3, "세종대왕");
-        		
-        		Set<Integer> keySet = map.keySet();
-        		for(Integer key : keySet) {
-        			String value = map.get(key);
-        			System.out.println(key + " = " + value);
-        		}
-        
-        //결과
-        1 = 홍길동
-        2 = 신사임당
-        3 = 세종대왕
-        ```
-        
+```java
+Map<Integer, String> map = new HashMap<>();
+		map.put(1, "홍길동");
+		map.put(2, "신사임당");
+		map.put(3, "세종대왕");
+		
+		Set<Integer> keySet = map.keySet(); //Integer는 map 키타입을 가져온것
+		Iterator<Integer> iter = keySet.iterator();
+		while(iter.hasNext()) {
+			Integer no = iter.next();
+			String value = map.get(no);
+			System.out.println(no + " = " + value);
+		}
+
+//결과 
+1 = 홍길동
+2 = 신사임당
+3 = 세종대왕
+```
+
+- **foreach문**으로 저장된 **모든 key 리턴**
+
+```java
+Map<Integer, String> map = new HashMap<>();
+		map.put(1, "홍길동");
+		map.put(2, "신사임당");
+		map.put(3, "세종대왕");
+		
+		Set<Integer> keySet = map.keySet();
+		for(Integer key : keySet) {
+			String value = map.get(key);
+			System.out.println(key + " = " + value);
+		}
+
+//결과
+1 = 홍길동
+2 = 신사임당
+3 = 세종대왕
+```
+
 2. **entrySet() : 저장된 모든 키(key)와 값(value) 리턴 → entry (key, value)를 별도의 Set으로 반환**
     - **while문**으로 저장된 **모든 key 리턴**
     
-    ```java
-    Map<Integer, String> map = new HashMap<>();
-    		map.put(1, "홍길동");
-    		map.put(2, "신사임당");
-    		map.put(3, "세종대왕");
-    
-    		Iterator<Map.Entry<Integer, String>> iter2 = map.entrySet().iterator();
-    		while(iter2.hasNext()) {
-    			Map.Entry<Integer, String> stu = iter2.next();
-    			System.out.println(stu.getKey() + " = " +stu.getValue());
-    		}
-    //결과
-    1 = 홍길동
-    2 = 신사임당
-    3 = 세종대왕
-    ```
-    
-    - **foreach문**으로 저장된 **모든 key 리턴**
-    
-    ```java
-    Map<Integer, String> map = new HashMap<>();
-    		map.put(1, "홍길동");
-    		map.put(2, "신사임당");
-    		map.put(3, "세종대왕");
-    
-    		for(Map.Entry<Integer, String> entry : entrySet) {
-    			Integer key = entry.getKey();
-    			String value = entry.getValue();
-    			System.out.println(key + " = " + value);
-    		}
-    //결과
-    1 = 홍길동
-    2 = 신사임당
-    3 = 세종대왕
-    ```
-    
+```java
+Map<Integer, String> map = new HashMap<>();
+		map.put(1, "홍길동");
+		map.put(2, "신사임당");
+		map.put(3, "세종대왕");
+
+		Iterator<Map.Entry<Integer, String>> iter2 = map.entrySet().iterator();
+		while(iter2.hasNext()) {
+			Map.Entry<Integer, String> stu = iter2.next();
+			System.out.println(stu.getKey() + " = " +stu.getValue());
+		}
+//결과
+1 = 홍길동
+2 = 신사임당
+3 = 세종대왕
+```
+
+- **foreach문**으로 저장된 **모든 key 리턴**
+
+```java
+Map<Integer, String> map = new HashMap<>();
+		map.put(1, "홍길동");
+		map.put(2, "신사임당");
+		map.put(3, "세종대왕");
+
+		for(Map.Entry<Integer, String> entry : entrySet) {
+			Integer key = entry.getKey();
+			String value = entry.getValue();
+			System.out.println(key + " = " + value);
+		}
+//결과
+1 = 홍길동
+2 = 신사임당
+3 = 세종대왕
+```
+
 
 #### 8. containsKey , containsValue
 

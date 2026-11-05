@@ -1,14 +1,19 @@
 ---
 별칭:
   - "학습 - Bootstrap5 설치"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b814389cde2c123571c58
+주제:
+  - "[[00 - 대시보드/주제/HTML·CSS|HTML·CSS]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
 ---
 
 # 학습: Bootstrap5 설치
@@ -108,27 +113,27 @@ import TheView from './components/TheView.vue';
 
 1. bootstrap-icons 모듈 설치
     
-    ```bash
-    npm i bootstrap-icons
-    ```
-    
+```bash
+npm i bootstrap-icons
+```
+
 2. main.js 에 bootstrap-icons.css 추가
     
-    ```jsx
-    // main.js
-    import 'bootstrap-icons/font/bootstrap-icons.css';
-    ```
-    
+```jsx
+// main.js
+import 'bootstrap-icons/font/bootstrap-icons.css';
+```
+
 3. `i 태그` 를 활용한 아이콘 적용
     
-    ```html
-    <template>
-    	<i class="bi bi-youtube"></i>
-    </template>
-    ```
-    
-    [Bootstrap Icons 바로가기](https://icons.getbootstrap.com/)
-    
+```html
+<template>
+	<i class="bi bi-youtube"></i>
+</template>
+```
+
+[Bootstrap Icons 바로가기](https://icons.getbootstrap.com/)
+
 
 ### 참고
 

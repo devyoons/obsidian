@@ -2,6 +2,7 @@
   "theme": "moonstone",
   "cssTheme": "Things",
   "enabledCssSnippets": [
-    "test"
+    "test",
+    "heading-black"
   ]
 }

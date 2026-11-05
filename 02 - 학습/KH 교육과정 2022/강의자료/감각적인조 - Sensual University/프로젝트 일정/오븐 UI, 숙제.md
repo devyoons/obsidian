@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 오븐 UI, 숙제"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

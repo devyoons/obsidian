@@ -1,21 +1,24 @@
 ---
 별칭:
   - "학습 - Spring Boot 정리"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/19512d5d383d41adaeaec32b98c4fbf8
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 학습: Spring Boot 정리
 
 ## 세부 내용
 
-[[02 - 학습/IT/개발 메모/Spring Boot 정리/환경설정|환경설정]]
+환경설정
 
 ![[02 - 학습/IT/개발 메모/Spring Boot 정리/첨부/0590a668_Untitled.png]]
 
@@ -32,12 +35,10 @@
     HttpMessageConverter 가 선택된다.
     > 
 
-[[02 - 학습/IT/개발 메모/Spring Boot 정리/Spring Boot 3.x|Spring Boot 3.x]]
+Spring Boot 3.x
 
 ## 하위 노트
 
-- [[02 - 학습/IT/개발 메모/Spring Boot 정리/Spring Boot 3.x|Spring Boot 3.x]]
-- [[02 - 학습/IT/개발 메모/Spring Boot 정리/환경설정|환경설정]]
 
 ## 관련 노트
 

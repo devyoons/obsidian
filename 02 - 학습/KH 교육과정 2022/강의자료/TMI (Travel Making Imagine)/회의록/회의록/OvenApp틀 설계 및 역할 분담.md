@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - OvenApp틀 설계 및 역할 분담"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

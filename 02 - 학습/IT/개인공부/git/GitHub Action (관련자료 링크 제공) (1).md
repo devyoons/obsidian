@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - GitHub Action (관련자료 링크 제공) (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/ed79a6ee35c54706a72a502212949cad
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
+  - "[[00 - 대시보드/주제/CI·CD|CI·CD]]"
 ---
 
 # 학습: GitHub Action (관련자료 링크 제공) (1)

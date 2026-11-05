@@ -1,15 +1,19 @@
 ---
 별칭:
   - "업무 - OCPP 1.6 프로토콜 분석 및 CSMS-1.6 설계 문서"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/completed
+  - domain/기초-자격증
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 노션원본: https://www.notion.so/983230420e684f3fb79e4c5b41af30e3
+주제:
+  - "[[00 - 대시보드/주제/소프트웨어 설계|소프트웨어 설계]]"
+  - "[[00 - 대시보드/주제/OCPP·EV 충전|OCPP·EV 충전]]"
 ---
 
 # 업무: OCPP 1.6 프로토콜 분석 및 CSMS-1.6 설계 문서
@@ -644,38 +648,38 @@ WS 서버는 충전기와의 통신을 역할만을  수용 하고 그외의 모
 - ➡️ **DataTransfer.req**
     - messageId로 메세지를 구분하며, 해당 메세지에 필요한 값은 data로 요청합니다.
     
-    ```json
-    [
-        2,
-        "d9b2fd73-cc2d-4b7b-976b-1e125630dea9",
-        "DataTransfer",
-        {
-            "vendorId":"EasyCharger",
-            "messageId":"GetPrice",
-            "data":"{ \"connectorId\":1, \"transactionId\":1190 }"}
-    ]
-    ```
-    
-    <aside>
-    📌 messageId 분류
-    `GetPrice`, `GetPricingProfile`, `PayInfo`, `PartialCancel`, `PhoneNumber`, `MACAddress`, `GetParkingFee`, `ParkingFee`, `PayInfoParking`
-    
-    </aside>
-    
+```json
+[
+    2,
+    "d9b2fd73-cc2d-4b7b-976b-1e125630dea9",
+    "DataTransfer",
+    {
+        "vendorId":"EasyCharger",
+        "messageId":"GetPrice",
+        "data":"{ \"connectorId\":1, \"transactionId\":1190 }"}
+]
+```
+
+<aside>
+📌 messageId 분류
+`GetPrice`, `GetPricingProfile`, `PayInfo`, `PartialCancel`, `PhoneNumber`, `MACAddress`, `GetParkingFee`, `ParkingFee`, `PayInfoParking`
+
+</aside>
+
 - ⬅️ **DataTransfer.res**
     - 성공여부와 요청 받은 메세지에 해당하는 data값을 응답합니다.
     
-    ```json
-    [
-        3,
-        "d9b2fd73-cc2d-4b7b-976b-1e125630dea9",
-        {
-            "status":"Accepted",
-            "data":"{\"connectorId\":1,\"currency\":\"KRW\",\"unitPrice\":4200.0}"
-        }
-    ]
-    ```
-    
+```json
+[
+    3,
+    "d9b2fd73-cc2d-4b7b-976b-1e125630dea9",
+    {
+        "status":"Accepted",
+        "data":"{\"connectorId\":1,\"currency\":\"KRW\",\"unitPrice\":4200.0}"
+    }
+]
+```
+
 
 #### **11-1. GetPrice**
 

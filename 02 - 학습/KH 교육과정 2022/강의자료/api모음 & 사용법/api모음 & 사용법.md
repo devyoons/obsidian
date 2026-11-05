@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - api모음 & 사용법"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

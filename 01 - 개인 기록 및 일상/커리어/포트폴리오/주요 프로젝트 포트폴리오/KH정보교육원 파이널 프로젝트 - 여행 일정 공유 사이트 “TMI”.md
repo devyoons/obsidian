@@ -1,7 +1,7 @@
 ---
 별칭:
   - "포트폴리오 - KH정보교육원 파이널 프로젝트 : 여행 일정 공유 사이트 “TMI”"
-태그:
+tags:
   - type/portfolio
   - context/career
   - theme/dev

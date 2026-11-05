@@ -1,15 +1,20 @@
 ---
 별칭:
   - "강의 - 로그인 ajax"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/1dd302360f1449ddb4a675641f6bc955
+주제:
+  - "[[00 - 대시보드/주제/jQuery·Ajax|jQuery·Ajax]]"
+  - "[[00 - 대시보드/주제/웹 기능 구현|웹 기능 구현]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 로그인 ajax
@@ -28,29 +33,29 @@
 
 - #14 (pom.xml)
     
-    ```xml
-    <!-- #14. jsonView 의존 -->
-    <dependency>
-        <groupId>net.sf.json-lib</groupId>
-        <artifactId>json-lib-ext-spring</artifactId>
-        <version>1.0.2</version>
-    </dependency>
-    ```
-    
+```xml
+<!-- #14. jsonView 의존 -->
+<dependency>
+    <groupId>net.sf.json-lib</groupId>
+    <artifactId>json-lib-ext-spring</artifactId>
+    <version>1.0.2</version>
+</dependency>
+```
+
 - #14.1 - 2 jsonView 빈 등록(servlet-context)
     
-    ```xml
-    <!-- #14.1 jsonView빈 등록 -->
-    <beans:bean id="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView">
-    	<beans:property name="contentType" value="application/json; charset=utf-8"/>
-    </beans:bean>
-    
-    <!-- #14.2 BeanNameViewResolver 등록 -->
-    <beans:bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
-    	<beans:property name="order" value="1"/><!-- InternalResourceViewResolver보다 우선처리 -->
-    </beans:bean>
-    ```
-    
+```xml
+<!-- #14.1 jsonView빈 등록 -->
+<beans:bean id="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView">
+	<beans:property name="contentType" value="application/json; charset=utf-8"/>
+</beans:bean>
+
+<!-- #14.2 BeanNameViewResolver 등록 -->
+<beans:bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+	<beans:property name="order" value="1"/><!-- InternalResourceViewResolver보다 우선처리 -->
+</beans:bean>
+```
+
 
 **jsonView** 
 
@@ -78,10 +83,10 @@
 
 - servlet-context 이걸 사용해서 view로 보냈었음.
     
-    ```java
-    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    ```
-    
+```java
+<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+```
+
 
 <aside>
 📌 1. beanNameViewResolver 먼저 찾음
@@ -99,38 +104,38 @@
 
 - #15. MessageConvert의 json처리용 빈
     
-    ```xml
-    <!-- #15. MessageConvert의 json처리용 빈 -->
-    <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-        <version>2.9.5</version>
-    </dependency>
-    ```
-    
+```xml
+<!-- #15. MessageConvert의 json처리용 빈 -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.5</version>
+</dependency>
+```
+
 - #15.1 jacksonMessageConverter
     
-    ```xml
-    <beans:bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
-    ```
-    
+```xml
+<beans:bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+```
+
 - #15.2 @ResponseBody 처리를 위한 MessageConverter 등록 [생략가능]
     - interface를 보고 알아서 찾아감.
     - spring 5.x에 버전에 와서 생략가능.
         - annotation-driven에 의해서 자동처리
     
-    ```xml
-    <!-- #15.2. @ResponseBody 처리를 위한 MessageConverter 등록 -->
-    
-    <beans:bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-    	<beans:property name="messageConverters">
-    		<beans:list>
-    			<beans:ref bean="jacksonMessageConverter"/>
-    		</beans:list>
-    	</beans:property>
-    </beans:bean>
-    ```
-    
+```xml
+<!-- #15.2. @ResponseBody 처리를 위한 MessageConverter 등록 -->
+
+<beans:bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+	<beans:property name="messageConverters">
+		<beans:list>
+			<beans:ref bean="jacksonMessageConverter"/>
+		</beans:list>
+	</beans:property>
+</beans:bean>
+```
+
 
 `@ResponseBody` 
 

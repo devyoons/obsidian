@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - ssl 인증서 갱신"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/13724612498b80baa4d7e35e8a653d6c
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
+  - "[[00 - 대시보드/주제/보안|보안]]"
 ---
 
 # 학습: ssl 인증서 갱신

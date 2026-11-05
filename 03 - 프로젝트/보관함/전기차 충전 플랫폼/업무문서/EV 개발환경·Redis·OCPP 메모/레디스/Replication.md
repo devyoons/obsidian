@@ -1,15 +1,20 @@
 ---
 별칭:
   - "업무 - Replication"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/보관함/전기차 충전 플랫폼/전기차 충전 플랫폼 (2023.07~2024.08)|전기차 충전 플랫폼 (2023.07~2024.08)]]"
 노션원본: https://www.notion.so/d1d51b8d81354418a11874614d726a3a
+주제:
+  - "[[00 - 대시보드/주제/Redis|Redis]]"
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
+  - "[[00 - 대시보드/주제/OCPP·EV 충전|OCPP·EV 충전]]"
 ---
 
 # 업무: Replication
@@ -44,26 +49,26 @@ Replication은 Redis에서 지원하는 복제 로직으로 동일한 데이터�
 
 - redis.conf 파일
     
-    ```bash
-    sudo vi /etc/redis/redis.conf
-    ```
-    
+```bash
+sudo vi /etc/redis/redis.conf
+```
+
 
 - 복제 설정
     
-    ```scheme
-    replicaof 마스터IP 마스터포트
-    
-    //EX. replicaof 127.0.0.1 6379
-    ```
-    
+```scheme
+replicaof 마스터IP 마스터포트
+
+//EX. replicaof 127.0.0.1 6379
+```
+
 
 - 설정 후 재시작
     
-    ```bash
-    sudo systemctl restart redis-server
-    ```
-    
+```bash
+sudo systemctl restart redis-server
+```
+
 
 ---
 

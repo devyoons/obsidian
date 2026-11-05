@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - @builder"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/bee0977eba5d4b2bb852d0e463808e74
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 학습: @builder

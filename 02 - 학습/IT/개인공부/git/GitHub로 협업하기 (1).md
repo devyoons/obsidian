@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - GitHub로 협업하기 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/8257f06a5dcf44f5997f76a0281b336e
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: GitHub로 협업하기 (1)
@@ -47,57 +50,57 @@ feature 브랜치는 develop 브랜치에서 생성되고 기능을 구현할 �
     
     `feature/add` 브랜치를 생성하고 아래와 같이 2개의 수를 더해주는 코드를 작성해봅시다. 이렇게 한 기능을 구현한 뒤, develop 브랜치에 기능을 더해 나갑니다. 예를 들면, 빼기나 곱하기, 나누기 등의 기능을 추가할 때마다 push 를 하는 거죠.
     
-    ```jsx
-    //calculator.js
-    function add(a,b){
-    	return a+b;
-    }
-    ```
-    
+```jsx
+//calculator.js
+function add(a,b){
+	return a+b;
+}
+```
+
 
 - **develop**
 develop 브랜치는 feature 브랜치에서 구현된 기능이 모여 브랜치들의 기둥 역할을 하는 브랜치입니다. 일반적으로 `develop`과 같은 이름을 붙입니다.
     
-    ```jsx
-    //calculator.js
-    function add(a,b){
-    	return a+b;
-    }
-    
-    function sub(a,b){
-    	return a-b;
-    }
-    
-    function mul(a,b){
-    	return a*b;
-    }
-    
-    function div(a,b){
-    	return a/b;
-    }
-    ```
-    
-    협업을 진행하는 팀원들이 사칙연산의 각 기능들을 구현하고 develop 브랜치로 구현한 기능들을 더하면,  위의 코드처럼 합쳐집니다.
-    
+```jsx
+//calculator.js
+function add(a,b){
+	return a+b;
+}
+
+function sub(a,b){
+	return a-b;
+}
+
+function mul(a,b){
+	return a*b;
+}
+
+function div(a,b){
+	return a/b;
+}
+```
+
+협업을 진행하는 팀원들이 사칙연산의 각 기능들을 구현하고 develop 브랜치로 구현한 기능들을 더하면,  위의 코드처럼 합쳐집니다.
+
 - **release**
 release 브랜치는 develop 브랜치에서 생성되며, **실제 배포 전 테스트를 하거나 버그 확인을 하기 위한 브랜치**입니다. develop 브랜치에서 계획했던 기능의 구현이 완료되었을 때, 기능 테스트 및 버그 확인을 위해 생성합니다. 일반적으로 `release-1`과 같은 이름을 붙입니다.
     
-    ```jsx
-    //calculator.js
-    function add(a,b){
-      if(typeof a !== "number" || typeof b !== "number"){
-    		return "숫자만 입력해주세요."
-    	}
-    	return a+b;
-    }
-    
-    function sub(a,b){...}
-    function mul(a,b){...}
-    function div(a,b){...}
-    ```
-    
-    위와 같이 사칙연산의 기능을 가진 서비스를 만들었습니다. release 브랜치에서 테스트하던 중 숫자를 입력하지 않았을 경우에도 계산기가 수행이 되는 버그를 확인하게 되었다고 가정해 봅시다. 이 경우, 기능을 수정한 후에 develop 브랜치로 merge 하고 다시 기존의 release 브랜치에서 배포 전 테스트 및 버그 확인을 진행합니다.
-    
+```jsx
+//calculator.js
+function add(a,b){
+  if(typeof a !== "number" || typeof b !== "number"){
+		return "숫자만 입력해주세요."
+	}
+	return a+b;
+}
+
+function sub(a,b){...}
+function mul(a,b){...}
+function div(a,b){...}
+```
+
+위와 같이 사칙연산의 기능을 가진 서비스를 만들었습니다. release 브랜치에서 테스트하던 중 숫자를 입력하지 않았을 경우에도 계산기가 수행이 되는 버그를 확인하게 되었다고 가정해 봅시다. 이 경우, 기능을 수정한 후에 develop 브랜치로 merge 하고 다시 기존의 release 브랜치에서 배포 전 테스트 및 버그 확인을 진행합니다.
+
 - **main(master)
 main** 브랜치는 release 브랜치에서 생성되며 실제 배포되는 소스의 브랜치입니다.
 

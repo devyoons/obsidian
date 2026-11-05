@@ -1,7 +1,7 @@
 ---
 별칭:
   - "강의 - 생성형 API"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev

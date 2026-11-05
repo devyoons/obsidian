@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 메인 (GIF)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

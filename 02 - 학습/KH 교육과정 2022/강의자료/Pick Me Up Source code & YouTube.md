@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - Pick Me Up Source code & YouTube"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

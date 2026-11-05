@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - 스레드 Thread"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/96dbb108dbd34782ac1184d5d16aa415
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 스레드 Thread
@@ -161,12 +164,12 @@
 - Thread(String s) : 스레드의 이름을 설정할 수 있는 생성자
     - 이름 설정 조회
         
-        ```java
-        이름설정 생성자 -> Thread thread = new Thread("스레드김");
-        					설정 -> thread.setName("스레드임");
-        					조회 -> thread.getName();
-        ```
-        
+```java
+이름설정 생성자 -> Thread thread = new Thread("스레드김");
+					설정 -> thread.setName("스레드임");
+					조회 -> thread.getName();
+```
+
 - Thread(Runnable r ) : Runnable 인터페이스 객체로 생성하는 생성자
 - Thread(Runnable r, String s) : Runnable 인터페이스 객체로 생성하며 이름을 가지는 생성자
 
@@ -279,14 +282,14 @@ public void run() {
         - 10 우선순위 가장 높음
         - 표현식
             
-            ```java
-            -Thread.MAX_PRIOROTY
-            -Thread.NORM_PRIORITY
-            -Thread.MIN_PRIORITY
-            
-            thread.setPriority(우선순위);
-            ```
-            
+```java
+-Thread.MAX_PRIOROTY
+-Thread.NORM_PRIORITY
+-Thread.MIN_PRIORITY
+
+thread.setPriority(우선순위);
+```
+
 - **순환할당(Round - Robin)**
     - 시간할당량 (Time Slice)를 정해서 하나의 스레드를 정해진 시간만큼 실행시키는 방식이다
     - **JVM에 의해 정해지기 때문에 개발자가 코드로 제어가 불가능하다**
@@ -358,23 +361,23 @@ public void run() {
     - join 수업시간 예제
         - 특정 스레드 종료시/지정한 시간동안 기다린다.
         
-        ```java
-        private void test4() {
-        		Thread th = new Thread(new CountDownThread(), "카운트다운");
-        		th.start();
-        		
-        		// 메인쓰레드가 카운트다운스레드에 조인
-        		try {
-        			// 현재쓰레드(main)가 th스레드에 join 
-        		//th.join();
-        			th.join(3000);  //join (long millis) 
-        		} catch (InterruptedException e) {
-        			e.printStackTrace();
-        		}
-        	}
-        ```
-        
-    
+```java
+private void test4() {
+		Thread th = new Thread(new CountDownThread(), "카운트다운");
+		th.start();
+		
+		// 메인쓰레드가 카운트다운스레드에 조인
+		try {
+			// 현재쓰레드(main)가 th스레드에 join 
+		//th.join();
+			th.join(3000);  //join (long millis) 
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+```
+
+
 
 #### sleep (long millis) : 일정시간동안 스레드 일시 정지
 
@@ -407,44 +410,44 @@ TestThread의 interrupt() 메소드를 실행하게 되면 TestThread가 sleep(
 
 - interrupt 수업 예제
     
-    ```java
-    public class ThreadStatusControlStudy {
-     
-    	public static void main(String[] args) {
-    		ThreadStatusControlStudy study = new ThreadStatusControlStudy();
-    		study.test5();
-    		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
-    	}
-    
-    private void test5() {
-    		Thread th = new Thread(new CountDownThread(), "카운트다운");
-    		th.start();
-    		
-    		System.out.println("엔터 입력시 카운트다운 종료!");
-    		new Scanner(System.in).nextLine();
-    		th.interrupt(); // 특정스레드 종료(InterruptedException유발)
-    	}
-    ```
-    
-    ```java
-    public class CountDownThread implements Runnable {
-    
-    	@Override
-    	public void run() {
-    		for(int i = 10; i >= 0; i--) {
-    			System.out.println(i);
-    			try {
-    				Thread.sleep(1000);
-    			} catch (InterruptedException e) {
-    //				e.printStackTrace();
-    				break; // 반복문 탈출!
-    			}
-    		}
-    		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
-    	}
-    }
-    ```
-    
+```java
+public class ThreadStatusControlStudy {
+ 
+	public static void main(String[] args) {
+		ThreadStatusControlStudy study = new ThreadStatusControlStudy();
+		study.test5();
+		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
+	}
+
+private void test5() {
+		Thread th = new Thread(new CountDownThread(), "카운트다운");
+		th.start();
+		
+		System.out.println("엔터 입력시 카운트다운 종료!");
+		new Scanner(System.in).nextLine();
+		th.interrupt(); // 특정스레드 종료(InterruptedException유발)
+	}
+```
+
+```java
+public class CountDownThread implements Runnable {
+
+	@Override
+	public void run() {
+		for(int i = 10; i >= 0; i--) {
+			System.out.println(i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+//				e.printStackTrace();
+				break; // 반복문 탈출!
+			}
+		}
+		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
+	}
+}
+```
+
 
 ---
 
@@ -498,72 +501,72 @@ public void method(){
     - 동기화를 하지 않았을 때 ATM1과 ATM2에서 동시 중간에 출금을 하는 바람에 잘못된 명세서가 출력되고 있다
     - 동기화 대상은 특정 객체 → 현재 코드에서는 **acc.withdraw() acc가 동기화 대상**이 된다.
     
-    ```java
-    public class Account {
-    	private int balance = 1000; // 잔액
-    	public int getBalance() {
-    		return balance;
-    	}
-    
-    public /***synchronized*/** void withdraw(int money) { // 동기화 메소드 처리
-    		// this 현재객체를 동기화처리
-    		**synchronized(this)**{			
-    			String threadName = Thread.currentThread().getName();
-    			System.out.printf("[%s]출금시도 %d원, 현재잔액 %d원 %n", threadName, money, balance);
-    			if(money <= balance) {
-    				balance -= money;
-    				System.out.printf("[%s]출금성공 -> 현재잔액 %d원 %n", threadName, balance);
-    			}
-    			else {
-    				System.out.printf("[%s]출금실패 -> 잔액부족 %n", threadName);			
-    			}
-    		}
-    	}
-    }
-    ```
-    
-    ```java
-    public class ATMMain {
-    
-    	public static void main(String[] args) {
-    		Account acc = new Account(); // 공유자원
-    		
-    		Thread th1 = new Thread(new ATMThread(acc), "ATM1");
-    		Thread th2 = new Thread(new ATMThread(acc), "ATM2");
-    		th1.start();
-    		th2.start();
-    	}
-    }
-    ```
-    
-    ```java
-    public class ATMThread implements Runnable {
-    
-    	private Account acc;
-    	public ATMThread (Account acc) {
-    		this.acc = acc;
-    	}
-    	
-    	@Override
-    	public void run() {
-    		// 잔액이 없을때 까지 출금시도
-    		while(acc.getBalance() > 0) {
-    			int money = (int)(Math.random() * 3 + 1) * 100; // 100 200 300
-    			acc.withdraw(money); // 출금
-    		}
-    		System.out.println("[" + Thread.currentThread().getName() + "종료]");
-    	}
-    }
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/56ba55dc_Untitled.png]]
-    
-    잘못된 명세서
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/1ed95a4d_Untitled.png]]
-    
-    올바른 명세서
-    
+```java
+public class Account {
+	private int balance = 1000; // 잔액
+	public int getBalance() {
+		return balance;
+	}
+
+public /***synchronized*/** void withdraw(int money) { // 동기화 메소드 처리
+		// this 현재객체를 동기화처리
+		**synchronized(this)**{			
+			String threadName = Thread.currentThread().getName();
+			System.out.printf("[%s]출금시도 %d원, 현재잔액 %d원 %n", threadName, money, balance);
+			if(money <= balance) {
+				balance -= money;
+				System.out.printf("[%s]출금성공 -> 현재잔액 %d원 %n", threadName, balance);
+			}
+			else {
+				System.out.printf("[%s]출금실패 -> 잔액부족 %n", threadName);			
+			}
+		}
+	}
+}
+```
+
+```java
+public class ATMMain {
+
+	public static void main(String[] args) {
+		Account acc = new Account(); // 공유자원
+		
+		Thread th1 = new Thread(new ATMThread(acc), "ATM1");
+		Thread th2 = new Thread(new ATMThread(acc), "ATM2");
+		th1.start();
+		th2.start();
+	}
+}
+```
+
+```java
+public class ATMThread implements Runnable {
+
+	private Account acc;
+	public ATMThread (Account acc) {
+		this.acc = acc;
+	}
+	
+	@Override
+	public void run() {
+		// 잔액이 없을때 까지 출금시도
+		while(acc.getBalance() > 0) {
+			int money = (int)(Math.random() * 3 + 1) * 100; // 100 200 300
+			acc.withdraw(money); // 출금
+		}
+		System.out.println("[" + Thread.currentThread().getName() + "종료]");
+	}
+}
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/56ba55dc_Untitled.png]]
+
+잘못된 명세서
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/1ed95a4d_Untitled.png]]
+
+올바른 명세서
+
 
 ---
 
@@ -614,61 +617,61 @@ thread.start();
 
 - 데몬스레드 수업시간 예제
     
-    ```java
-    <ThreadStatusControlStudy클래스>
-    public class ThreadStatusControlStudy {
-     
-    	public static void main(String[] args) {
-    		ThreadStatusControlStudy study = new ThreadStatusControlStudy()
-    		study.test3();
-    		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
-    	}
-    
-    private void test3() {
-    		Thread th = new Thread(new CountDownThread(), "카운트다운");
-    		th.setDaemon(true); // 이 코드를 주석하면 일반스레드가됨
-    		th.start();
-    		
-    		System.out.println("엔터입력시 카운트다운 종료!!");
-    		new Scanner(System.in).nextLine();
-    	}
-    }
-    ```
-    
-    ```java
-    <CountDownThread클래스>
-    
-    public class CountDownThread implements Runnable {
-    
-    	@Override
-    	public void run() {
-    		for(int i = 10; i >= 0; i--) {
-    			System.out.println(i);
-    			try {
-    				Thread.sleep(1000);
-    			} catch (InterruptedException e) {
-    //				e.printStackTrace();
-    				break; // 반복문 탈출!
-    			}
-    		}
-    		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
-    	}
-    
-    }
-    //결과
-    엔터 입력시 카운트다운 종료!
-    10
-    9
-    8
-    7
-    6
-    5
-    4
-    3
-    2
-    1
-    [카운트다운종료!]
-    ```
+```java
+<ThreadStatusControlStudy클래스>
+public class ThreadStatusControlStudy {
+ 
+	public static void main(String[] args) {
+		ThreadStatusControlStudy study = new ThreadStatusControlStudy()
+		study.test3();
+		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
+	}
+
+private void test3() {
+		Thread th = new Thread(new CountDownThread(), "카운트다운");
+		th.setDaemon(true); // 이 코드를 주석하면 일반스레드가됨
+		th.start();
+		
+		System.out.println("엔터입력시 카운트다운 종료!!");
+		new Scanner(System.in).nextLine();
+	}
+}
+```
+
+```java
+<CountDownThread클래스>
+
+public class CountDownThread implements Runnable {
+
+	@Override
+	public void run() {
+		for(int i = 10; i >= 0; i--) {
+			System.out.println(i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+//				e.printStackTrace();
+				break; // 반복문 탈출!
+			}
+		}
+		System.out.println("[" + Thread.currentThread().getName() + " 종료!]");
+	}
+
+}
+//결과
+엔터 입력시 카운트다운 종료!
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+[카운트다운종료!]
+```
 
 ## 관련 노트
 

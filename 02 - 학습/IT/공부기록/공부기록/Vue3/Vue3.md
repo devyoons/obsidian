@@ -1,15 +1,18 @@
 ---
 별칭:
   - "학습 - Vue3"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 "노션태그": "언어"
 노션원본: https://www.notion.so/16024612498b81468684d7293b0ce78d
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
 ---
 
 # 학습: Vue3

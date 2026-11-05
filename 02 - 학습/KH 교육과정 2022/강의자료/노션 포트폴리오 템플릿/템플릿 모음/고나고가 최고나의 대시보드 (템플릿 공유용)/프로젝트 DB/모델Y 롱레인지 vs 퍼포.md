@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 모델Y 롱레인지 vs 퍼포"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

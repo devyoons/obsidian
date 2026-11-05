@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - AOP(Aspect Oriented Programming)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/f42757925aa94f8e9733cd84e5dc0555
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: AOP(Aspect Oriented Programming)
@@ -32,20 +35,6 @@
 
 - AOP(Aspect Oriented Programming)
     - 개념 설명
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|a. 관점(Aspect)]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|b. Joinpoint]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|c. Pointcut]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|d. Advice]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|e. Weaving (= Cross-Cutting)]]
-    - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|Advice 종류]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|Before Advice]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|Around Advice]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|After Returning Advice]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|After Advice(*finally*)]]
-        - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|After Throwing Advice(*catch*)]]
-    - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|각 advice별로 실행구조]]
-    - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|선언식에서의 표현]]
-    - [[02 - 학습/KH 교육과정 2022/수업 필기/AOP(Aspect Oriented Programming)|Pointcut 선언하기]]
 
 ### 개념 설명
 
@@ -191,39 +180,39 @@ Weaving 은 AOP가 기존의 핵심 관심 모듈의 코드에 전혀 영향을 
 - pointcut : 상기표현식으로 joinpoint를 선정함.
 - pointcut-ref : 선언된 pointcut을 이름으로 참조함.
     
-    ```
-      <aop:config>
-      	<aop:advisor
-      		pointcut="com.xyz.someapp.SystemArchitecture.businessService()"
-      		advice-ref="some-advice"/>
-      </aop:config>
-    
-    ```
-    
+```
+  <aop:config>
+  	<aop:advisor
+  		pointcut="com.xyz.someapp.SystemArchitecture.businessService()"
+  		advice-ref="some-advice"/>
+  </aop:config>
+
+```
+
 1. `<aop:aspect> : multiple pointcut + multiple advice`
 - aop:aspect는 등록된 특정 Aspect빈(클래스)을 참조함.(@Aspect 어노테이션 선언과 동일함.)
     
-    ```
-      <aop:config>
-      	<aop:aspect id="loggerAspect" ref="loggerAspect">
-      		<aop:pointcut expression="execution(* com.kh.spring.memo..*(..))" id="pc"/>
-      		<aop:around method="aroundAdvice" pointcut-ref="pc"/>
-      		<aop:before method="beforeAdvice" pointcut-ref="pc"/>
-      	</aop:aspect>
-      </aop:config>
-    
-    ```
-    
+```
+  <aop:config>
+  	<aop:aspect id="loggerAspect" ref="loggerAspect">
+  		<aop:pointcut expression="execution(* com.kh.spring.memo..*(..))" id="pc"/>
+  		<aop:around method="aroundAdvice" pointcut-ref="pc"/>
+  		<aop:before method="beforeAdvice" pointcut-ref="pc"/>
+  	</aop:aspect>
+  </aop:config>
+
+```
+
 1. `<aop:pointcut> : pointcut 표현식 이용`
     
-    ```
-     <aop:config>
-     	<aop:pointcut id="businessService"
-     		expression="execution(* com.xyz.myapp.service.*.*(..))"/>
-     </aop:config>
-    
-    ```
-    
+```
+ <aop:config>
+ 	<aop:pointcut id="businessService"
+ 		expression="execution(* com.xyz.myapp.service.*.*(..))"/>
+ </aop:config>
+
+```
+
 
 ### Pointcut 선언하기
 
@@ -232,24 +221,24 @@ Pointcut은 Aspectj를 통해 와일드카드를 이용한 다음 표현식을 �
 1. execution pointcut designator
 `execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-pattern(param-pattern) throws-pattern?)`
     
-    ```java
-    @Pointcut("execution(public * *(..))")
-    private void anyPublicOperation() {}
-    ```
-    
-    ```java
-    @Pointcut("within(com.xyz.someapp.trading..*)")
-    private void inTrading() {}
-    ```
-    
+```java
+@Pointcut("execution(public * *(..))")
+private void anyPublicOperation() {}
+```
+
+```java
+@Pointcut("within(com.xyz.someapp.trading..*)")
+private void inTrading() {}
+```
+
 2. within pointcut designator
 3. name pointcut designator(다른 pointcut을 이름으로 참조함)
     
-    ```java
-    @Pointcut("anyPublicOperation() && inTrading()")
-    private void tradingOperation() {}
-    ```
-    
+```java
+@Pointcut("anyPublicOperation() && inTrading()")
+private void tradingOperation() {}
+```
+
 
 return-type-pattern, name-pattern, parameter-patter을 제외하고는 모두 optional임.
 

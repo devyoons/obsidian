@@ -1,46 +1,47 @@
 ---
 별칭:
   - "학습 - WAS 서버 설정"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/10624612498b80019374eb7f10345943
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
+  - "[[00 - 대시보드/주제/Docker|Docker]]"
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: WAS 서버 설정
 
 ## 세부 내용
 
----
-
----
 
 ## 1. Nginx 설치
 
----
 
 1. 설치 명령어 실행
     
-    ```bash
-    $ sudo apt update
-    $ sudo apt install nginx
-    ```
-    
+```bash
+$ sudo apt update
+$ sudo apt install nginx
+```
+
 
 1. 현재 내 IP 확인 후 IP 주소로 브라우저에 검색하여 확인
     
-    ```bash
-    $ ip addr
-    ```
-    
-    ![[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/첨부/ae3363f9_image.png]]
-    
-    해당 ip로 접속하면 nginx가 정상 실행중인 경우 위 페이지를 확인할 수 있다.
-    
+```bash
+$ ip addr
+```
+
+![[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/첨부/ae3363f9_image.png]]
+
+해당 ip로 접속하면 nginx가 정상 실행중인 경우 위 페이지를 확인할 수 있다.
+
 2. 도메인 설정 사이트에서 사용할 도메인 설정
     - My가비아 > DNS 관리툴 > 설정 > 레코드 수정 > Web Server가 설치된 인스턴스 IP로 레코드 등록
     - 도메인 타입은 `A`, 서브 도메인 타입은 `CNAME`
@@ -60,19 +61,19 @@
     - 도메인 주소로된 파일은 추후 필요없을 예정. nginx에 접속이 잘돼는지 확인용 (ex: domain.com)
     - nexus, gitlab, jenkins, web, app, mng 각 서브도메인별로 파일 생성하여 설정해야함. (ex: git.domain.com)
     
-    ```bash
-    $ sudo vi /etc/nginx/sites-available/{생성할 파일명}
-        
-    # 예시
-    $ sudo vi /etc/nginx/sites-available/git.domain.com
-      
-    # 파일 전부 생성한 후에 목록 확인
-    $ ls /etc/nginx/sites-available
-      
-    # 출력결과
-    ci.domain.com  default  git.domain.com  repo.domain.com  web.domain.com  app.domain.com  mng.domain.com
-    ```
+```bash
+$ sudo vi /etc/nginx/sites-available/{생성할 파일명}
     
+# 예시
+$ sudo vi /etc/nginx/sites-available/git.domain.com
+  
+# 파일 전부 생성한 후에 목록 확인
+$ ls /etc/nginx/sites-available
+  
+# 출력결과
+ci.domain.com  default  git.domain.com  repo.domain.com  web.domain.com app.domain.com  mng.domain.com
+```
+
 
 **위 생성한 파일 내용 예시**
 
@@ -84,44 +85,44 @@
     
     - nginx 접속 확인용으로 사용 후 추후에 주석처리한다.
     
-    ```bash
-    # 80번 포트에서 모든 요청을 HTTPS로 리다이렉트
-    server {
-    
-        listen 80;
-        listen [::]:80;
-    
-        server_name {도메인주소} www.{도메인주소};
-    
-        # 모든 요청을 HTTPS로 리다이렉트
-        # return 404; # managed by Certbot
-        return 301 https://$host$request_uri;
-    
+```bash
+# 80번 포트에서 모든 요청을 HTTPS로 리다이렉트
+server {
+
+    listen 80;
+    listen [::]:80;
+
+    server_name {도메인주소} www.{도메인주소};
+
+    # 모든 요청을 HTTPS로 리다이렉트
+    # return 404; # managed by Certbot
+    return 301 https://$host$request_uri;
+
+}
+
+# 443번 포트에서 백엔드로 요청 프록시 처리
+server {
+    listen 443 ssl; # managed by Certbot
+    server_name {도메인주소} www.{도메인주소};
+
+    access_log /var/log/nginx/domain.com/access.log;
+    error_log /var/log/nginx/domain.com/error.log;
+
+    # Root location block to serve static content
+    location / {
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+        try_files $uri $uri/ =404;
     }
-    
-    # 443번 포트에서 백엔드로 요청 프록시 처리
-    server {
-        listen 443 ssl; # managed by Certbot
-        server_name {도메인주소} www.{도메인주소};
-    
-        access_log /var/log/nginx/domain.com/access.log;
-        error_log /var/log/nginx/domain.com/error.log;
-    
-        # Root location block to serve static content
-        location / {
-            root /var/www/html;
-            index index.html index.htm index.nginx-debian.html;
-            try_files $uri $uri/ =404;
-        }
-    
-        # SSL/TLS configuration using Let's Encrypt certificate
-        ssl_certificate /etc/letsencrypt/live/{도메인주소}/fullchain.pem; # managed by Certbot
-        ssl_certificate_key /etc/letsencrypt/live/{도메인주소}/privkey.pem; # managed by Certbot
-        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-    }
-    ```
-    
+
+    # SSL/TLS configuration using Let's Encrypt certificate
+    ssl_certificate /etc/letsencrypt/live/{도메인주소}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/{도메인주소}/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+```
+
 
 **gitlab**
 
@@ -356,30 +357,30 @@ $ sudo ufw allow 443/tcp
 1. docker 설치
     - 리눅스의 응용 프로그램들을 프로세스 격리 기술들을 사용해 컨테이너로 실행하고 관리하는 오픈 소스 프로젝트
     
-    ```bash
-    # 우분투 시스템 패키지 업데이트
-    $ sudo apt-get update
-    
-    # 필요한 패키지 설치
-    $ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-    
-    # Docker의 공식 GPG키를 추가
-    $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    
-    # 시스템 패키지 업데이트
-    $ sudo apt-get update
-    
-    # Docker 설치
-    $ sudo apt-get install docker-ce docker-ce-cli containerd.io
-    # 위 명령어가 에러가나서 찾아보니 우분투에서는 도커 설치 명령어를 제공한다고함
-    
-    $ sudo apt install -y docker.io nfs-common dnsutils curl
-    
-    # 도커 실행상태 확인
-    $ sudo systemctl status docker
-    
-    ```
-    
+```bash
+# 우분투 시스템 패키지 업데이트
+$ sudo apt-get update
+
+# 필요한 패키지 설치
+$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+# Docker의 공식 GPG키를 추가
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+# 시스템 패키지 업데이트
+$ sudo apt-get update
+
+# Docker 설치
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+# 위 명령어가 에러가나서 찾아보니 우분투에서는 도커 설치 명령어를 제공한다고함
+
+$ sudo apt install -y docker.io nfs-common dnsutils curl
+
+# 도커 실행상태 확인
+$ sudo systemctl status docker
+
+```
+
 - 에러참고
     
     [http://3.36.24.220/topic/1472/sudo-apt-get-install-docker-ce-docker-ce-cli-containerd-io-docker-compose-plugin-%EC%84%A4%EC%B9%98-%EC%8B%9C-%EC%98%A4%EB%A5%98/3](http://3.36.24.220/topic/1472/sudo-apt-get-install-docker-ce-docker-ce-cli-containerd-io-docker-compose-plugin-%EC%84%A4%EC%B9%98-%EC%8B%9C-%EC%98%A4%EB%A5%98/3)
@@ -388,28 +389,28 @@ $ sudo ufw allow 443/tcp
 1. docker compose 설치
     - 여러 개의 도커 컨테이너를 하나의 어플리케이션을 구성하기 위해 사용
     
-    ```bash
-    # 도커 컴포즈 설치
-    $ sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-      
-    # 도커 컴포즈 권한 부여
-    $ sudo chmod +x /usr/local/bin/docker-compose
-      
-    # 심볼릭 링크 연결
-    $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-    ```
-    
+```bash
+# 도커 컴포즈 설치
+$ sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  
+# 도커 컴포즈 권한 부여
+$ sudo chmod +x /usr/local/bin/docker-compose
+  
+# 심볼릭 링크 연결
+$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
 
 1. 네트워크 생성
     - 여러 컨테이너 간의 통신을 원활하게 관리하고 분리된 네트워크 환경을 제공하기 위함
     
-    ```bash
-    $ sudo docker network create {생성할 네트워크명}
-    
-    # 예시
-    $ sudo docker network create ev-network
-    ```
-    
+```bash
+$ sudo docker network create {생성할 네트워크명}
+
+# 예시
+$ sudo docker network create ev-network
+```
+
 
 ## 3. GitLab 가이드
 
@@ -515,11 +516,11 @@ services:
 1. 도커 컴포즈 실행 명령
     - docker-compose.yml 파일이 있는 디렉토리에서 다음 명령어로 GitLab을 실행
     
-    ```bash
-    $ docker-compose up -d # 백그라운드에서 GitLab 컨테이너를 실행
-    $ docker-compose down # 실행 중인 GitLab 컨테이너를 중지하고 종료
-    ```
-    
+```bash
+$ docker-compose up -d # 백그라운드에서 GitLab 컨테이너를 실행
+$ docker-compose down # 실행 중인 GitLab 컨테이너를 중지하고 종료
+```
+
 2. GitLab 접속
 - 브라우저에서 `http://{서버 IP 주소}:{gitlab 포트}` 으로 접속할 수 있습니다.
     - `http://192.168.0.179:51080` or `http://localhost:51080`
@@ -633,22 +634,22 @@ $  ssh -T git@git.any-ev.com -p 41010
 
 1. Git 설치
     
-    ```bash
-    $ sudo apt-get install git
-    ```
-    
+```bash
+$ sudo apt-get install git
+```
+
 2. 올릴 프로젝트 경로로 이동 후 초기화
     
-    ```bash
-    $ git init
-    ```
-    
+```bash
+$ git init
+```
+
 3. 원격 저장소와 연결
     
-    ```bash
-    $ git remote add origin {원격저장소주소}
-    ```
-    
+```bash
+$ git remote add origin {원격저장소주소}
+```
+
 - 원격저장소 주소 복사
     
     *VM에서 접속할 시 localhost가 들어가야함*
@@ -660,40 +661,40 @@ $  ssh -T git@git.any-ev.com -p 41010
 
 1. 원격 저장소와 연결 확인
     
-    ```bash
-    $ git remote -v
-    ```
-    
+```bash
+$ git remote -v
+```
+
 2. 올릴 파일을 스토리지에 추가
     
-    ```bash
-    $ git add .
-    ```
-    
+```bash
+$ git add .
+```
+
 3. 커밋
     
-    ```bash
-    $ git commit -m "메세지 내용"
-    ```
-    
+```bash
+$ git commit -m "메세지 내용"
+```
+
 4. 커밋 내용 확인
     
-    ```bash
-    $ git shortlog
-    ```
-    
+```bash
+$ git shortlog
+```
+
 5. 원격 저장소에 푸시
     
-    ```bash
-    $ git push origin main
-    ```
-    
-    - 푸시가 안되는 경우
-    
-    ```bash
-    $ git config --global init.defaultBranch main
-    ```
-    
+```bash
+$ git push origin main
+```
+
+- 푸시가 안되는 경우
+
+```bash
+$ git config --global init.defaultBranch main
+```
+
 6. GitLab에 등록된 username과 password를 입력  *"accessToken 발급 사전 작업 되어있어야함"*
     - 등록이 안되어있다면 1번 내용을 통해 등록
     - 프로젝트 계정 권한 주는 방법
@@ -720,137 +721,137 @@ $  ssh -T git@git.any-ev.com -p 41010
 
 1. 시스템 패키지 리스트를 업데이트하여 최신 패키지를 사용할 수 있도록 함
     
-    ```bash
-    $ sudo apt-get update
-    ```
-    
+```bash
+$ sudo apt-get update
+```
+
 2. Java17 설치
     
-    ```bash
-    $ sudo apt-get install openjdk-17-jdk  # OpenJDK 17 버전 설치
-    ```
-    
+```bash
+$ sudo apt-get install openjdk-17-jdk  # OpenJDK 17 버전 설치
+```
+
 3. infra/jenkins 폴더 생성
     
-    ```bash
-    $ cd ~/infra # 'infra' 디렉토리로 이동
-    $ mkdir jenkins # 'jenkins' 디렉토리 생성
-    $ cd jenkins # 'jenkins' 디렉토리로 이동
-    ```
-    
+```bash
+$ cd ~/infra # 'infra' 디렉토리로 이동
+$ mkdir jenkins # 'jenkins' 디렉토리 생성
+$ cd jenkins # 'jenkins' 디렉토리로 이동
+```
+
 4. 도커 파일 (Dockerfile) 작성
     
-    ```bash
-    $ vim Dockerfile # Dockerfile 생성 및 작성
-    ```
-    
-    **Dockerfile**
-    
-    ```bash
-    From jenkins/jenkins:jdk17 # Jenkins 이미지에서 jdk17을 사용하여 기본 이미지를 생성
-    
-    USER root # root 권한으로 설정
-    
-    # 필수 패키지 설치(lsb-release는 시스템 정보를 가져오는 데 사용)
-    RUN apt-get update && apt-get install -y lsb-release
-    
-    # Docker GPG 키 다운로드 (도커 패키지를 신뢰할 수 있도록 서명된 키를 다운로드)
-    RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
-    https://download.docker.com/linux/debian/gpg
-    
-    # Docker 리포지토리 추가 (도커 설치를 위해 Debian 기반의 리포지토리를 추가)
-    RUN echo "deb [arch=$(dpkg --print-architecture) \
-    signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
-    https://download.docker.com/linux/debian \
-    $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
-    
-    # 도커 클라이언트 설치 (Docker CLI 도구 설치)
-    RUN apt-get update && apt-get install -y docker-ce-cli
-    
-    # sshpass 설치 (자동화된 SSH 로그인 도구 설치)
-    RUN apt-get install -y sshpass
-    
-    # 로케일 설정 (한국어 환경을 설정하고 UTF-8 인코딩 적용)
-    RUN apt-get install -y locales git \
-       && localedef -f UTF-8 -i ko_KR ko_KR.UTF-8
-    ENV LC_ALL ko_KR.UTF-8 # 모든 로케일 설정을 한국어로 변경
-    
-    # git 설치
-    Run apt-get install -y git
-    
-    # docker 그룹 추가 
-    RUN groupadd -f docker # docker 그룹이 존재하지 않으면 생성
-    
-    # jenkins 사용자를 docker 그룹과 root 그룹에 추가
-    RUN usermod -aG docker jenkins
-    RUN usermod -aG root jenkins
-    
-    # 이후 jenkins 사용자로 돌아감
-    USER jenkins
-    ```
-    
+```bash
+$ vim Dockerfile # Dockerfile 생성 및 작성
+```
+
+**Dockerfile**
+
+```bash
+From jenkins/jenkins:jdk17 # Jenkins 이미지에서 jdk17을 사용하여 기본 이미지를 생성
+
+USER root # root 권한으로 설정
+
+# 필수 패키지 설치(lsb-release는 시스템 정보를 가져오는 데 사용)
+RUN apt-get update && apt-get install -y lsb-release
+
+# Docker GPG 키 다운로드 (도커 패키지를 신뢰할 수 있도록 서명된 키를 다운로드)
+RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
+https://download.docker.com/linux/debian/gpg
+
+# Docker 리포지토리 추가 (도커 설치를 위해 Debian 기반의 리포지토리를 추가)
+RUN echo "deb [arch=$(dpkg --print-architecture) \
+signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
+https://download.docker.com/linux/debian \
+$(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+
+# 도커 클라이언트 설치 (Docker CLI 도구 설치)
+RUN apt-get update && apt-get install -y docker-ce-cli
+
+# sshpass 설치 (자동화된 SSH 로그인 도구 설치)
+RUN apt-get install -y sshpass
+
+# 로케일 설정 (한국어 환경을 설정하고 UTF-8 인코딩 적용)
+RUN apt-get install -y locales git \
+   && localedef -f UTF-8 -i ko_KR ko_KR.UTF-8
+ENV LC_ALL ko_KR.UTF-8 # 모든 로케일 설정을 한국어로 변경
+
+# git 설치
+Run apt-get install -y git
+
+# docker 그룹 추가 
+RUN groupadd -f docker # docker 그룹이 존재하지 않으면 생성
+
+# jenkins 사용자를 docker 그룹과 root 그룹에 추가
+RUN usermod -aG docker jenkins
+RUN usermod -aG root jenkins
+
+# 이후 jenkins 사용자로 돌아감
+USER jenkins
+```
+
 5. 도커 컴포즈 (docker-compose) 작성
     
-    ```bash
-    # 도커 컴포즈 파일 생성
-    $ cd ~/infra # 'infra' 디렉토리로 이동
-    $ mkdir jenkins # 'jenkins' 디렉토리 생성
-    $ cd jenkins # 'jenkins' 디렉토리로 이동
-    $ vim docker-compose.yml # docker-compose.yml 생성 및 작성
-    ```
-    
-    **docker-compose.yml**
-    
-    ```bash
-    version: '3.3' # Docker Compose 파일의 버전 설정
-    services:
-      jenkins:
-        privileged: true # 컨테이너 시스템의 주요 자원에 접근할 수 있게 지정
-        networks:
-          - ev-network # Jenkins가 연결될 네트워크 설정
-        build:
-          context: . # Dockerfile이 있는 위치
-          dockerfile: Dockerfile # Jenkins 이미지 생성에 사용할 Dockerfile 지정
-        container_name: 'jenkins' # 컨테이너 이름을 'jenkins'로 지정
-        restart: always # 컨테이너가 종료되면 자동으로 재시작하도록 설정
-        ports:
-          - '51008:8080' # Jenkins의 웹 인터페이스 포트 (51008을 로컬의 8080으로 매핑)
-          - '51007:50000' # Jenkins 에이전트 연결 포트 (51007을 로컬의 50000으로 매핑)
-        volumes:
-          - './volume/jenkins_home:/var/jenkins_home' # Jenkins 홈 디렉토리를 호스트와 공유
-          - '/var/run/docker.sock:/var/run/docker.sock' # 도커 소켓을 공유하여 도커 명령어 사용 가능하게 설정
-        environment:
-          TZ: "Asia/Seoul" # 시스템 시간대를 한국으로 설정
+```bash
+# 도커 컴포즈 파일 생성
+$ cd ~/infra # 'infra' 디렉토리로 이동
+$ mkdir jenkins # 'jenkins' 디렉토리 생성
+$ cd jenkins # 'jenkins' 디렉토리로 이동
+$ vim docker-compose.yml # docker-compose.yml 생성 및 작성
+```
+
+**docker-compose.yml**
+
+```bash
+version: '3.3' # Docker Compose 파일의 버전 설정
+services:
+  jenkins:
+    privileged: true # 컨테이너 시스템의 주요 자원에 접근할 수 있게 지정
     networks:
-      ev-network:
-        external: true # 외부 네트워크 사용
-    ```
-    
+      - ev-network # Jenkins가 연결될 네트워크 설정
+    build:
+      context: . # Dockerfile이 있는 위치
+      dockerfile: Dockerfile # Jenkins 이미지 생성에 사용할 Dockerfile 지정
+    container_name: 'jenkins' # 컨테이너 이름을 'jenkins'로 지정
+    restart: always # 컨테이너가 종료되면 자동으로 재시작하도록 설정
+    ports:
+      - '51008:8080' # Jenkins의 웹 인터페이스 포트 (51008을 로컬의 8080으로 매핑)
+      - '51007:50000' # Jenkins 에이전트 연결 포트 (51007을 로컬의 50000으로 매핑)
+    volumes:
+      - './volume/jenkins_home:/var/jenkins_home' # Jenkins 홈 디렉토리를 호스트와 공유
+      - '/var/run/docker.sock:/var/run/docker.sock' # 도커 소켓을 공유하여 도커 명령어 사용 가능하게 설정
+    environment:
+      TZ: "Asia/Seoul" # 시스템 시간대를 한국으로 설정
+networks:
+  ev-network:
+    external: true # 외부 네트워크 사용
+```
+
 6. volume 폴더의 소유권을 변경하여 Jenkins가 해당 폴더에 접근할 수 있도록 설정
     
-    ```bash
-    $ cd ~/infra/jenkins  # jenkins 디렉토리로 이동
-    $ sudo chown -R 1000:1000 ./volume  # 폴더의 소유권을 UID 1000(보통 jenkins 사용자)로 변경
-    ```
-    
+```bash
+$ cd ~/infra/jenkins  # jenkins 디렉토리로 이동
+$ sudo chown -R 1000:1000 ./volume  # 폴더의 소유권을 UID 1000(보통 jenkins 사용자)로 변경
+```
+
 7. Jenkins 도커 컴포즈 실행
     
-    ```bash
-    $ docker-compose up -d  # 백그라운드에서 Jenkins 컨테이너 실행
-    ```
-    
+```bash
+$ docker-compose up -d  # 백그라운드에서 Jenkins 컨테이너 실행
+```
+
 8. Jenkins 접속하여 초기 비밀번호 수정 
     - 브라우저에서 `http://{서버 IP 주소}:{포트번호}` 으로 접속할 수 있습니다.
     - `http://192.168.0.1:51080` or `http://localhost:51080`
 9. 초기 비밀번호 확인후 변경
     
-    ```bash
-    # 초기 비밀번호 파일이 있는 경로로 이동
-    $ sudo docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-    
-    # 출력된 비밀번호를 복사하여 브라우저에서 로그인 후 비밀번호를 변경한다.
-    ```
-    
+```bash
+# 초기 비밀번호 파일이 있는 경로로 이동
+$ sudo docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
+# 출력된 비밀번호를 복사하여 브라우저에서 로그인 후 비밀번호를 변경한다.
+```
+
 10. 젠킨스 설치
     - install suggested plugins 클릭
         
@@ -882,44 +883,44 @@ $  ssh -T git@git.any-ev.com -p 41010
 - 크레덴셜 생성을 위해 젠킨스에서 ssh-key를 등록합니다.
 1. jenkins는 docker container 위에서 작동되고 있으니 우선 docker에서 젠킨스서버에 접속합니다.
     
-    ```bash
-    # 기본 접속 명령어
-    $ docker exec -it {컨테이너명} bash
-    
-    # 예시
-    $ docker exec -it jenkins bash
-    
-    # root 계정으로 접속 명령어
-    $ docker exec -it -u root {컨테이너명} /bin/bash # /bin/bash가 안돼면 /bin/sh로 변경
-    ```
-    
+```bash
+# 기본 접속 명령어
+$ docker exec -it {컨테이너명} bash
+
+# 예시
+$ docker exec -it jenkins bash
+
+# root 계정으로 접속 명령어
+$ docker exec -it -u root {컨테이너명} /bin/bash # /bin/bash가 안돼면 /bin/sh로 변경
+```
+
 2. ssh 키를 발급한 뒤 젠킨스에서 gitlab에 접근이 가능한지 확인합니다.
     
-    ```bash
-    # ssh 키 발급
-    $ ssh-keygen -t rsa
-    
-    # ssh 키 생성 확인
-    $ cd /var/jenkins-home/.ssh
-    $ ls
-    id-rsa   id-rsa.pub
-    
-    # 공개키를 원격서버로 복사
-    $ ssh-copy-id -i /var/jenkins_home/.ssh/id_rsa.pub -p {원격서버 ssh 접속 port} {계정명}@{외부IP}
-    
-    # 예시
-    $ ssh-copy-id -i /var/jenkins_home/.ssh/id_rsa.pub -p 20022 evdev@112.0.24.90
-    
-    # id-rsa 키 확인
-    $ cat /var/jenkins-home/.ssh/id-rsa
-    # 출력된 키를 복사한 후에 젠킨스 웹사이트에 접속하여 아래 이미지와 같이 추가한다.
-    ```
-    
-    - Dashboard > Jenkins관리 > Credential > global 로 이동
-        - ID 부분에 `jenkins-ssh-key`로 설정했는데 추후 프로젝트에 있는 `Jenkinsfile`에서 해당ID를 사용하니 참고하세요.
-        
-        ![[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/첨부/2a3390bb_image.png]]
-        
+```bash
+# ssh 키 발급
+$ ssh-keygen -t rsa
+
+# ssh 키 생성 확인
+$ cd /var/jenkins-home/.ssh
+$ ls
+id-rsa   id-rsa.pub
+
+# 공개키를 원격서버로 복사
+$ ssh-copy-id -i /var/jenkins_home/.ssh/id_rsa.pub -p {원격서버 ssh 접속 port} {계정명}@{외부IP}
+
+# 예시
+$ ssh-copy-id -i /var/jenkins_home/.ssh/id_rsa.pub -p 20022 evdev@112.0.24.90
+
+# id-rsa 키 확인
+$ cat /var/jenkins-home/.ssh/id-rsa
+# 출력된 키를 복사한 후에 젠킨스 웹사이트에 접속하여 아래 이미지와 같이 추가한다.
+```
+
+- Dashboard > Jenkins관리 > Credential > global 로 이동
+    - ID 부분에 `jenkins-ssh-key`로 설정했는데 추후 프로젝트에 있는 `Jenkinsfile`에서 해당ID를 사용하니 참고하세요.
+
+    ![[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/첨부/2a3390bb_image.png]]
+
 
 <aside>
 💡
@@ -995,17 +996,17 @@ $  ssh -T git@git.any-ev.com -p 41010
 1. 저장 후 job 생성 확인
     - 대시보드로 돌아가면 정상적으로 생성된것을 확인 할 수 있습니다.
     
-    ```bash
-    # 도커 관련 플러그인
-    Docker, Docker Commons, Docker Pipeline, Docker API, docker-build-step
-    
-    # gitlab 관련 플러그인
-    Git, Git client, Git Parameter, GitLab, GitLab API, GitLab Authentication
-    
-    # 젠킨스 사각화 플러그인
-    pipeline-stage-view 
-    ```
-    
+```bash
+# 도커 관련 플러그인
+Docker, Docker Commons, Docker Pipeline, Docker API, docker-build-step
+
+# gitlab 관련 플러그인
+Git, Git client, Git Parameter, GitLab, GitLab API, GitLab Authentication
+
+# 젠킨스 사각화 플러그인
+pipeline-stage-view 
+```
+
 
 #### 2. 젠킨스 deploy 방법 (JenkinsFile 작성)
 
@@ -1247,79 +1248,79 @@ pipeline {
 
 1. infra/nexus 폴더 생성
     
-    ```bash
-    $ cd ~/infra # 'infra' 디렉토리로 이동
-    $ mkdir nexus # 'nexus' 디렉토리 생성
-    $ cd nexus # 'nexus' 디렉토리로 이동
-    ```
-    
+```bash
+$ cd ~/infra # 'infra' 디렉토리로 이동
+$ mkdir nexus # 'nexus' 디렉토리 생성
+$ cd nexus # 'nexus' 디렉토리로 이동
+```
+
 2. 도커 파일 (Dockerfile) 작성
     
-    ```bash
-    $ vim Dockerfile # Dockerfile 생성 및 작성
-    ```
-    
-    **Dockerfile**
-    
-    ```bash
-    FROM sonatype/nexus3:3.32.0
-     
-    USER root
-     
-    RUN chown -R nexus:nexus ${NEXUS_HOME}/etc \
-        && sed '/^application-port/s:$:\napplication-port-ssl=8443:' -i ${NEXUS_HOME}/etc/nexus-default.properties \
-        && sed '/^nexus-args/s:$:,${jetty.etc}/jetty-https.xml:' -i ${NEXUS_HOME}/etc/nexus-default.properties \
-        && rm -rf ${NEXUS_HOME}/etc/ssl && ln -s ${NEXUS_DATA}/etc/ssl ${NEXUS_HOME}/etc/ssl
-     
-    COPY start.sh /usr/local/bin
-     
-    USER nexus
-     
-    EXPOSE 8443
-     
-    CMD start.sh
-    ```
-    
+```bash
+$ vim Dockerfile # Dockerfile 생성 및 작성
+```
+
+**Dockerfile**
+
+```bash
+FROM sonatype/nexus3:3.32.0
+ 
+USER root
+ 
+RUN chown -R nexus:nexus ${NEXUS_HOME}/etc \
+    && sed '/^application-port/s:$:\napplication-port-ssl=8443:' -i ${NEXUS_HOME}/etc/nexus-default.properties \
+    && sed '/^nexus-args/s:$:,${jetty.etc}/jetty-https.xml:' -i ${NEXUS_HOME}/etc/nexus-default.properties \
+    && rm -rf ${NEXUS_HOME}/etc/ssl && ln -s ${NEXUS_DATA}/etc/ssl ${NEXUS_HOME}/etc/ssl
+ 
+COPY start.sh /usr/local/bin
+ 
+USER nexus
+ 
+EXPOSE 8443
+ 
+CMD start.sh
+```
+
 3. 도커 컴포즈 (docker-compose) 작성
     
-    ```bash
-    $ vim docker-compose.yml # docker-compose.yml 생성 및 작성
-    ```
-    
-    **docker-compose.yml**
-    
-    ```bash
-    version: '3.9'
-    services:
-      nexus:
-        build:
-          context: .
-          dockerfile: Dockerfile
-        image: any-ev_nexus:myversion
-        container_name: 'nexus'
-        user: root
-        restart: always
-        ports:
-          - 18081:8081
-          - 15443:5443
-        volumes:
-          - './volume/nexus-data:/nexus-data'
-        environment:
-          TZ: 'Asia/Seoul'
-          SAN_DNS: 'nexus'
-        networks:
-          - ev-network
+```bash
+$ vim docker-compose.yml # docker-compose.yml 생성 및 작성
+```
+
+**docker-compose.yml**
+
+```bash
+version: '3.9'
+services:
+  nexus:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: any-ev_nexus:myversion
+    container_name: 'nexus'
+    user: root
+    restart: always
+    ports:
+      - 18081:8081
+      - 15443:5443
+    volumes:
+      - './volume/nexus-data:/nexus-data'
+    environment:
+      TZ: 'Asia/Seoul'
+      SAN_DNS: 'nexus'
     networks:
-      ev-network:
-        external: true
-    ```
-    
+      - ev-network
+networks:
+  ev-network:
+    external: true
+```
+
 4. 스크립트 파일 (`start.sh`) 작성
     
-    ```bash
-    $ vim start.sh
-    ```
-    
+```bash
+$ vim start.sh
+```
+
 
 **start.sh**
 
@@ -1339,29 +1340,29 @@ sh -c ${SONATYPE_DIR}/start-nexus-repository-manager.sh
 
 1. 스크립트파일 실행권한부여 및 파일생성 현황 확인
     
-    ```bash
-    $ chmod +x start.sh 
-    $ ls -al
-    ```
-    
+```bash
+$ chmod +x start.sh 
+$ ls -al
+```
+
 2. nexus 도커 컴포즈 실행
     
-    ```bash
-    $ docker-compose up -d
-    ```
-    
+```bash
+$ docker-compose up -d
+```
+
 3. 초기 비밀번호 찾기
     
-    ```bash
-    # nexus 서버 접속
-    $ docker exec -it nexus /bin/bash
-    
-    # 비밀번호 찾기
-    $ cd /nexus-data
-    $ ls -al
-    $ cat admin.password
-    ```
-    
+```bash
+# nexus 서버 접속
+$ docker exec -it nexus /bin/bash
+
+# 비밀번호 찾기
+$ cd /nexus-data
+$ ls -al
+$ cat admin.password
+```
+
 4. 찾은 비밀번호로 nexus 웹사이트에 접속하여 로그인 후 수정
     
     ![[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/첨부/0a090229_image.png]]
@@ -1403,22 +1404,22 @@ sh -c ${SONATYPE_DIR}/start-nexus-repository-manager.sh
 1. Nexus에서 내장되어 있는 `keytool`을 이용해서 `nexus.crt`라는 Nexus 인증서를 생성후 Export 한다.
     - 인증서명은 nexus.crt로 생성된다.
     
-    ```bash
-    $ docker exec nexus keytool -printcert -sslserver 127.0.0.1:8443 -rfc | tee nexus.crt
-    -----BEGIN CERTIFICATE-----
-    MIIDpzCCAo+gAwIBAgIECefZAjANBgkqhkiG9w0BAQsFADBxMQswCQYDVQQGEwJL
-    ... 중략 ...
-    tLLOW1jWZibfItnWEePdaeer7DNxDoOPONdO
-    -----END CERTIFICATE-----
-    ```
-    
+```bash
+$ docker exec nexus keytool -printcert -sslserver 127.0.0.1:8443 -rfc | tee nexus.crt
+-----BEGIN CERTIFICATE-----
+MIIDpzCCAo+gAwIBAgIECefZAjANBgkqhkiG9w0BAQsFADBxMQswCQYDVQQGEwJL
+... 중략 ...
+tLLOW1jWZibfItnWEePdaeer7DNxDoOPONdO
+-----END CERTIFICATE-----
+```
+
 2. 생성된 nexus.crt 인증서 내용을 확인한다.
     - 출력된 내역중 CN, DNS등의 정보가 입력된 정보 (FastCampus, Private DNS 도메인명) 과 동일한 값이 입력이 되었으면 정상적으로 인증서가 생성된 것이다.
     
-    ```bash
-    $ openssl x509 -in nexus.crt -text |grep -i ' cn\|dns\|before'  -2
-    ```
-    
+```bash
+$ openssl x509 -in nexus.crt -text |grep -i ' cn\|dns\|before'  -2
+```
+
 
 ### 4. 인증서 Import
 
@@ -1496,20 +1497,20 @@ $ docker login -u 'admin' -p 'a1234' https://repo.any-ev:5443
 
 1. infra/jenkins 폴더 생성
     
-    ```bash
-    $ cd ~/infra # 'infra' 디렉토리로 이동
-    $ mkdir redis # 'redis' 디렉토리 생성
-    $ cd redis # 'redis' 디렉토리로 이동
-    ```
-    
+```bash
+$ cd ~/infra # 'infra' 디렉토리로 이동
+$ mkdir redis # 'redis' 디렉토리 생성
+$ cd redis # 'redis' 디렉토리로 이동
+```
+
 2. 도커 컴포즈 (docker-compose) 작성
     
-    ```bash
-    $ cd ~/infra # 'infra' 디렉토리로 이동
-    $ mkdir redis # 'redis' 디렉토리 생성
-    $ vim docker-compose.yml # docker-compose.yml 생성 및 작성
-    ```
-    
+```bash
+$ cd ~/infra # 'infra' 디렉토리로 이동
+$ mkdir redis # 'redis' 디렉토리 생성
+$ vim docker-compose.yml # docker-compose.yml 생성 및 작성
+```
+
 
 **docker-compose.yml**
 
@@ -1540,44 +1541,44 @@ networks:
 
 1. 도커 컴포즈 실행
     
-    ```bash
-    $ docker-compose up -d
-    ```
-    
+```bash
+$ docker-compose up -d
+```
+
 2. 컨테이너 실행 확인
     
-    ```bash
-    $ docker ps
-    ```
-    
+```bash
+$ docker ps
+```
+
 3. 레디스 접속
     
-    ```bash
-    $ docker exec -it {컨테이너명} /bin/sh # /bin/sh 안돼면 /bin/bash 로 변경
-    
-    # 예시
-    $ docker exec -it redis /bin/sh
-    ```
-    
+```bash
+$ docker exec -it {컨테이너명} /bin/sh # /bin/sh 안돼면 /bin/bash 로 변경
+
+# 예시
+$ docker exec -it redis /bin/sh
+```
+
 4. 레디스 cli 접속
     
-    ```bash
-    $ redis-cli
-    ```
-    
+```bash
+$ redis-cli
+```
+
 5. 비밀번호 입력
     - 비밀번호 설정 위치 : docker-compose.yml에 --requirepass "비밀번호”
     
-    ```bash
-    $ auth {비밀번호}
-    ```
-    
+```bash
+$ auth {비밀번호}
+```
+
 6. 연결 확인
     - 명령어 입력 후 "pong"이 출력되면 정상
     
-    ```bash
-    $ ping
-    ```
+```bash
+$ ping
+```
 
 ## 관련 노트
 

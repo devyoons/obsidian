@@ -1,7 +1,7 @@
 ---
 별칭:
   - "강의 - xml"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev

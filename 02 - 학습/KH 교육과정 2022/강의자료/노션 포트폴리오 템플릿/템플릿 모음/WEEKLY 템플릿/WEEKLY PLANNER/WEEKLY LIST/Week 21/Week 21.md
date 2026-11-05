@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - Week 21"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
@@ -24,7 +24,7 @@
 
 ### 🌟 DAILY ROUTINE
 
-- [x]  [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/네이버 카페|네이버 카페]] 신규 가입인사하기
+- [x]  네이버 카페 신규 가입인사하기
 - [x]  [‣](https://app.notion.com/p/7d1ceb1161af47d1ac9e4306a7e560f7) 책 읽기
 - [ ]  
 
@@ -38,7 +38,7 @@
 
 ---
 
-`12:00-13:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/경제학원론|경제학원론]] 
+`12:00-13:00` 경제학원론 
 
 `12:00-13:00` 성균관대 강의
 
@@ -49,13 +49,13 @@
 - [x]  아이패드 프로 5세대 출시일 확인
 - [x]  굿즈 택배 발송하기
 - [x]  인생네컷 위치 파악하기
-- [x]  [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/선유도서관|선유도서관]]  강의 준비
+- [x]  선유도서관  강의 준비
 
 ### TUESDAY
 
 ---
 
-`12:00-14:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/선유도서관|선유도서관]] 강의 준비하기
+`12:00-14:00` 선유도서관 강의 준비하기
 
 `12:00-13:00` 도서관 출발하기
 
@@ -72,7 +72,7 @@
 
 ---
 
-`12:00-14:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/경제학원론|경제학원론]] 
+`12:00-14:00` 경제학원론 
 
 `18:00-21:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/한양대학교 노션 강의|한양대학교 노션 강의]] 
 
@@ -90,7 +90,7 @@
 
 `12:00-13:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/연세대학교 노션 강의|연세대학교 노션 강의]] 
 
-`19:00-21:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/선유도서관|선유도서관]] 
+`19:00-21:00` 선유도서관 
 
 ---
 
@@ -103,11 +103,11 @@
 
 ---
 
-`12:00-13:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/노션 왕초보 클래스 1기|노션 왕초보 클래스 1기]] 
+`12:00-13:00` 노션 왕초보 클래스 1기 
 
-`12:00-13:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/선유도서관|선유도서관]] 강의 
+`12:00-13:00` 선유도서관 강의 
 
-`19:00-20:00` [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/노션 왕초보 클래스 1기|노션 왕초보 클래스 1기]] 
+`19:00-20:00` 노션 왕초보 클래스 1기 
 
 ---
 

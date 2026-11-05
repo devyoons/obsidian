@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - M1X 맥북프로 벤치마크"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

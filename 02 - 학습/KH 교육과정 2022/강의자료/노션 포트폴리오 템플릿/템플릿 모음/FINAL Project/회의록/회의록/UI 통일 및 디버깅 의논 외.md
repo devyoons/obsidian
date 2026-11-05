@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - UI 통일 및 디버깅 의논 외"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

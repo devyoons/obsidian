@@ -1,0 +1,15 @@
+/* 모든 제목(H1~H6)과 문서 상단 제목을 검정색으로 */
+body {
+  --h1-color: #000;
+  --h2-color: #000;
+  --h3-color: #000;
+  --h4-color: #000;
+  --h5-color: #000;
+  --h6-color: #000;
+  --inline-title-color: #000;
+}
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3,
+.markdown-rendered h4, .markdown-rendered h5, .markdown-rendered h6,
+.HyperMD-header, .cm-header, .inline-title {
+  color: #000 !important;
+}

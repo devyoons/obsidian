@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - OvenApp & 시퀀스 & 테이블 정의서"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

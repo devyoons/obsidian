@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - UML 요구사항 예제"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/기초-자격증
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/1747d064acb04708a5068a7e6728138d
+주제:
+  - "[[00 - 대시보드/주제/소프트웨어 설계|소프트웨어 설계]]"
 ---
 
 # 강의: UML 요구사항 예제

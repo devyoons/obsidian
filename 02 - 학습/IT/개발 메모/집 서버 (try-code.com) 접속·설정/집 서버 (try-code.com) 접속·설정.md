@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - 집 서버 (try-code.com) 접속·설정"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/6849ecba7070415f9819431225538cc5
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
 ---
 
 # 학습: 집 서버 (try-code.com) 접속·설정
@@ -18,9 +21,9 @@
 ssh [yoon@110.9.24.96](mailto:yoon@110.9.24.96) -p 20022
 Xksekswl!
 
-[[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/nginx|nginx]]
+[[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/nginx|nginx]]
 
-[[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/docker|docker]]
+[[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/도커 설치|docker]]
 
 [[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/gitlab|gitlab]]
 
@@ -82,11 +85,11 @@ pw : admin
 
 ## 하위 노트
 
-- [[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/docker|docker]]
+- [[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/도커 설치|docker]]
 - [[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/gitlab|gitlab]]
 - [[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/jenkins|jenkins]]
 - [[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/nexus|nexus]]
-- [[02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/nginx|nginx]]
+- [[02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/nginx|nginx]]
 
 ## 관련 노트
 

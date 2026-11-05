@@ -1,16 +1,19 @@
 ---
 별칭:
   - "서버 - 게스트용 DB 접속정보"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
   - status/in-progress
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/진행중/안전톡/안전톡 (스마트 건설현장 플랫폼)|안전톡 (스마트 건설현장 플랫폼)]]"
 환경: 
 노션원본: https://www.notion.so/1f324612498b8081aa5dd533297b0fef
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 서버: 게스트용 DB 접속정보

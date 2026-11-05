@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - TMI (Travel Making Imagine)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
@@ -37,9 +37,9 @@
 
 ---
 
-[[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/기획안|기획안]]
+기획안
 
-[[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/최종발표|최종발표]]
+최종발표
 
 [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/참고 사이트 모음|참고 사이트 모음]]
 
@@ -49,7 +49,7 @@
 
 [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/ERD|ERD]]
 
-[[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/Wire Frame|Wire Frame]]
+Wire Frame
 
 [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/유스케이스|유스케이스]]
 
@@ -71,7 +71,7 @@
 
 ---
 
-[[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/요구사항 정의서|요구사항 정의서]]
+요구사항 정의서
 
 ## 😶‍🌫️협업
 
@@ -132,16 +132,12 @@ Collaboration tool  `notion`  `Git` `Github` `ERDcloud`  `Google Spread Sheet`
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/ERD|ERD]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/JDBC 연동 확인|JDBC 연동 확인]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/NOTION 사용법|NOTION 사용법]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/Wire Frame|Wire Frame]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/summernote사용법|summernote사용법]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/기획안|기획안]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/시퀀스 다이어그램|시퀀스 다이어그램]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/오라클 클라우드 협업을 위한 준비|오라클 클라우드 협업을 위한 준비]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/요구사항 정의서|요구사항 정의서]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/유스케이스|유스케이스]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/일정관리/타임라인 프로젝트/타임라인 프로젝트|타임라인 프로젝트]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/참고 사이트 모음|참고 사이트 모음]]
-- [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/최종발표|최종발표]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/코드 참고|코드 참고]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/코드 컨벤션|코드 컨벤션]]
 - [[02 - 학습/KH 교육과정 2022/강의자료/TMI (Travel Making Imagine)/코드리뷰|코드리뷰]]

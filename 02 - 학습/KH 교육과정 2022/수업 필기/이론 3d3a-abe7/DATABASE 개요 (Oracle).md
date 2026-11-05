@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - DATABASE 개요 (Oracle)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/d0ec020f2c99454bba950f0f36299d4f
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/Oracle|Oracle]]"
 ---
 
 # 강의: DATABASE 개요 (Oracle)

@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - GitHub 꾸미기 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/7df162557cfa4851a99bee548008ae64
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: GitHub 꾸미기 (1)

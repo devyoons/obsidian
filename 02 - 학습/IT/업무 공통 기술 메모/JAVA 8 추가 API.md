@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - JAVA 8 추가 API"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/9be500eac892409c99cb19c3fbdb2180
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 학습: JAVA 8 추가 API
@@ -64,30 +67,30 @@ public class AnonymousToLambda {
 
 - 사용방법
     
-    ```java
-    (인자 리스트) -> { body }
-    ```
-    
-    - 인자 리스트
-        - 인자가 없을 때 : ( )
-        - 인자가 1개일 때 : (one) 또는 one으로 괄호() 생략 가능
-        - 인자가 여러 개일 때 : (one, two) 괄호 생략 X
-        - 인자의 타입(Type)은 생략 가능 / 컴파일러가 추론(infer)하지만 명시할 수도 있다. (Integer one, Integer two)
-    - Body(바디)
-        - 화살표(->) 오른쪽에 함수 본문을 정의
-        - **여러 줄인 경우 { }를 사용해서 묶는다.**
-        - **1 줄인 경우 { }를 생략 가능하며, return 또한 생략 가능**
-    
-    ```java
-    // 생략 전
-    Function<Integer, Integer> plus10 = (input) -> {
-        return input + 10;
-    };
-     
-    // 괄호{ } , return 생략
-    Function<Integer, Integer> plus20 = (input) -> input + 20; // 괄호, return 생략 가능
-    ```
-    
+```java
+(인자 리스트) -> { body }
+```
+
+- 인자 리스트
+    - 인자가 없을 때 : ( )
+    - 인자가 1개일 때 : (one) 또는 one으로 괄호() 생략 가능
+    - 인자가 여러 개일 때 : (one, two) 괄호 생략 X
+    - 인자의 타입(Type)은 생략 가능 / 컴파일러가 추론(infer)하지만 명시할 수도 있다. (Integer one, Integer two)
+- Body(바디)
+    - 화살표(->) 오른쪽에 함수 본문을 정의
+    - **여러 줄인 경우 { }를 사용해서 묶는다.**
+    - **1 줄인 경우 { }를 생략 가능하며, return 또한 생략 가능**
+
+```java
+// 생략 전
+Function<Integer, Integer> plus10 = (input) -> {
+    return input + 10;
+};
+ 
+// 괄호{ } , return 생략
+Function<Integer, Integer> plus20 = (input) -> input + 20; // 괄호, return 생략 가능
+```
+
 
 #### interface : default, static 메서드
 
@@ -242,22 +245,22 @@ System.out.println("Count : " + count); // 2
 - 명시적으로 해당 변수가 null일수도 있다는 가능성을 표현할 수 있음.
 - NPE를 유발할 수 있는 null을 직접 다루지 않아도되서 코드가 깔끔해진다.
     
-    ```java
-    // 적용 전
-    public void test(){
-        String str = "ggomak";
-        if(str!=null){
-            System.out.println(str);
-        }	
-    }
-    // 적용 후
-    public void test(){
-        String str = "ggomak";
-        Optional<String> opt = Optional.ofNullable(str);
-        opt.ifPresent(name -> System.out.println(name));
-    }
-    ```
-    
+```java
+// 적용 전
+public void test(){
+    String str = "ggomak";
+    if(str!=null){
+        System.out.println(str);
+    }	
+}
+// 적용 후
+public void test(){
+    String str = "ggomak";
+    Optional<String> opt = Optional.ofNullable(str);
+    opt.ifPresent(name -> System.out.println(name));
+}
+```
+
 - 메서드가 반환할 결과값이 ‘없음’을 명백하게 표현할 필요가 있고, null을 반환하면 에러를 유발할 가능성이 높은 상황에서 메서드의 반환 타입으로 Optional을 사용하자는 것이 만들어진 주목적이다.
 
 #### StringJoiner : 문자열을 구분자로 합칠 수 있는 기능
@@ -342,74 +345,74 @@ final String result = numbers.stream()
 
 - 현재 시간 객체 생성
     
-    ```java
-    // 현재 시간 객체 생성
-    LocalTime localTime = LocalTime.now(); // 11:37:23.431062500
-    LocalTime localTIme = LocalTime.of(12, 30, 0);//12:30
-    ```
-    
+```java
+// 현재 시간 객체 생성
+LocalTime localTime = LocalTime.now(); // 11:37:23.431062500
+LocalTime localTIme = LocalTime.of(12, 30, 0);//12:30
+```
+
 
 - 객체의 형변환
     
-    ```java
-    // localTime -> String 
-    localTime.format( DateTimeFormatter.ISO_LOCAL_TIME ); // 11:07:27.0000000000
-    localTime.format( DateTimeFormatter.ofPattern( "HH:mm:ss" ); // 11:07:27
-    
-    // String -> localTime 
-    LocalTime.parse( "22:00:00", DateTimeFormatter.ofPattern( "HH:mm:ss" ) ); // @param String, DateTimeFormatter
-    ```
-    
+```java
+// localTime -> String 
+localTime.format( DateTimeFormatter.ISO_LOCAL_TIME ); // 11:07:27.0000000000
+localTime.format( DateTimeFormatter.ofPattern( "HH:mm:ss" ); // 11:07:27
+
+// String -> localTime 
+LocalTime.parse( "22:00:00", DateTimeFormatter.ofPattern( "HH:mm:ss" ) ); // @param String, DateTimeFormatter
+```
+
 
 - 유용한 메서드
     
-    ```java
-    // 시간, 분, 초 나노초 얻기 
-    loalTime.getHour(); // 11
-    localTime.getMinute(); // 25
-    localTime.getSecond(); // 38
-    localTime.getNano(); // 879975840
-    
-    // 시간 비교 
-    LocalTime time1 = LocalTime.of( 12, 30, 0 );
-    LocalTime time2 = LocalTime.of( 13, 40, 0 );
-    
-    time1.isAfter( time2 ); // false ( @param LocalTime )
-    time1.isBefore( time2 ); // true
-    
-    // 특정 시간에서 특정 부분 ( 시간, 분, 초 ) 변경한 객체 얻기
-    LocalTime localTime3 = LocalTime.of(12, 30, 0);
-    
-    localTime3.with(ChronoField.MINUTE_OF_HOUR, 40); // 12:40 ( @param TemporalField field, long newValue )
-    localTime3.withHour(13); // 13:30
-    localTime3.withMinute(40); // 12:40
-    localTime3.withSecond(40); // 12:30:40
-    localTime3.withNano(40); // 12:30:00.000000040
-    
-    // 시간 더하기
-    localTime3.plus(2, ChronoUnit.HOURS); // 14:30 ( @param long amountToAdd, TeporalUnit unit )
-    localTime3.plusHours(2); // 14:30
-    localTime3.plusMinutes(30); // 13:00
-    localTime3.plusSeconds(30); // 12:30:30
-    localTime3.plusNanos(30); // 12:30:00.000000030
-    
-    // 시간 빼기
-    localTime3.minus(2, ChronoUnit.HOURS); // 10:30 ( @param long amountToSubtract, TeporalUnit unit )
-    localTime3.minusHours(2); // 10:30
-    localTime3.minusMinutes(30); // 12:00
-    localTime3.minusSeconds(30); // 12:29:30
-    localTime3.minusNanos(30); // 12:29:59.999999970
-    
-    // 두 시간 차이
-    Duration duration = Duration.between(time1, time2);
-    duration.getNano(); // 0
-    duration.getSeconds(); // 4200
-    
-    long diffHours = ChronoUnit.HOURS.between(time1, time2); // 1
-    long diffMinutes = ChronoUnit.MINUTES.between(time1, time2); // 70
-    long diffSeconds = ChronoUnit.SECONDS.between(time1, time2); // 4200
-    ```
-    
+```java
+// 시간, 분, 초 나노초 얻기 
+loalTime.getHour(); // 11
+localTime.getMinute(); // 25
+localTime.getSecond(); // 38
+localTime.getNano(); // 879975840
+
+// 시간 비교 
+LocalTime time1 = LocalTime.of( 12, 30, 0 );
+LocalTime time2 = LocalTime.of( 13, 40, 0 );
+
+time1.isAfter( time2 ); // false ( @param LocalTime )
+time1.isBefore( time2 ); // true
+
+// 특정 시간에서 특정 부분 ( 시간, 분, 초 ) 변경한 객체 얻기
+LocalTime localTime3 = LocalTime.of(12, 30, 0);
+
+localTime3.with(ChronoField.MINUTE_OF_HOUR, 40); // 12:40 ( @param TemporalField field, long newValue )
+localTime3.withHour(13); // 13:30
+localTime3.withMinute(40); // 12:40
+localTime3.withSecond(40); // 12:30:40
+localTime3.withNano(40); // 12:30:00.000000040
+
+// 시간 더하기
+localTime3.plus(2, ChronoUnit.HOURS); // 14:30 ( @param long amountToAdd, TeporalUnit unit )
+localTime3.plusHours(2); // 14:30
+localTime3.plusMinutes(30); // 13:00
+localTime3.plusSeconds(30); // 12:30:30
+localTime3.plusNanos(30); // 12:30:00.000000030
+
+// 시간 빼기
+localTime3.minus(2, ChronoUnit.HOURS); // 10:30 ( @param long amountToSubtract, TeporalUnit unit )
+localTime3.minusHours(2); // 10:30
+localTime3.minusMinutes(30); // 12:00
+localTime3.minusSeconds(30); // 12:29:30
+localTime3.minusNanos(30); // 12:29:59.999999970
+
+// 두 시간 차이
+Duration duration = Duration.between(time1, time2);
+duration.getNano(); // 0
+duration.getSeconds(); // 4200
+
+long diffHours = ChronoUnit.HOURS.between(time1, time2); // 1
+long diffMinutes = ChronoUnit.MINUTES.between(time1, time2); // 70
+long diffSeconds = ChronoUnit.SECONDS.between(time1, time2); // 4200
+```
+
 - 참조
     
     [Java의 날짜/시간 API. Date와 Calendar는 왜 사용하면 안될까?](https://gaebalsogi.tistory.com/66)

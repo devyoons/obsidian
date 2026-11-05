@@ -1,7 +1,7 @@
 ---
 별칭:
   - "서버 - Untitled"
-태그:
+tags:
   - type/server
   - context/work
   - theme/dev
@@ -38,10 +38,10 @@ d2442ca4bb0435405496ac38deca4bc1f6c9464a
 
 - awa : jenkins-access-token
     
-    ```jsx
-    a6476e6d5de57c6218bcd61898e9041912d612e1
-    ```
-    
+```jsx
+a6476e6d5de57c6218bcd61898e9041912d612e1
+```
+
 
 - 참고 블로그
     
@@ -66,17 +66,17 @@ d2442ca4bb0435405496ac38deca4bc1f6c9464a
         - `/home/jenkins/.ssh/config` 파일을 열어 아래와 같이 추가합니다.
     2. **파일 내용**
     
-    ```
-    sh
-    복사편집
-    Host gitserver
-      HostName 110.9.24.96
-      Port 20022
-      User git
-      IdentityFile /home/jenkins/.ssh/id_rsa  # SSH private key
-    
-    ```
-    
+```
+sh
+복사편집
+Host gitserver
+  HostName 110.9.24.96
+  Port 20022
+  User git
+  IdentityFile /home/jenkins/.ssh/id_rsa  # SSH private key
+
+```
+
 
 - 빌드시 jdk 21 안돼는 오류
     

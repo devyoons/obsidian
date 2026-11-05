@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Database Object 1"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/fb47189b957749ab8e76c884b049b995
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 강의: Database Object 1
@@ -322,14 +325,14 @@ drop sequence seq_tb_advice_no
 1. 선택도(selectivity)가 좋은 컬럼을 인덱스로 만든다.
 2. 선택도란? 고유한 값을 많이 가지는 것.
     
-    ```sql
-    employee.emp_id 중복X      -> 선택도가 아주 좋다.
-    employee.emp_no 중복X      -> 선택도가 아주 좋다.
-    employee.emp_name 중복O    -> 선택도가 좋다.
-    employee.dept_code 중복O   -> 선택도 보통.
-    employee.gender            -> 선택도 나쁨
-    ```
-    
+```sql
+employee.emp_id 중복X      -> 선택도가 아주 좋다.
+employee.emp_no 중복X      -> 선택도가 아주 좋다.
+employee.emp_name 중복O    -> 선택도가 좋다.
+employee.dept_code 중복O   -> 선택도 보통.
+employee.gender            -> 선택도 나쁨
+```
+
 3. where절에서 자주 조회되는 컬럼
 4. join조건 컬럼을 선택
 5. 한번 입력된 데이터가 변경이 자주 없는 컬럼

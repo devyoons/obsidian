@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - 이클립스, Java프로그래밍,명명규칙"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/f22d2e24b7324298a2c0f02542459205
+주제:
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 이클립스, Java프로그래밍,명명규칙

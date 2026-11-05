@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Lambda API"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/803659dbd74640d18ce8c2369c8486db
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Lambda API
@@ -553,51 +556,51 @@ class MyClass{
 
 - JDK8에 추가된 default메소드 `Iterable::forEach`
     
-    ```java
-    public interface Iterable<T> {
-    
-    	default void forEach(Consumer<? super T> action) {
-            Objects.requireNonNull(action);
-            for (T t : this) {
-                action.accept(t);
-            }
+```java
+public interface Iterable<T> {
+
+	default void forEach(Consumer<? super T> action) {
+        Objects.requireNonNull(action);
+        for (T t : this) {
+            action.accept(t);
         }
     }
-    ```
-    
+}
+```
+
 - JDK8에 추가된 default메소드 `Collection::removeIf`
     
-    ```java
-    public interface Collection<E> extends Iterable<E> {
-    	default boolean removeIf(Predicate<? super E> filter) {
-            Objects.requireNonNull(filter);
-            boolean removed = false;
-            final Iterator<E> each = iterator();
-            while (each.hasNext()) {
-                if (filter.test(each.next())) {
-                    each.remove();
-                    removed = true;
-                }
+```java
+public interface Collection<E> extends Iterable<E> {
+	default boolean removeIf(Predicate<? super E> filter) {
+        Objects.requireNonNull(filter);
+        boolean removed = false;
+        final Iterator<E> each = iterator();
+        while (each.hasNext()) {
+            if (filter.test(each.next())) {
+                each.remove();
+                removed = true;
             }
-            return removed;
         }
+        return removed;
     }
-    ```
-    
+}
+```
+
 - JDK8에 추가된 default메소드 `List::replaceAll`
     
-    ```java
-    public interface List<E> extends Collection<E> {
-    	default void replaceAll(UnaryOperator<E> operator) {
-            Objects.requireNonNull(operator);
-            final ListIterator<E> li = this.listIterator();
-            while (li.hasNext()) {
-                li.set(operator.apply(li.next()));
-            }
+```java
+public interface List<E> extends Collection<E> {
+	default void replaceAll(UnaryOperator<E> operator) {
+        Objects.requireNonNull(operator);
+        final ListIterator<E> li = this.listIterator();
+        while (li.hasNext()) {
+            li.set(operator.apply(li.next()));
         }
     }
-    ```
-    
+}
+```
+
 
 <aside>
 💡 `Arrays$ArrayList`인경우, 불변리스트로 `UnsupportedOperationException` 유발한다. 상속하고 있는 `AbstractList`의 remove, add등을 override하지 않았음. 
@@ -647,73 +650,73 @@ public class Lambda05WithCollection {
 
 - JDK8에 추가된 default메소드 `Map::forEach`
     
-    ```java
-    public interface Map<K, V> {
-    	
-    	default void forEach(BiConsumer<? super K, ? super V> action) {
-            Objects.requireNonNull(action);
-            for (Map.Entry<K, V> entry : entrySet()) {
-                K k;
-                V v;
-                try {
-                    k = entry.getKey();
-                    v = entry.getValue();
-                } catch (IllegalStateException ise) {
-                    // this usually means the entry is no longer in the map.
-                    throw new ConcurrentModificationException(ise);
-                }
-                action.accept(k, v);
+```java
+public interface Map<K, V> {
+	
+	default void forEach(BiConsumer<? super K, ? super V> action) {
+        Objects.requireNonNull(action);
+        for (Map.Entry<K, V> entry : entrySet()) {
+            K k;
+            V v;
+            try {
+                k = entry.getKey();
+                v = entry.getValue();
+            } catch (IllegalStateException ise) {
+                // this usually means the entry is no longer in the map.
+                throw new ConcurrentModificationException(ise);
             }
+            action.accept(k, v);
         }
     }
-    ```
-    
+}
+```
+
 
 ```java
 package com.kh.java.lambda;
 
 public class Lambda05WithCollection {
+
+public static void main(String[] args){
+	Lambda05WithCollection lambda = new Lambda05WithCollection();
+	//Map
+	lambda.test2();
+}
+
+private void test2() {
+	Map<Integer, String> map  = new HashMap<>();
+	map.put(1,"Davic");
+	map.put(2,"Sam");
+	map.put(3,"Curry");
+	map.put(4,"Brown");
+	map.put(5,"Carl");
 	
-	public static void main(String[] args){
-		Lambda05WithCollection lambda = new Lambda05WithCollection();
-		//Map
-		lambda.test2();
-	}
+	//get 기본값 있음.
+	System.out.println(map.getOrDefault(1, "홍길동"));
+	System.out.println(map.getOrDefault(10, "신사임당"));
 
-	private void test2() {
-		Map<Integer, String> map  = new HashMap<>();
-		map.put(1,"Davic");
-		map.put(2,"Sam");
-		map.put(3,"Curry");
-		map.put(4,"Brown");
-		map.put(5,"Carl");
-		
-		//get 기본값 있음.
-		System.out.println(map.getOrDefault(1, "홍길동"));
-		System.out.println(map.getOrDefault(10, "신사임당"));
-
-		//해당 key가 존재하지 않을 경우, 해당 key - value생성
-		//10=James가 추가된다.
-		map.computeIfAbsent(10, (k)-> {
-			return "James";
-		});
-		//해당 key가 존재한다면, 수정할 수 있다.
-		//5=Karl로 수정된다.
-		map.computeIfPresent(5, (k, v)-> "Karl");
-		
-		//해당 key에 대한 value를 수정(존재하거나 존재하지 않거나, 존재하는데 null이거나 모두 적용
-		map.compute(3, (k, v) -> (v == null ? "Ted" : v + "!!!")); // 3=Curry!!! 수정
-		map.compute(33, (k, v) -> (v == null ? "Ted" : v + "!!!")); // 33=Ted 추가
-		
-		//기존key의 value를 모두 변경
-		map.replaceAll((k, v) -> v.toUpperCase());
-		
-		//기존값과 병합하기
-		map.merge(4, "Choco", (prev, newVal) ->  newVal + prev); // prev=Brown, newVal=Choco이 전달됨.
-		map.merge(44, "Sky", (prev, newVal) ->  newVal + prev); // prev="", newVal=Sky이 전달됨.
-		//void java.util.Map.forEach(BiConsumer<? super String, ? super String> action)
-		map.forEach((k,v) -> System.out.println(k + "=" + v));
-	}
+	//해당 key가 존재하지 않을 경우, 해당 key - value생성
+	//10=James가 추가된다.
+	map.computeIfAbsent(10, (k)-> {
+		return "James";
+	});
+	//해당 key가 존재한다면, 수정할 수 있다.
+	//5=Karl로 수정된다.
+	map.computeIfPresent(5, (k, v)-> "Karl");
+	
+	//해당 key에 대한 value를 수정(존재하거나 존재하지 않거나, 존재하는데 null이거나 모두 적용
+	map.compute(3, (k, v) -> (v == null ? "Ted" : v + "!!!")); // 3=Curry!!! 수정
+	map.compute(33, (k, v) -> (v == null ? "Ted" : v + "!!!")); // 33=Ted 추가
+	
+	//기존key의 value를 모두 변경
+	map.replaceAll((k, v) -> v.toUpperCase());
+	
+	//기존값과 병합하기
+	map.merge(4, "Choco", (prev, newVal) ->  newVal + prev); // prev=Brown, newVal=Choco이 전달됨.
+	map.merge(44, "Sky", (prev, newVal) ->  newVal + prev); // prev="", newVal=Sky이 전달됨.
+	//void java.util.Map.forEach(BiConsumer<? super String, ? super String> action)
+	map.forEach((k,v) -> System.out.println(k + "=" + v));
+}
 
 }
 ```
@@ -722,59 +725,59 @@ public class Lambda05WithCollection {
 
 1. MyClass객체 리스트를 순회하면서 40세 이상만 출력하세요. (list의 forEach메소드 사용할 것.)
     
-    ```java
-    /**
-    	 * @실습문제 : MyClass객체 리스트를 순회하면서 40세 이상만 출력하세요.
-    	 * (list의 forEach메소드 사용할 것.)
-    	 * 
-    	 * 
-    	 */
-    	private void test3() {
-    		List<MyClass> list = new ArrayList<>() {
-    			{
-    				add(new MyClass("홍길동", 30));
-    				add(new MyClass("신사임당", 48));
-    				add(new MyClass("전봉준", 55));
-    				add(new MyClass("세종대왕", 54));
-    				add(new MyClass("간달프", 105));
-    			}			
-    		};
-    		
-    		list.forEach(myClass -> {
-    			if(myClass.getAge() >= 40)
-    				System.out.println(myClass.getName());
-    		});
-    		
-    	}
-    ```
-    
+```java
+/**
+	 * @실습문제 : MyClass객체 리스트를 순회하면서 40세 이상만 출력하세요.
+	 * (list의 forEach메소드 사용할 것.)
+	 * 
+	 * 
+	 */
+	private void test3() {
+		List<MyClass> list = new ArrayList<>() {
+			{
+				add(new MyClass("홍길동", 30));
+				add(new MyClass("신사임당", 48));
+				add(new MyClass("전봉준", 55));
+				add(new MyClass("세종대왕", 54));
+				add(new MyClass("간달프", 105));
+			}			
+		};
+		
+		list.forEach(myClass -> {
+			if(myClass.getAge() >= 40)
+				System.out.println(myClass.getName());
+		});
+		
+	}
+```
+
 2. 다음 map에서 key값이 홀수인 value만 출력하세요. (map의 forEach메소드 사용할 것.)
     
-    ```java
-    /**
-    	 * @실습문제 :
-    	 * 다음 map에서 key값이 홀수인 value만 출력하세요.
-    	 * (map의 forEach메소드 사용할 것.)
-    	 */
-    	private void test5() {
-    		Map<Integer, MyClass> map = new HashMap<>() {
-    			{
-    				put(1, new MyClass("홍길동", 30));
-    				put(2, new MyClass("신사임당", 48));
-    				put(3, new MyClass("전봉준", 55));
-    				put(4, new MyClass("세종대왕", 54));
-    				put(5, new MyClass("간달프", 105));
-    			}
-    		};
-    		
-    		//{} 생략 불가
-    		map.forEach((k, v) -> {
-    			if(k % 2 == 1) 
-    				System.out.println(v);
-    		});
-    	}
-    ```
-    
+```java
+/**
+	 * @실습문제 :
+	 * 다음 map에서 key값이 홀수인 value만 출력하세요.
+	 * (map의 forEach메소드 사용할 것.)
+	 */
+	private void test5() {
+		Map<Integer, MyClass> map = new HashMap<>() {
+			{
+				put(1, new MyClass("홍길동", 30));
+				put(2, new MyClass("신사임당", 48));
+				put(3, new MyClass("전봉준", 55));
+				put(4, new MyClass("세종대왕", 54));
+				put(5, new MyClass("간달프", 105));
+			}
+		};
+		
+		//{} 생략 불가
+		map.forEach((k, v) -> {
+			if(k % 2 == 1) 
+				System.out.println(v);
+		});
+	}
+```
+
 
 ## See Also
 

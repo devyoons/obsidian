@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - JOIN"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/6ab0fb23ebc54b048d2ab03606537836
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 강의: JOIN
@@ -78,17 +81,17 @@ from
 
 - 오라클 전용문법
     
-    ```sql
-    select
-        *
-    from
-        emplyee e, department d
-    where
-        e.dept_code = de.dept_id;
-       and
-        e.dept_code = 'D9';
-    ```
-    
+```sql
+select
+    *
+from
+    emplyee e, department d
+where
+    e.dept_code = de.dept_id;
+   and
+    e.dept_code = 'D9';
+```
+
 
 ### OUTER JOIN (좌 , 우 , 전체 : 교집합 항상 포함)
 
@@ -110,16 +113,16 @@ from
 
 - 오라클 전용문법
     
-    ```sql
-    -- 외부조인(+)를 상대테이블 컬럼에 추가
-    select
-        *
-    from
-        employee e, department d
-    where
-        e.dept_code = d.dept_id(+); --좌측(null)을 채워줌
-    ```
-    
+```sql
+-- 외부조인(+)를 상대테이블 컬럼에 추가
+select
+    *
+from
+    employee e, department d
+where
+    e.dept_code = d.dept_id(+); --좌측(null)을 채워줌
+```
+
 
 #### 2. right outer join
 
@@ -136,15 +139,15 @@ from
 
 - 오라클 전용문법
     
-    ```sql
-    --[oracle전용] : 오라클전용문법은 join순서 중요하지 않음 
-    select *
-    from
-        employee e, department d
-    where
-        e.dept_code(+) = d.dept_id;
-    ```
-    
+```sql
+--[oracle전용] : 오라클전용문법은 join순서 중요하지 않음 
+select *
+from
+    employee e, department d
+where
+    e.dept_code(+) = d.dept_id;
+```
+
 
 #### 3. full outer join(실무에서 쓸 일 거의 없음)
 
@@ -175,13 +178,13 @@ from
 
 - 오라클전용
     
-    ```sql
-    select
-        *
-    from
-        employee e, department d;
-    ```
-    
+```sql
+select
+    *
+from
+    employee e, department d;
+```
+
 
 ### SELF JOIN
 
@@ -205,20 +208,20 @@ from
 
 - 오라클 전용문법
     
-    ```sql
-    select
-        e1.emp_name,
-        e2.emp_name
-    from
-        employee e1, employee e2
-    where
-        e1.manager_id = e2.emp_id(+);
-    
-    select emp_id, emp_name, manager_id 
-    from
-        employee;
-    ```
-    
+```sql
+select
+    e1.emp_name,
+    e2.emp_name
+from
+    employee e1, employee e2
+where
+    e1.manager_id = e2.emp_id(+);
+
+select emp_id, emp_name, manager_id 
+from
+    employee;
+```
+
 
 ### MULTIPLE JOIN
 
@@ -250,24 +253,49 @@ from
 
 - 오라클 전용문법
     
-    ```sql
-    select
-        *
-    from
-        employee e, department d, location l, nation n --오라클문법에서 테이블 나열순서는 상관없다.
-    where                          --테이블 순서는 where에서 중요하다.
-        e.dept_code = d.dept_id(+) --left와 동일하게 연속처리해줘야 null값이 살아있다.
-        and
-        d.location_id = l.local_code(+)
-        and
-        l.national_code = n.national_code(+);
-    ```
-    
+```sql
+select
+    *
+from
+    employee e, department d, location l, nation n --오라클문법에서 테이블 나열순서는 상관없다.
+where                          --테이블 순서는 where에서 중요하다.
+    e.dept_code = d.dept_id(+) --left와 동일하게 연속처리해줘야 null값이 살아있다.
+    and
+    d.location_id = l.local_code(+)
+    and
+    l.national_code = n.national_code(+);
+```
+
 
 ```sql
 -- 직급이 대리이면서 ASIA지역에 근무하는 직원 조회
 -- (사번, 이름, 직급명, 부서명, 근무지역명,급여)
 
+select
+e.emp_id 사번,
+e.emp_name 이름,
+j.job_name 직급명,
+d.dept_title 부서명,
+to_char(e.salary, 'fml999,999,999') 급여,
+n.national_name 근무지역명,
+l.local_name
+from
+employee e 
+    left join job j
+        on e.job_code = j.job_code
+    left join department d
+        on e.dept_code = d.dept_id
+    left join location l
+        on d.location_id = l.local_code
+    left join nation n 
+        on l.national_code = n.national_code
+where 
+j.job_name = '대리' and l.local_name like 'ASIA%';
+```
+
+- 오라클 전용문법
+    
+```sql
 select
     e.emp_id 사번,
     e.emp_name 이름,
@@ -277,44 +305,19 @@ select
     n.national_name 근무지역명,
     l.local_name
 from
-    employee e 
-        left join job j
-            on e.job_code = j.job_code
-        left join department d
-            on e.dept_code = d.dept_id
-        left join location l
-            on d.location_id = l.local_code
-        left join nation n 
-            on l.national_code = n.national_code
-where 
+    employee e, job j, department d, location l, nation n
+where
+    e.job_code = j.job_code(+)
+    and
+    e.dept_code = d.dept_id(+)
+    and
+    d.location_id = l.local_code(+)
+    and
+    l.national_code = n.national_code(+)
+    and
     j.job_name = '대리' and l.local_name like 'ASIA%';
 ```
 
-- 오라클 전용문법
-    
-    ```sql
-    select
-        e.emp_id 사번,
-        e.emp_name 이름,
-        j.job_name 직급명,
-        d.dept_title 부서명,
-        to_char(e.salary, 'fml999,999,999') 급여,
-        n.national_name 근무지역명,
-        l.local_name
-    from
-        employee e, job j, department d, location l, nation n
-    where
-        e.job_code = j.job_code(+)
-        and
-        e.dept_code = d.dept_id(+)
-        and
-        d.location_id = l.local_code(+)
-        and
-        l.national_code = n.national_code(+)
-        and
-        j.job_name = '대리' and l.local_name like 'ASIA%';
-    ```
-    
 
 ### 테이블 별칭의 중요성
 
@@ -426,15 +429,15 @@ from
 
 - 오라클 전용문법
     
-    ```sql
-    select
-        *
-    from
-        employee e, sal_grade s
-    where
-        e.salary between s.min_sal and s.max_sal;
-    ```
-    
+```sql
+select
+    *
+from
+    employee e, sal_grade s
+where
+    e.salary between s.min_sal and s.max_sal;
+```
+
 
 #### 실습문제 03/17
 

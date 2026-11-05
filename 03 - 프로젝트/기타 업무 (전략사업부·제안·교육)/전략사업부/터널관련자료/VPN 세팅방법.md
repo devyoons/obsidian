@@ -1,15 +1,18 @@
 ---
 별칭:
   - "업무 - VPN 세팅방법"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/기타 업무 (전략사업부·제안·교육)/기타 (전략사업부·제안·교육)|기타 (전략사업부·제안·교육)]]"
 노션원본: https://www.notion.so/cd7d1ec8934b4eb199f7e5410068e6b3
+주제:
+  - "[[00 - 대시보드/주제/Network|Network]]"
 ---
 
 # 업무: VPN 세팅방법

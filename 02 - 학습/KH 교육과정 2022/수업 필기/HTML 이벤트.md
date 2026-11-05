@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - HTML 이벤트"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/0a8ef81b2a80421da32d0500d90dadec
+주제:
+  - "[[00 - 대시보드/주제/HTML·CSS|HTML·CSS]]"
 ---
 
 # 강의: HTML 이벤트

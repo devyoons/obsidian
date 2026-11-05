@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - void wait(long timeout, int nanos)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/97701ca340514cbaa56e1265acf487f3
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: void wait(long timeout, int nanos)

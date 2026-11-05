@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - Vue.js 3 완벽 마스터: 기초부터 실전까지 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b80e38485c49cc5106cd7
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
 ---
 
 # 학습: Vue.js 3 완벽 마스터: 기초부터 실전까지 (1)
@@ -121,7 +125,7 @@
 
 ---
 
-[[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Plugins (2)|Plugins]]
+[[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Plugins|Plugins]]
 
 [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Custom Directives|Custom Directives]]
 
@@ -172,7 +176,6 @@
 - [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Options API vs Composition API|Options API vs Composition API]]
 - [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Pinia란|Pinia란?]]
 - [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Plugins|Plugins]]
-- [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Plugins (2)|Plugins]]
 - [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Props|Props]]
 - [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Provide - Inject|Provide / Inject]]
 - [[02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/Setup hook|Setup hook]]

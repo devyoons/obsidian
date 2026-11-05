@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - vue 저장시 vue/multi-word-component-names 문구"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/b87bb9b843a54bae86e0dd3e00671a59
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
 ---
 
 # 학습: vue 저장시 vue/multi-word-component-names 문구

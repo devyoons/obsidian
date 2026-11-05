@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - DB 백업"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

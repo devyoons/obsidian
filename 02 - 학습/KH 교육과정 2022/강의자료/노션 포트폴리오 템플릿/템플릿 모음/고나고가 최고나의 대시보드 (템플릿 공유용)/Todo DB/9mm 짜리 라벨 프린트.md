@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 9mm 짜리 라벨 프린트"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

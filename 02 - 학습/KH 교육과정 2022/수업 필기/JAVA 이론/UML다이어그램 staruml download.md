@@ -1,15 +1,20 @@
 ---
 별칭:
   - "강의 - UML다이어그램 staruml download"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/도구-기타
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/dd14941c6497412f81193779c2f1b3f8
+주제:
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
+  - "[[00 - 대시보드/주제/소프트웨어 설계|소프트웨어 설계]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: UML다이어그램 staruml download

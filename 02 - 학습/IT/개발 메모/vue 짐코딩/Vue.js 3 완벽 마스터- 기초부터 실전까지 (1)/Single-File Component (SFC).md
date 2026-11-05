@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - Single-File Component (SFC)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b81838247eb8c0ac2b384
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: Single-File Component (SFC)

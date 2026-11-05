@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Set : 순서X, 데이터 중복X"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/70a0432d0cd840c0bdb6c6f16c170cb1
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: Set : 순서X, 데이터 중복X

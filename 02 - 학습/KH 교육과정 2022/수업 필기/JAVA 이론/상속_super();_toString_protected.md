@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - 상속_super();_toString_protected"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/fb7eef55b7b04d7c9acc8870d5c0a396
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 상속_super();_toString_protected

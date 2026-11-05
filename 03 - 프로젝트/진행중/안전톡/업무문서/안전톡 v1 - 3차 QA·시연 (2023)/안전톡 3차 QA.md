@@ -1,7 +1,7 @@
 ---
 별칭:
   - "업무 - 안전톡 3차 QA"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev

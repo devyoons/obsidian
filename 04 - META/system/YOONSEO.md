@@ -1,7 +1,7 @@
 ---
 별칭:
   - "노트 - YOONSEO"
-태그:
+tags:
   - type/note
   - context/personal
   - theme/dev

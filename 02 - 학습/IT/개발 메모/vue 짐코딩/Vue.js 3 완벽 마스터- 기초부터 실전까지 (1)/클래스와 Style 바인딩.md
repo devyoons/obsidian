@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - 클래스와 Style 바인딩"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b814e8c3df99c66aaa96a
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
 ---
 
 # 학습: 클래스와 Style 바인딩

@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - proxy server"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/ca418ea2c0b14b9eaa4a28c6908e8b4c
+주제:
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: proxy server
@@ -55,27 +59,27 @@ public class DataController {
 
 - **Service.java**
     
-    ```java
-    // 서비스 인터페이스
-    public interface DataService {
-    	Resource passXml(String xML_URL);
-    }
-    
-    // 서비스 구현체
-    @Service
-    public class DataServiceImpl implements DataService {
-    
-    	@Autowired
-    	ResourceLoader resourceLoader;
-    	
-    	@Override
-    	public Resource passXml(String url) {
-    		return resourceLoader.getResource(url);
-    	}
-    
-    }
-    ```
-    
+```java
+// 서비스 인터페이스
+public interface DataService {
+	Resource passXml(String xML_URL);
+}
+
+// 서비스 구현체
+@Service
+public class DataServiceImpl implements DataService {
+
+	@Autowired
+	ResourceLoader resourceLoader;
+	
+	@Override
+	public Resource passXml(String url) {
+		return resourceLoader.getResource(url);
+	}
+
+}
+```
+
 
 ### JSON Data
 

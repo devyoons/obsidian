@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - Git에 관한 잡다한 이야기들 (1)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/cc743b756ec34ee9a3af1f26dc50388d
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: Git에 관한 잡다한 이야기들 (1)

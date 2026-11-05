@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 세미 프로젝트 - Salabrity"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - FUNCTION 단일행함수"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/18e74164cdc4440d84ea85a085e75f7c
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 강의: FUNCTION 단일행함수
@@ -190,19 +194,19 @@ select rpad (name, 6, '0') from member;
 
 - 문자함수 수업예제
     
-    ```sql
-    -- 사원테이블에서 남자사원의 사번, 이름, 주민번호를 조회
-    -- (주민번호의 뒤 6자리는 *로 숨김처리) 1,3 남자/ 2,4 여자
-    select
-        emp_id 사번,
-        emp_name 이름,
-        rpad(substr(emp_no, 1, 8), 14, '*') 주민번호
-    from
-        employee
-    where
-        substr(emp_no, 8, 1) in (1, 3); -- 오라클이 자동형변환해줌 '1', '3'
-    ```
-    
+```sql
+-- 사원테이블에서 남자사원의 사번, 이름, 주민번호를 조회
+-- (주민번호의 뒤 6자리는 *로 숨김처리) 1,3 남자/ 2,4 여자
+select
+    emp_id 사번,
+    emp_name 이름,
+    rpad(substr(emp_no, 1, 8), 14, '*') 주민번호
+from
+    employee
+where
+    substr(emp_no, 8, 1) in (1, 3); -- 오라클이 자동형변환해줌 '1', '3'
+```
+
 
 #### <문자열 트림 함수 `ltrim`, `rtrim`, `trim`>
 
@@ -428,44 +432,44 @@ from
 
 - 수업시간예제
     
-    ```sql
-    -- to_char(date, format_char) : char
-    select
-        to_char(sysdate, 'yyyy-mm-dd hh24:mi:ss') 날짜,--2022-03-16 09:32:06
-        to_char(sysdate, 'yyyy-mm-dd (day) hh:mi:ss') 날짜, --2022-03-16 (수요일) 09:32:06
-        to_char(sysdate, 'yyyy-mm-dd (day)(dy)(d)') 날짜,--2022-03-16 (수요일)(수)(4)
-        to_char(sysdate, 'yyyy"년" mm"월" dd"일"') 날짜, --2022년 03월 16일
-        to_char(sysdate, 'fmyyyy"년" mm"월" dd"일"') 날짜 --2022년 3월 16일 fm공백제거용도
-        
-    from
-        dual;
+```sql
+-- to_char(date, format_char) : char
+select
+    to_char(sysdate, 'yyyy-mm-dd hh24:mi:ss') 날짜,--2022-03-16 09:32:06
+    to_char(sysdate, 'yyyy-mm-dd (day) hh:mi:ss') 날짜, --2022-03-16 (수요일) 09:32:06
+    to_char(sysdate, 'yyyy-mm-dd (day)(dy)(d)') 날짜,--2022-03-16 (수요일)(수)(4)
+    to_char(sysdate, 'yyyy"년" mm"월" dd"일"') 날짜, --2022년 03월 16일
+    to_char(sysdate, 'fmyyyy"년" mm"월" dd"일"') 날짜 --2022년 3월 16일 fm공백제거용도
     
-    -- to_char(number, format_char) : char
-    -- 세자리 콤마적용, 소수점이하 처리
-    -- 실제값보다 형식,문자 자리수가 적으면 표시할 수 없다.
-    select
-        to_char(1234567890, '9,999'),--######
-        to_char(1234567890, '999,999,999,999'), --___1,234,567,890
-        to_char(1234567890, 'fmL999,999,999,999'), --1,234,567,890 <원화표시(지역통화기호):L>
-        123 숫자숫자숫자, --숫자는 오른쪽정렬, 문자는 왼쪽정렬
-        to_char(123.456,'99999.99999'), 
-        --___123.45600 -> 해당자리수가 없을때 공백처리, 소수점이하는 ()채움처리
-        to_char(123.456,'00000.00000') 
-        -- 00123.45600 -> 해당자리수가 없을때 소수점이상/이하는 ()채움처리
-    from
-        dual;
-    
-    -- 사원테이블에서 사원명, 급여, 연봉(급여*12), 입사일 조회
-    -- 금액형식지정, 년월일 형식으로 지정
-    select 
-        emp_name 사원명,   
-        to_char(salary,'fmL999,999,999') 급여,
-        to_char(salary * 12, 'fmL999,999,999') 연봉,
-        to_char(hire_date, 'yyyy"년"mm"월"dd"일"') 입사일
-    
-    from employee;
-    ```
-    
+from
+    dual;
+
+-- to_char(number, format_char) : char
+-- 세자리 콤마적용, 소수점이하 처리
+-- 실제값보다 형식,문자 자리수가 적으면 표시할 수 없다.
+select
+    to_char(1234567890, '9,999'),--######
+    to_char(1234567890, '999,999,999,999'), --___1,234,567,890
+    to_char(1234567890, 'fmL999,999,999,999'), --1,234,567,890 <원화표시(지역통화기호):L>
+    123 숫자숫자숫자, --숫자는 오른쪽정렬, 문자는 왼쪽정렬
+    to_char(123.456,'99999.99999'), 
+    --___123.45600 -> 해당자리수가 없을때 공백처리, 소수점이하는 ()채움처리
+    to_char(123.456,'00000.00000') 
+    -- 00123.45600 -> 해당자리수가 없을때 소수점이상/이하는 ()채움처리
+from
+    dual;
+
+-- 사원테이블에서 사원명, 급여, 연봉(급여*12), 입사일 조회
+-- 금액형식지정, 년월일 형식으로 지정
+select 
+    emp_name 사원명,   
+    to_char(salary,'fmL999,999,999') 급여,
+    to_char(salary * 12, 'fmL999,999,999') 연봉,
+    to_char(hire_date, 'yyyy"년"mm"월"dd"일"') 입사일
+
+from employee;
+```
+
 
 #### <`to_number(char, format_char)` : 그룹핑된 숫자 → 변환 후 연산>
 
@@ -512,54 +516,54 @@ from
 
 - 수업시간예제
     
-    ```sql
-    -- 나이 구하기
-    -- 450505 -> 1945, 550505 -> 1955, 070707 -> 2007
-    -- yy? rr? 둘다 아니다.
-    -- 주민번호의 뒷 첫번째자리를 근거로 1900 + 생년2자리, 2000 + 생년2자리 
-    select
-        extract(year from to_date('550505','yymmdd')), -- 2055
-        extract(year from to_date('550505','yymmdd')), -- 2055
-        
-        extract(year from to_date('550505','rrmmdd')), -- 1955
-        extract(year from to_date('070707','rrmmdd'))  -- 2007
-    from
-        dual;
-                  
-    -- 현재시각으로 부터 1일 2시간 3분 4초뒤를 시각조회
-    -- 년월일시분초 형태로 출력
-    -- 날짜 + 숫자(1:하루)
-    select
-        to_char(sysdate + 1 + 
-        2 / (2 * 24) + 
-        3 / (3 * 24 * 60) + 
-        4 / (4 * 24 * 60 * 60), 
-        'yyyy"년" mm"월" dd"일" hh24"시" mi"분" ss"초"') "1일 2시간 3분 4초뒤"
-    from
-        dual;
-    ```
+```sql
+-- 나이 구하기
+-- 450505 -> 1945, 550505 -> 1955, 070707 -> 2007
+-- yy? rr? 둘다 아니다.
+-- 주민번호의 뒷 첫번째자리를 근거로 1900 + 생년2자리, 2000 + 생년2자리 
+select
+    extract(year from to_date('550505','yymmdd')), -- 2055
+    extract(year from to_date('550505','yymmdd')), -- 2055
     
-    ```sql
-    -- 현재시각으로 부터 1일 2시간 3분 4초뒤를 시각조회
-    -- 년월일시분초 형태로 출력
-    -- 날짜 + 숫자(1:하루)
-    select
-        to_char(sysdate + 1 + 
-        2 / (2 * 24) + 
-        3 / (3 * 24 * 60) + 
-        4 / (4 * 24 * 60 * 60), 
-        'yyyy"년" mm"월" dd"일" hh24"시" mi"분" ss"초"') "1일 2시간 3분 4초뒤"
-    from
-        dual;
-        
+    extract(year from to_date('550505','rrmmdd')), -- 1955
+    extract(year from to_date('070707','rrmmdd'))  -- 2007
+from
+    dual;
+              
+-- 현재시각으로 부터 1일 2시간 3분 4초뒤를 시각조회
+-- 년월일시분초 형태로 출력
+-- 날짜 + 숫자(1:하루)
+select
+    to_char(sysdate + 1 + 
+    2 / (2 * 24) + 
+    3 / (3 * 24 * 60) + 
+    4 / (4 * 24 * 60 * 60), 
+    'yyyy"년" mm"월" dd"일" hh24"시" mi"분" ss"초"') "1일 2시간 3분 4초뒤"
+from
+    dual;
+```
+
+```sql
+-- 현재시각으로 부터 1일 2시간 3분 4초뒤를 시각조회
+-- 년월일시분초 형태로 출력
+-- 날짜 + 숫자(1:하루)
+select
+    to_char(sysdate + 1 + 
+    2 / (2 * 24) + 
+    3 / (3 * 24 * 60) + 
+    4 / (4 * 24 * 60 * 60), 
+    'yyyy"년" mm"월" dd"일" hh24"시" mi"분" ss"초"') "1일 2시간 3분 4초뒤"
+from
+    dual;
     
-    -- 2022/08/29 남은 일수 구하기
-    select
-        '수료일로부터 D-' || ceil(to_date('2022/08/29', 'yyyy/mm/dd') - sysdate) || '입니다.'
-    from
-        dual;
-    ```
-    
+
+-- 2022/08/29 남은 일수 구하기
+select
+    '수료일로부터 D-' || ceil(to_date('2022/08/29', 'yyyy/mm/dd') - sysdate) || '입니다.'
+from
+    dual;
+```
+
 
 ### 날짜 차이 구하기
 

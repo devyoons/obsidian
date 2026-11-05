@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - MY Library 오늘의 강의자료"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

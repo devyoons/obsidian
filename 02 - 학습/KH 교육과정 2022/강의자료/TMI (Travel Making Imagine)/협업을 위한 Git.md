@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - 협업을 위한 Git"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

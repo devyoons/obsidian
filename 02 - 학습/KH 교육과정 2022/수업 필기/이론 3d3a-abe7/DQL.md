@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - DQL"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/1edb925d36234f689bc4ea18525ac7e2
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
 ---
 
 # 강의: DQL
@@ -118,42 +121,42 @@
         - Result Set : select문을 통해 조회된 결과물(조회된 행들의 집합)
     - Result Set은 특정기준에 따라 필터링되거나 정렬될 수 있다.
     
-    ```sql
-    -- 문법 순서
-    1. SELECT   : 원하는 컬럼 지정
-    2. FROM     : 조회할 대상 테이블
-    3. WHERE    : 특정 조건을 만족하는 행만 필터링
-    4. GROUP BY : 그룹핑
-    5. HAVING   : 그룹핑된 결과를 필터링
-    6. ORDER BY : 특정컬럼 기준으로 행을 정렬
-    ```
-    
-    ```sql
-    -- 실행 순서
-    
-    1. FROM
-    2. WHERE
-    3. GROUP BY
-    4. HAVING
-    5. SELECT
-    6. ORDER BY
-    ```
-    
-    > **실행 순서 추상화**
-    > 
-    
-    해당 데이터가 있는 테이블을 찾아가서 (FROM)
-    
-    조건에 맞는 데이터로 필터링하고 (WHERE)
-    
-    원하는 데이터로 그룹핑하고 (GROUP BY)
-    
-    가공한 데이터에서 조건에 맞는 것만 (HAVING)
-    
-    뽑아내서 (SELECT)
-    
-    정렬한다 (ORDER BY)
-    
+```sql
+-- 문법 순서
+1. SELECT   : 원하는 컬럼 지정
+2. FROM     : 조회할 대상 테이블
+3. WHERE    : 특정 조건을 만족하는 행만 필터링
+4. GROUP BY : 그룹핑
+5. HAVING   : 그룹핑된 결과를 필터링
+6. ORDER BY : 특정컬럼 기준으로 행을 정렬
+```
+
+```sql
+-- 실행 순서
+
+1. FROM
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. ORDER BY
+```
+
+> **실행 순서 추상화**
+> 
+
+해당 데이터가 있는 테이블을 찾아가서 (FROM)
+
+조건에 맞는 데이터로 필터링하고 (WHERE)
+
+원하는 데이터로 그룹핑하고 (GROUP BY)
+
+가공한 데이터에서 조건에 맞는 것만 (HAVING)
+
+뽑아내서 (SELECT)
+
+정렬한다 (ORDER BY)
+
 
 ---
 

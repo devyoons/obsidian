@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - spring-bean → 프로젝트 설정"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/ed8e1337eae24c59963102ef70b1c0df
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: spring-bean → 프로젝트 설정
@@ -76,25 +79,25 @@
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/ea36b993_Untitled.png]]
     
-    ```java
-    <!-- 
-    	scope 객체 관리 주기
-    		- singletone (기본값)단 하나의 객체만 생성 관리
-    		- prototype  getBean 요청시마다 생성
-    		- request    request 마다 생성
-    		- session    session 마다 생성
-     -->
-    <bean id="LgTv" class="com.kh.spring.tv.LgTv" scope="singletone"></bean>
-    <bean id="SamsungTv" class="com.kh.spring.tv.SamsungTv"></bean>
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/9068da40_Untitled.png]]
-    
-    getter를 만들때 자동으로 세터를 생성해서 
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/7b19838c_Untitled.png]]
-    
-    객체가 생성될 때 의존이 주입된다.
+```java
+<!-- 
+	scope 객체 관리 주기
+		- singletone (기본값)단 하나의 객체만 생성 관리
+		- prototype  getBean 요청시마다 생성
+		- request    request 마다 생성
+		- session    session 마다 생성
+ -->
+<bean id="LgTv" class="com.kh.spring.tv.LgTv" scope="singletone"></bean>
+<bean id="SamsungTv" class="com.kh.spring.tv.SamsungTv"></bean>
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/9068da40_Untitled.png]]
+
+getter를 만들때 자동으로 세터를 생성해서 
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/7b19838c_Untitled.png]]
+
+객체가 생성될 때 의존이 주입된다.
 
 ## 관련 노트
 

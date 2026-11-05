@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - json"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/3e5109799dab46f7af4efcc922dbd05e
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 강의: json

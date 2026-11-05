@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - Model Y 액세서리 챙기기"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

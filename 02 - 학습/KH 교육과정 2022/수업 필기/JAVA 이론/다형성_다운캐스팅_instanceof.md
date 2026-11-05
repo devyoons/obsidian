@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - 다형성_다운캐스팅_instanceof"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/4e458cd6fc0d4f71bc2f44ab87728cb5
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 다형성_다운캐스팅_instanceof
@@ -149,37 +152,37 @@ public class InterfaceTest{
 
 - 수업시간 예제
     
-    ```java
-    <자식 객체를 부모타입의 변수에 담아 제어할 수 있다.>
-    public void test1() {
-    		Tiger tiger = new Tiger();
-    		Animal animal1 = tiger; 
-    		
-    		Lion lion = new Lion();
-    		Animal animal2 = lion;
-    	}
-    }
-    ```
-    
-    ```java
-    public void test1() {
-    		Tiger tiger = new Tiger();
-    		Animal animal1 = tiger; 
-    		
-    		Animal animal2 = new Lion();
-    		
-    		// 자식객체를 자식타입변수에 대입한 경우
-    		tiger.say();
-    		tiger.punch();
-    		
-    		// 자식객체를 부모타입변수에 대입한 경우
-    		animal1.say();
-    //	animal1.punch(); : 자식클래스에 선언한 필드/메소드에 접근할 수 없다.
-    //자식클래스의 메소드를 사용하고 싶다면, 다시 자식 타입으로 형변환해야 한다. DownCasting
-    		((Tiger) animal1).punch();
-    //	(Tiger) animal1.punch(); //우선순위가 animal1. 이 먼저 실행되므로 괄호를 해줘야한다.
-    ```
-    
+```java
+<자식 객체를 부모타입의 변수에 담아 제어할 수 있다.>
+public void test1() {
+		Tiger tiger = new Tiger();
+		Animal animal1 = tiger; 
+		
+		Lion lion = new Lion();
+		Animal animal2 = lion;
+	}
+}
+```
+
+```java
+public void test1() {
+		Tiger tiger = new Tiger();
+		Animal animal1 = tiger; 
+		
+		Animal animal2 = new Lion();
+		
+		// 자식객체를 자식타입변수에 대입한 경우
+		tiger.say();
+		tiger.punch();
+		
+		// 자식객체를 부모타입변수에 대입한 경우
+		animal1.say();
+//	animal1.punch(); : 자식클래스에 선언한 필드/메소드에 접근할 수 없다.
+//자식클래스의 메소드를 사용하고 싶다면, 다시 자식 타입으로 형변환해야 한다. DownCasting
+		((Tiger) animal1).punch();
+//	(Tiger) animal1.punch(); //우선순위가 animal1. 이 먼저 실행되므로 괄호를 해줘야한다.
+```
+
 
 ![[02 - 학습/KH 교육과정 2022/수업 필기/JAVA 이론/첨부/6aa5712e_Untitled.png]]
 

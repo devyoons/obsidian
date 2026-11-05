@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - gitlab"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/cb5f3433365f40f188aca8a214a3441c
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
+  - "[[00 - 대시보드/주제/서버·인프라|서버·인프라]]"
 ---
 
 # 학습: gitlab

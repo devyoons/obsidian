@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - Math API"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/566c9a49fc034530ac838a2654b4d027
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: Math API
@@ -53,88 +56,88 @@ function test2(){
 
 - @실습문제 : li태그 난수채우기
     
-    ```jsx
-    <!-- emmet이용 ul#test>li*100 --> 
-    <ul id="test">
-    	<li></li>
-    	...
-    </ul>
-    
-    <style>
-    .even {
-      color: hotpink;
+```jsx
+<!-- emmet이용 ul#test>li*100 --> 
+<ul id="test">
+	<li></li>
+	...
+</ul>
+
+<style>
+.even {
+  color: hotpink;
+}
+</style>
+
+<script>
+/**
+ * ul#test li태그에 1 ~ 1000사이의 난수를 대입하고, 짝수인 경우 color를 변경하는 함수
+ * - 매 실행시마다 초기화되어야 함.
+ */
+function test3(){
+  const list = document.querySelectorAll("ul#test li");
+  for(let i = 0; i < list.length; i++){
+    const li = list[i];
+    li.classList.remove('even');
+    const n = Math.floor(Math.random() * 1000) + 1;
+    li.innerText = n;
+    if(n % 2 == 0){
+      li.classList.add('even');
     }
-    </style>
-    
-    <script>
-    /**
-     * ul#test li태그에 1 ~ 1000사이의 난수를 대입하고, 짝수인 경우 color를 변경하는 함수
-     * - 매 실행시마다 초기화되어야 함.
-     */
-    function test3(){
-      const list = document.querySelectorAll("ul#test li");
-      for(let i = 0; i < list.length; i++){
-        const li = list[i];
-        li.classList.remove('even');
-        const n = Math.floor(Math.random() * 1000) + 1;
-        li.innerText = n;
-        if(n % 2 == 0){
-          li.classList.add('even');
-        }
-      }
-    }
-    </script>
-    ```
-    
-    - 다른 풀이
-        
-        ```jsx
-        /**
-         * class값이 아닌 직접 style객체 제어하기
-         */
-        function test(){
-        	var elems = document.getElementsByTagName("li");
-        	//console.log(elems);
-        	for (var i = 0; i < elems.length; i++) {
-        		var num = Math.floor(Math.random() * 1000) + 1;
-        		elems[i].innerHTML = num;
-        		
-        		//짝수인경우 배경색 난수 지정
-        		elems[i].style.backgroundColor = "#fff";//16진수로 컬러값 초기화
-        		if(num % 2 == 0){
-        			var r =  Math.floor(Math.random() * 256);
-        			var g =  Math.floor(Math.random() * 256);
-        			var b =  Math.floor(Math.random() * 256);
-        			elems[i].style.backgroundColor = `rgb(${r},${g},${b})`;
-        		}
-        	}
-        }
-        
-        /**
-         * div#test 하위에 동적으로  ul>li*100을 생성하는 함수
-         *
-         */
-        function setRndNumber2(){
-        	const container = document.querySelector("div#test");
-        	// 0.기존 자식요소제거
-        	const prevChild = container.querySelector("ul");
-        	prevChild != null && container.removeChild(prevChild);
-        
-        	// 태그를 동적으로 생성 : js object먼저 생성후, DOM에 추가
-        	const ul = document.createElement("ul"); // <ul></ul>
-        
-        	for(let i = 0; i < 100; i++){
-        	  const li = document.createElement("li"); // <li></li>
-        	  let n = Math.floor(Math.random() * 100) + 1;
-        	  const textContent = document.createTextNode(n);
-        	  
-        	  li.append(textContent); // <li>34</li>
-        	  ul.append(li);
-        	}
-        
-        	container.append(ul);
-        }
-        ```
+  }
+}
+</script>
+```
+
+- 다른 풀이
+
+```jsx
+/**
+ * class값이 아닌 직접 style객체 제어하기
+ */
+function test(){
+	var elems = document.getElementsByTagName("li");
+	//console.log(elems);
+	for (var i = 0; i < elems.length; i++) {
+		var num = Math.floor(Math.random() * 1000) + 1;
+		elems[i].innerHTML = num;
+		
+		//짝수인경우 배경색 난수 지정
+		elems[i].style.backgroundColor = "#fff";//16진수로 컬러값 초기화
+		if(num % 2 == 0){
+			var r =  Math.floor(Math.random() * 256);
+			var g =  Math.floor(Math.random() * 256);
+			var b =  Math.floor(Math.random() * 256);
+			elems[i].style.backgroundColor = `rgb(${r},${g},${b})`;
+		}
+	}
+}
+
+/**
+ * div#test 하위에 동적으로  ul>li*100을 생성하는 함수
+ *
+ */
+function setRndNumber2(){
+	const container = document.querySelector("div#test");
+	// 0.기존 자식요소제거
+	const prevChild = container.querySelector("ul");
+	prevChild != null && container.removeChild(prevChild);
+
+	// 태그를 동적으로 생성 : js object먼저 생성후, DOM에 추가
+	const ul = document.createElement("ul"); // <ul></ul>
+
+	for(let i = 0; i < 100; i++){
+	  const li = document.createElement("li"); // <li></li>
+	  let n = Math.floor(Math.random() * 100) + 1;
+	  const textContent = document.createTextNode(n);
+	  
+	  li.append(textContent); // <li>34</li>
+	  ul.append(li);
+	}
+
+	container.append(ul);
+}
+```
 
 ## 관련 노트
 

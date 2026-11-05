@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - Props"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/11524612498b81388f23fdbb824da410
+주제:
+  - "[[00 - 대시보드/주제/Vue|Vue]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: Props
@@ -124,64 +128,64 @@ export default {
 
 - 선언된 props를 `<template>`에서 바로 사용할 수 있습니다.
     
-    ```jsx
-    <template>
-    	<p>{{ title }}</p>
-    </template>
-    ```
-    
+```jsx
+<template>
+	<p>{{ title }}</p>
+</template>
+```
+
 - `setup()` 함수의 첫 번째 매개변수로 props 객체를 받아 사용할 수 있습니다.
     
-    ```jsx
-    export default {
-    	setup(props) {
-    		return { };
-    	},
-    };
-    ```
-    
+```jsx
+export default {
+	setup(props) {
+		return { };
+	},
+};
+```
+
 - 컴포넌트 인스턴스(this)의 `$props` 객체로 접근할 수 있습니다. **<u>[(Options API)](https://vuejs.org/api/component-instance.html#props)</u>**
     
-    ```jsx
-    <template>
-    	<p>{{ $props }}</p>
-    </template>
-    <script>
-    export default {
-    	created() {
-    		// 객체로 접근
-    		this.$props
-    
-    		// 
-    		this.title
-    	}
-    };
-    </script>
-    ```
-    
+```jsx
+<template>
+	<p>{{ $props }}</p>
+</template>
+<script>
+export default {
+	created() {
+		// 객체로 접근
+		this.$props
+
+		// 
+		this.title
+	}
+};
+</script>
+```
+
 
 ### Props Name Casing
 
 - `props` 선언시에는 camelCase를 사용하여 이름을 선언합니다. 이렇게 하면 속성 키로 사용할 때 따옴표를 사용할 필요가 없고 유효한 JavaScript 식별자이기 때문에 템플릿 표현식에서 직접 참조할 수 있기 때문입니다.
     
-    ```jsx
-    export default {
-    	props: {
-    		greetingMessage: String
-    	}
-    }
-    ```
-    
-    ```html
-    <span>{{ greetingMessage }}</span>
-    ```
-    
+```jsx
+export default {
+	props: {
+		greetingMessage: String
+	}
+}
+```
+
+```html
+<span>{{ greetingMessage }}</span>
+```
+
 - 속성에 값을 전달할 때는 `kebab-case`를 사용하는 것을 [권장](https://vuejs.org/guide/components/props.html#props-declaration)합니다.
     
-    ```html
-    <MyComponent greeting-message="hello"></MyComponent>
-    ```
-    
+```html
+<MyComponent greeting-message="hello"></MyComponent>
+```
+
 
 ### 객체를 사용하여 다중 속성 전달
 
@@ -234,37 +238,37 @@ export default {
 
 1. **prop은 초기 값을 전달하는 데 사용됩니다. 자식 컴포넌트에서 속성 값을 로컬 데이터 속성으로 사용 하고자할 때 입니다.** 이 경우 prop을 초기 값으로 사용하는 로컬 변수를 선언하는 것이 가장 좋습니다.
     
-    ```jsx
-    export default {
-    	props: ['initialWidth', 'initialHeight'],
-    	setup(props) {
-    		// width는 props.initialWidth 값으로 초기화 됩니다.
-    		// 향후 props 업데이트의 연결이 끊어집니다.
-    		const width = ref(props.initialWidth)
-    		const height = ref(props.initialHeight)
-    		return {
-    			width,
-    			height
-    		}
-    	}
-    }
-    ```
-    
+```jsx
+export default {
+	props: ['initialWidth', 'initialHeight'],
+	setup(props) {
+		// width는 props.initialWidth 값으로 초기화 됩니다.
+		// 향후 props 업데이트의 연결이 끊어집니다.
+		const width = ref(props.initialWidth)
+		const height = ref(props.initialHeight)
+		return {
+			width,
+			height
+		}
+	}
+}
+```
+
 2. **prop**의 값의 변환이 필요할 때 입니다. 이 경우 `computed`를 사용하면 좋습니다. 그리고 상위 속성의 변경을 유지할 수 있습니다.
     
-    ```jsx
-    export default {
-    	props: ['size'],
-    	setup(props) {
-    		// 향후 props 업데이트의 연결이 유지됩니다.끊어집니다.
-    		const rectangleSize = computed(() => props.size.trim().toUpperCase());
-    		return {
-    			rectangleSize
-    		}
-    	}
-    }
-    ```
-    
+```jsx
+export default {
+	props: ['size'],
+	setup(props) {
+		// 향후 props 업데이트의 연결이 유지됩니다.끊어집니다.
+		const rectangleSize = computed(() => props.size.trim().toUpperCase());
+		return {
+			rectangleSize
+		}
+	}
+}
+```
+
 
 #### **객체 / 배열 Props 업데이트**
 

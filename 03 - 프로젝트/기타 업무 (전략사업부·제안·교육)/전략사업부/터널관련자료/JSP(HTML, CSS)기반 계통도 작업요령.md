@@ -1,15 +1,19 @@
 ---
 별칭:
   - "업무 - JSP(HTML, CSS)기반 계통도 작업요령"
-태그:
+tags:
   - type/work-doc
   - context/work
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 프로젝트: "[[03 - 프로젝트/기타 업무 (전략사업부·제안·교육)/기타 (전략사업부·제안·교육)|기타 (전략사업부·제안·교육)]]"
 노션원본: https://www.notion.so/42648c1cce6047b6ad037091325bb900
+주제:
+  - "[[00 - 대시보드/주제/JSP·Servlet|JSP·Servlet]]"
+  - "[[00 - 대시보드/주제/HTML·CSS|HTML·CSS]]"
 ---
 
 # 업무: JSP(HTML, CSS)기반 계통도 작업요령
@@ -98,30 +102,30 @@
 
 - 📌**코드 복붙**
     
-    ```
-    <!-- 본문 시작 -->
-    <div id="contentWrap">
-    
-        <!-- 상단 항목 시작 -->
-        <div class="top-control clear">
-            <div class="option-control02 clear mgLspace">
-    
-            </div>
-    
-            <!-- 터널 시작 -->
-            <div class="tunnel-area">
-                <div class="tunnel">
-    
-                </div>
-            </div>
-            <!-- 하단 항목 -->
-            <div class="bottom-control clear">
-    
+```
+<!-- 본문 시작 -->
+<div id="contentWrap">
+
+    <!-- 상단 항목 시작 -->
+    <div class="top-control clear">
+        <div class="option-control02 clear mgLspace">
+
+        </div>
+
+        <!-- 터널 시작 -->
+        <div class="tunnel-area">
+            <div class="tunnel">
+
             </div>
         </div>
+        <!-- 하단 항목 -->
+        <div class="bottom-control clear">
+
+        </div>
     </div>
-    ```
-    
+</div>
+```
+
 
 ![[03 - 프로젝트/기타 업무 (전략사업부·제안·교육)/전략사업부/터널관련자료/첨부/65e1f4e3_Untitled.png]]
 

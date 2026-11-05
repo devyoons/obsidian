@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - git 여러개 프로젝트 올리기"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/10d24612498b80f6822fd004a7b01d4c
+주제:
+  - "[[00 - 대시보드/주제/Git·GitHub|Git·GitHub]]"
 ---
 
 # 학습: git 여러개 프로젝트 올리기

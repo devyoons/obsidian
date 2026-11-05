@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - Date API"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/d9170b8575a5411eae773ebf8f05e086
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: Date API
@@ -59,35 +62,35 @@ function test4(){
 
 - 초 시계 만들기
     
-    ```jsx
-    <h2 id='clock'></h2>
-    <script>
-    function displayClock(date){
-      const f = function(n){
-        return (n < 10) ? "0" + n : n;
-      };
-    
-      const yyyy = date.getFullYear();
-      const MM = f(date.getMonth() + 1);
-      const dd = f(date.getDate());
-      const hh = f(date.getHours());
-      const mm = f(date.getMinutes());
-      const ss = f(date.getSeconds());
-    
-      const str = `${yyyy}/${MM}/${dd} ${hh}:${mm}:${ss}`;
-      clock.innerHTML = str;
-    
-      // 1초후에 다시 호출
-      // 1 * 1000 ms
-      setTimeout(function(){
-        displayClock(new Date());
-      }, 1000); 
-      
-    }
-    
+```jsx
+<h2 id='clock'></h2>
+<script>
+function displayClock(date){
+  const f = function(n){
+    return (n < 10) ? "0" + n : n;
+  };
+
+  const yyyy = date.getFullYear();
+  const MM = f(date.getMonth() + 1);
+  const dd = f(date.getDate());
+  const hh = f(date.getHours());
+  const mm = f(date.getMinutes());
+  const ss = f(date.getSeconds());
+
+  const str = `${yyyy}/${MM}/${dd} ${hh}:${mm}:${ss}`;
+  clock.innerHTML = str;
+
+  // 1초후에 다시 호출
+  // 1 * 1000 ms
+  setTimeout(function(){
     displayClock(new Date());
-    </script>
-    ```
+  }, 1000); 
+  
+}
+
+displayClock(new Date());
+</script>
+```
 
 ## 관련 노트
 

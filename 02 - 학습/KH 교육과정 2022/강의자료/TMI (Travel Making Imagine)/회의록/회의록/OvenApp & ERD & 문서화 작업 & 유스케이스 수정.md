@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - OvenApp & ERD & 문서화 작업 & 유스케이스 수정"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

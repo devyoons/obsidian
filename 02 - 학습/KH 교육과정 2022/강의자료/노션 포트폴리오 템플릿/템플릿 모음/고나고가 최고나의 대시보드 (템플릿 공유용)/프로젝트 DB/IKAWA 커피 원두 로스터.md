@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - IKAWA 커피 원두 로스터"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

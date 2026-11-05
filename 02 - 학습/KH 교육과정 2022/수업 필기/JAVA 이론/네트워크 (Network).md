@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - 네트워크 (Network)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/546a0ec17b8f4abdbf63291b330dc873
+주제:
+  - "[[00 - 대시보드/주제/Network|Network]]"
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 네트워크 (Network)
@@ -99,12 +103,12 @@
                 - 프로토콜://도메인명/파일명.확장자/ 예> [ftp://www.microsoft.com/driver.zip/](ftp://www.microsoft.com/driver.zip/)
                 - 프로토콜://도메인명/에플리케이션이름/폴더명/폴더명/클래스명?변수명=값&변수명=값 예> [http://localhost:8080/notice/list?userid=admin](http://localhost:8080/notice/list?userid=admin) (클래스명 뒤의 ?다음의 내용을 QueryString이라고 함
                     
-                    ```
-                      getQuery()에 의해 리턴받을 수 있음)
-                    ```
-                    
-                - 관련 클래스 : java.net.URL
-            - URN(Uniform Resource Name): 리소스(자원)의 이름
+```
+  getQuery()에 의해 리턴받을 수 있음)
+```
+
+- 관련 클래스 : java.net.URL
+- URN(Uniform Resource Name): 리소스(자원)의 이름
 
 프로토콜(protocol) : 컴퓨터간에 정보를 주고받을 때의 통신방법에 대한 규칙과 약속.
 

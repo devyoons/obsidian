@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - Home Sweet Home - pk_last_name"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

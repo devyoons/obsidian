@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - 댓글 DB 테이블생성"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/bad40af6beea49fdbd41d8e40feb2d9e
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/웹 기능 구현|웹 기능 구현]]"
 ---
 
 # 강의: 댓글 DB 테이블생성
@@ -88,16 +92,16 @@ values(
     - 부모행과 자식행 연결
     - prior 를 부모행 앞에 적어준다.
     
-    ```sql
-    select * 
-    from board_comment
-    where board_no = 143
-    start with comment_level = 1
-    connect by comment_ref = prior no;
-    ```
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4f811cdd_Untitled.png]]
-    
+```sql
+select * 
+from board_comment
+where board_no = 143
+start with comment_level = 1
+connect by comment_ref = prior no;
+```
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4f811cdd_Untitled.png]]
+
 
 ```sql
 select level, bc.*

@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - Spring Boot"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/b20d6e975fc74f6fb4c1db29320885fa
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: Spring Boot
@@ -84,59 +87,59 @@ public class DemoApplication {
 
 - HelloSpringbootApplication.java
     
-    ```java
-    package com.kh.spring;
-    
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
-    
-    /**
-     * 
-     * @Configuration
-     * @EnableAutoConfiguration - 자동으로 context 구성
-     * @ComponentScan - 현재 패키지 하위의 @Component를 빈으로 등록
-     *
-     */
-    @SpringBootApplication
-    public class HelloSpringbootApplication {
-    
-    	public static void main(String[] args) {
-    		SpringApplication.run(HelloSpringbootApplication.class, args);
-    	}
-    
-    }
-    ```
-    
+```java
+package com.kh.spring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * 
+ * @Configuration
+ * @EnableAutoConfiguration - 자동으로 context 구성
+ * @ComponentScan - 현재 패키지 하위의 @Component를 빈으로 등록
+ *
+ */
+@SpringBootApplication
+public class HelloSpringbootApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelloSpringbootApplication.class, args);
+	}
+
+}
+```
+
 - application.properties
     
-    ```java
-    server.servlet.context-path=/springboot
-    server.port=10000
-    ```
-    
+```java
+server.servlet.context-path=/springboot
+server.port=10000
+```
+
 - indexController.jave
     
-    ```java
-    package com.kh.spring;
-    
-    import org.springframework.stereotype.Controller;
-    import org.springframework.web.bind.annotation.GetMapping;
-    import org.springframework.web.bind.annotation.ResponseBody;
-    
-    import lombok.extern.slf4j.Slf4j;
-    
-    @Controller
-    @Slf4j
-    public class indexController {
-    
-    	@GetMapping("/")
-    	@ResponseBody
-    	public String index() {
-    		return "<h1>hello, springbooooooot!</h1>";
-    	}
-    }
-    ```
-    
+```java
+package com.kh.spring;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+public class indexController {
+
+	@GetMapping("/")
+	@ResponseBody
+	public String index() {
+		return "<h1>hello, springbooooooot!</h1>";
+	}
+}
+```
+
 
 ### 2. boot 의 view단 (thymeleaf, velocity, mustache)
 
@@ -151,20 +154,20 @@ public class DemoApplication {
     4. resources 추가
     5. pom.xml 에 dependency 추가
         
-        ```xml
-        <!-- #1. jsp를 view단으로 사용하기 위한 의존 -->
-        	<dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>jstl</artifactId>
-            </dependency>
-        
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-jasper</artifactId>
-                <scope>provided</scope>
-            </dependency>
-        ```
-        
+```xml
+<!-- #1. jsp를 view단으로 사용하기 위한 의존 -->
+	<dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-jasper</artifactId>
+        <scope>provided</scope>
+    </dependency>
+```
+
 
 ## rest api 개요
 
@@ -177,25 +180,25 @@ public class DemoApplication {
 
 - **db연결시 mybatis 설정하기 —> application.properties**
     
-    ```xml
-    server.servlet.context-path=/springboot
-    server.port=10000
-    
-    # datasource
-    spring.datasource.url=jdbc:orcle:thin:@localhost:1521:xe
-    spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
-    spring.datasource.username=spring
-    spring.datasource.password==spring
-    
-    # mybatis
-    mybatis.configuration.jdbc-type-for-null=NULL
-    mybatis.configuration.map-underscore-to-camel-case=true
-    mybatis.type-aliases-package=com.kh.spring
-    mybatis.mapper-locations=classpath*:mapper/**/*-mapper.xml
-    
-    # loggin - logback
-    logging.level.com.kh.spring=DEBUG
-    ```
+```xml
+server.servlet.context-path=/springboot
+server.port=10000
+
+# datasource
+spring.datasource.url=jdbc:orcle:thin:@localhost:1521:xe
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.username=spring
+spring.datasource.password==spring
+
+# mybatis
+mybatis.configuration.jdbc-type-for-null=NULL
+mybatis.configuration.map-underscore-to-camel-case=true
+mybatis.type-aliases-package=com.kh.spring
+mybatis.mapper-locations=classpath*:mapper/**/*-mapper.xml
+
+# loggin - logback
+logging.level.com.kh.spring=DEBUG
+```
 
 ## 하위 노트
 

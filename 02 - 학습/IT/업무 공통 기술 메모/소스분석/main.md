@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - main"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/fb5e2045901e4583a57e42f74a09d65d
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
+  - "[[00 - 대시보드/주제/JSP·Servlet|JSP·Servlet]]"
 ---
 
 # 학습: main

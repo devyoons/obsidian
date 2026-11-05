@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - [Network] TCP/IP 기본용어 정리"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/인프라
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/7f7090ed10eb4cb2bb26a8139c059016
+주제:
+  - "[[00 - 대시보드/주제/Network|Network]]"
 ---
 
 # 학습: [Network] TCP/IP 기본용어 정리

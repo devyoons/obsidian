@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - frontend project생성"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

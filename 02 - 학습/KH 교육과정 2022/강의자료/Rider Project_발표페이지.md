@@ -1,7 +1,7 @@
 ---
 별칭:
   - "학습 - Rider Project_발표페이지"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev

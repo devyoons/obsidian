@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - STS 다운로드 & 설정"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/f9c39afd708140db9e7d6ff73dcfd0b4
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: STS 다운로드 & 설정
@@ -130,36 +133,36 @@
     
     [https://mvnrepository.com/artifact/org.springframework/springloaded/1.2.8.RELEASE](https://mvnrepository.com/artifact/org.springframework/springloaded/1.2.8.RELEASE)
     
-    ```java
-    <!-- #5. hotswapping 기능을 지원하는 의존. tomcat구동시에 필요 -->
-    <!-- JDK11 지원안함. -->
-    <!-- scope : provided compile때 사용하고, 운영시에는 사용하지 않음 -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>springloaded</artifactId>
-      <version>1.2.8.RELEASE</version>
-      <scope>provided</scope>
-    </dependency>
-    ```
-    
-    C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/c48a8b09_Untitled.png]]
-    
-    경로로 복사
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4c56017a_Untitled.png]]
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1ade2882_Untitled.png]]
-    
-    javaagent:"C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE\springloaded-1.2.8.RELEASE.jar" -noverify
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/106349f5_Untitled.png]]
-    
-    이클립스 자동리로드 체크박스 비우기
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fa774a34_Untitled.png]]
-    
+```java
+<!-- #5. hotswapping 기능을 지원하는 의존. tomcat구동시에 필요 -->
+<!-- JDK11 지원안함. -->
+<!-- scope : provided compile때 사용하고, 운영시에는 사용하지 않음 -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>springloaded</artifactId>
+  <version>1.2.8.RELEASE</version>
+  <scope>provided</scope>
+</dependency>
+```
+
+C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/c48a8b09_Untitled.png]]
+
+경로로 복사
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4c56017a_Untitled.png]]
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1ade2882_Untitled.png]]
+
+javaagent:"C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE\springloaded-1.2.8.RELEASE.jar" -noverify
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/106349f5_Untitled.png]]
+
+이클립스 자동리로드 체크박스 비우기
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fa774a34_Untitled.png]]
+
 - 콘솔 크기 설정 : 8만으로 제한되어 있어서 내용이 짤림
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/667d5bea_Untitled.png]]
@@ -186,44 +189,44 @@
         
         [https://mvnrepository.com/artifact/org.springframework/springloaded/1.2.8.RELEASE](https://mvnrepository.com/artifact/org.springframework/springloaded/1.2.8.RELEASE)
         
-        ```java
-        <!-- #5. hotswapping 기능을 지원하는 의존. tomcat구동시에 필요 -->
-        <!-- JDK11 지원안함. -->
-        <!-- scope : provided compile때 사용하고, 운영시에는 사용하지 않음 -->
-        <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>springloaded</artifactId>
-          <version>1.2.8.RELEASE</version>
-          <scope>provided</scope>
-        </dependency>
-        ```
-        
-    2. springloaded.jar 파일 찾기
-        
-        경로 > C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/c48a8b09_Untitled.png]]
-        
-        shift + 우클릭 : 경로로 복사
-        
-    3. 얻은 경로를 지역서버 오버뷰에서 톰캣실행인자들 마지막에 붙여넣기 
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4c56017a_Untitled.png]]
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1ade2882_Untitled.png]]
-        
-        javaagent:"C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE\springloaded-1.2.8.RELEASE.jar" -noverify
-        
-        - noverify : 옵션은 검증하지 않겠다
-        - 오타 있으면 서버 안켜짐
-    4. 이클립스 리로드 설정끄기 
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/106349f5_Untitled.png]]
-        
-        이클립스 자동리로드 체크박스 비우기
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fa774a34_Untitled.png]]
-        
+```java
+<!-- #5. hotswapping 기능을 지원하는 의존. tomcat구동시에 필요 -->
+<!-- JDK11 지원안함. -->
+<!-- scope : provided compile때 사용하고, 운영시에는 사용하지 않음 -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>springloaded</artifactId>
+  <version>1.2.8.RELEASE</version>
+  <scope>provided</scope>
+</dependency>
+```
+
+2. springloaded.jar 파일 찾기
+
+경로 > C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/c48a8b09_Untitled.png]]
+
+shift + 우클릭 : 경로로 복사
+
+3. 얻은 경로를 지역서버 오버뷰에서 톰캣실행인자들 마지막에 붙여넣기 
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4c56017a_Untitled.png]]
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1ade2882_Untitled.png]]
+
+javaagent:"C:\Users\chlqk\.m2\repository\org\springframework\springloaded\1.2.8.RELEASE\springloaded-1.2.8.RELEASE.jar" -noverify
+
+- noverify : 옵션은 검증하지 않겠다
+- 오타 있으면 서버 안켜짐
+4. 이클립스 리로드 설정끄기 
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/106349f5_Untitled.png]]
+
+이클립스 자동리로드 체크박스 비우기
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/fa774a34_Untitled.png]]
+
 
 #### [[02 - 학습/KH 교육과정 2022/수업 필기/hello-spring - 2일차|#7 DB 영속성 설정]]
 

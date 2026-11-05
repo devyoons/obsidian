@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - 반복문 for, while (완벽 호환)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/4805d482d7d54ef6af950835e696f0a6
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: 반복문 for, while (완벽 호환)

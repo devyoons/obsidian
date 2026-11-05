@@ -1,7 +1,7 @@
 ---
 별칭:
   - "강의 - Log4j"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
@@ -91,16 +91,16 @@ public class Log4jTest {
     
     ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/e80446c5_Untitled.png]]
     
-    ```java
-    <appender name="console" class="org.apache.log4j.ConsoleAppender">
-    		<param name="Target" value="System.out" />
-    		<layout class="org.apache.log4j.PatternLayout">
-    			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
-    		</layout>
-    	</appender>
-    ```
-    
-    - 내부적으로 sysout을 사용하지만 얘가 쓰는지 내가 쓰는지에 대한 차이가 있다.
+```java
+<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
+```
+
+- 내부적으로 sysout을 사용하지만 얘가 쓰는지 내가 쓰는지에 대한 차이가 있다.
 
 ### PatternLayout
 

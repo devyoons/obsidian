@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - SQLD 정리"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/데이터베이스
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/2f3d96d10bfd4e6f89acb0bae8e65f3c
+주제:
+  - "[[00 - 대시보드/주제/Database·SQL|Database·SQL]]"
+  - "[[00 - 대시보드/주제/자격증|자격증]]"
 ---
 
 # 학습: SQLD 정리
@@ -76,21 +80,21 @@ TO 유저 WITH ADMIN OPTION;
 - [문제1] 
 유저 hoho가 아래의 코드와 같은 작업을 수행할 수 있도록 권한을 부여하는 DCL을 작성하시오.
     
-    ```sql
-    UPDATE hoho_qualification.data 
-    SET col2 = ‘합격’
-    WHERE col1 = ‘SQLD’ ;
-    ```
-    
-    - 정답
-        
-        ```sql
-        GRANT SELECT, UPDATE ON hoho_qualification.data TO hoho;
-        ```
-        
-        - GRANT권한 ON 테이블명 TO 유저명;
-        - WHERE조건문을 사용가능하기 위한 SELECT권한도 수여
-        - 
+```sql
+UPDATE hoho_qualification.data 
+SET col2 = ‘합격’
+WHERE col1 = ‘SQLD’ ;
+```
+
+- 정답
+
+```sql
+GRANT SELECT, UPDATE ON hoho_qualification.data TO hoho;
+```
+
+- GRANT권한 ON 테이블명 TO 유저명;
+- WHERE조건문을 사용가능하기 위한 SELECT권한도 수여
+- 
 - [문제2]
 데이터베이스상에서 많은 사용자들에게 개별적으로 권한을 부여하고 관리하는 어려움을 해소하고자 다양한 권한을 하나의 그룹으로 묶어서 관리할 수 있도록 하는 논리적인 권한의 그롭(명령어)을 칭하는 말은?
     - 정답
@@ -161,62 +165,62 @@ CREATE TABLE C_INFO (
 김호호씨가 아래와 같이 테이블 menu를 생성한 후, 유효한 튜플 값 4개를 삽입했다.
 이 경우, SQL-a와 SQL-b의 실행 결과를 각각 구하시오.
     
-    ```sql
-    <테이블 생성>
-    	CREATE TABLE MENU (
-    	메뉴명 varchar2(10) PRIMARY KEY,
-    	가격 number(10) 
-    ) ;
-    
-    <SQL-a>
-    SELECT count(*) FROM MENU;
-    
-    <SQL-b>
-    SELECT count(메뉴명) FROM MENU;
-    ```
-    
-    - 정답
-        
-        둘 다 숫자 4가 출력된다.
-        
-        - count(*) : 전체 행의 수 카운트, null 포함
-        - count(컬럼명) : null 제외한 행 수 카운트
-        - 메뉴명 컬럼은 PK이므로 null값을 가질 수 없다.
-            - 따라서 *을 통해 전체 행을 추출한 sql-a와 메뉴명이랑 컬럼명을 명시한 sql-b 결과가 동일
-            
+```sql
+<테이블 생성>
+	CREATE TABLE MENU (
+	메뉴명 varchar2(10) PRIMARY KEY,
+	가격 number(10) 
+) ;
+
+<SQL-a>
+SELECT count(*) FROM MENU;
+
+<SQL-b>
+SELECT count(메뉴명) FROM MENU;
+```
+
+- 정답
+
+    둘 다 숫자 4가 출력된다.
+
+    - count(*) : 전체 행의 수 카운트, null 포함
+    - count(컬럼명) : null 제외한 행 수 카운트
+    - 메뉴명 컬럼은 PK이므로 null값을 가질 수 없다.
+        - 따라서 *을 통해 전체 행을 추출한 sql-a와 메뉴명이랑 컬럼명을 명시한 sql-b 결과가 동일
+
 - [문제4]
 김호호씨가 아래와 같이 테이블 menu를 생성한 후, 유효한 튜플 값 4개를 삽입했다.
 이 경우, SQL-a와 SQL-b의 실행할 경우엔 어떤 결과가 출력될까요?
     
-    ```sql
-    <테이블 생성>
-    CREATE TABLE MENU (
-    	메뉴명 varchar2(10) PRIMARY KEY,
-    	가격 number(10) 
-    ) ;
-    
-    <SQL-a>
-    SELECT count(*) FROM MENU;
-    
-    <SQL-b>
-    SELECT count(가격) FROM MENU;
-    ```
-    
-    - 정답
-        
-        [가격]컬럼에 포함된 null값의 개수에 따라 서로 실행 결과가 다를 수 있다.
-        
-        - [가격] 컬럼은 NOT NULL 제약조건이 붙지도 않았고, primary key 도 아니다.
-    
-    <aside>
-    💡 Point. null 말문제 대비
-    
-    1. NULL 은 모르는 값을 상징하고, 값이 없음(부재)을 의미함
-    2. NULL **IS** NULL = TRUE
-    3. NULL 과의 모든 비교 (ex. NULL = 0 ) 은 알 수 없음(NULL)을 반환함
-    4. NULL은 숫자 0이나 공백문자 (‘ ‘)와 동일하지 않음 (얘네는 값이 있음)
-    </aside>
-    
+```sql
+<테이블 생성>
+CREATE TABLE MENU (
+	메뉴명 varchar2(10) PRIMARY KEY,
+	가격 number(10) 
+) ;
+
+<SQL-a>
+SELECT count(*) FROM MENU;
+
+<SQL-b>
+SELECT count(가격) FROM MENU;
+```
+
+- 정답
+
+    [가격]컬럼에 포함된 null값의 개수에 따라 서로 실행 결과가 다를 수 있다.
+
+    - [가격] 컬럼은 NOT NULL 제약조건이 붙지도 않았고, primary key 도 아니다.
+
+<aside>
+💡 Point. null 말문제 대비
+
+1. NULL 은 모르는 값을 상징하고, 값이 없음(부재)을 의미함
+2. NULL **IS** NULL = TRUE
+3. NULL 과의 모든 비교 (ex. NULL = 0 ) 은 알 수 없음(NULL)을 반환함
+4. NULL은 숫자 0이나 공백문자 (‘ ‘)와 동일하지 않음 (얘네는 값이 있음)
+</aside>
+
 
 #### 1 - 2. ALTER : 테이블과 컬럼에 대해 이름 및 속성 변경, 추가/삭제 등 구조 수정을 위해 사용
 
@@ -247,11 +251,11 @@ CREATE TABLE C_INFO (
     
     - 정답
         
-        ```sql
-        ALTER TABLE RIDING
-        MODIFY ( phone varchar(15) NOT NULL ) ;
-        ```
-        
+```sql
+ALTER TABLE RIDING
+MODIFY ( phone varchar(15) NOT NULL ) ;
+```
+
 
 #### 1 - 3. DROP : 테이블 및 컬럼 삭제
 
@@ -345,28 +349,28 @@ TRUNCATE | **TRUNCATE TABLE** MENU ;
     
     다음의 SQL을 통해 MENU 테이블을 생성했다. 보기의 SQL문장 중 오류가 발생하는 것을 모두 고르시오.
     
-    ```sql
-    CREATE TABLE MENU (
-    	메뉴코드 varchar2(10) PRIMARY KEY,
-    	메뉴명 varchar2(10) NOT NULL,
-    	가격 number(10) NOT NULL,
-    	할인율 number(100) DEFAULT 0
-    ) ;
-    ```
-    
-    1. UPDATE MENU SET 메뉴코드 = 100 WHERE 메뉴명 = ‘스키야키’ ;
-    2. DELETE MENU;
-    3. INSERT INTO MENU (메뉴코드, 가격) VALUES (‘101’, 50000 );
-    4. INSERT INTO MENU VALUES ( ‘102’, 와규, 30000 ) ;
-    - 정답
-        
-        3, 4
-        
-        - 숫자는 varchar2 와 char에 입력 가능
-        - DELETE 에서 FROM 생략 가능
-        - not null값인 메뉴명에 대한 insert가 이뤄지지 않을 경우 오류 발생
-        - 컬럼명 지정이 이뤄지지 않은 상태에서는전체값이 들어가야함
-        
+```sql
+CREATE TABLE MENU (
+	메뉴코드 varchar2(10) PRIMARY KEY,
+	메뉴명 varchar2(10) NOT NULL,
+	가격 number(10) NOT NULL,
+	할인율 number(100) DEFAULT 0
+) ;
+```
+
+1. UPDATE MENU SET 메뉴코드 = 100 WHERE 메뉴명 = ‘스키야키’ ;
+2. DELETE MENU;
+3. INSERT INTO MENU (메뉴코드, 가격) VALUES (‘101’, 50000 );
+4. INSERT INTO MENU VALUES ( ‘102’, 와규, 30000 ) ;
+- 정답
+
+    3, 4
+
+    - 숫자는 varchar2 와 char에 입력 가능
+    - DELETE 에서 FROM 생략 가능
+    - not null값인 메뉴명에 대한 insert가 이뤄지지 않을 경우 오류 발생
+    - 컬럼명 지정이 이뤄지지 않은 상태에서는전체값이 들어가야함
+
 - 문제[3]
     
     DELETE에 관한 설명 중 틀린 것은?
@@ -407,110 +411,110 @@ TRUNCATE | **TRUNCATE TABLE** MENU ;
     
     다음의 SQL문을 수행했을때 결과를 구하시오. (주관식)
     
-    ```sql
-    CREATE TABLE T1 (
-    	col1 varchar2(10)
-    	col2 number(10)
-    ) ; 
-    INSERT INTO T1 VALUES( 10, 100) ; 
-    INSERT INTO T1 VALUES( 20, 200) ;
-    INSERT INTO T1 VALUES( 25, 250) ;
-    SAVEPOINT S1;
-    DELETE T1 WHERE col1 = 10 ;
-    UPDATE T1 SET col1 = 40 WHERE col2 = 200 ; 
-    SAVEPOINT S1;
-    INSERT INTO T1 VALUES(50, 500);
-    ROLLBACK TO SAVEPOINT S1;
-    SELECT MAX(col2) FROM T1;
-    ```
-    
-    - 정답
-        
-        300
-        
-        ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/731ef79d_Untitled.png]]
-        
+```sql
+CREATE TABLE T1 (
+	col1 varchar2(10)
+	col2 number(10)
+) ; 
+INSERT INTO T1 VALUES( 10, 100) ; 
+INSERT INTO T1 VALUES( 20, 200) ;
+INSERT INTO T1 VALUES( 25, 250) ;
+SAVEPOINT S1;
+DELETE T1 WHERE col1 = 10 ;
+UPDATE T1 SET col1 = 40 WHERE col2 = 200 ; 
+SAVEPOINT S1;
+INSERT INTO T1 VALUES(50, 500);
+ROLLBACK TO SAVEPOINT S1;
+SELECT MAX(col2) FROM T1;
+```
+
+- 정답
+
+    300
+
+    ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/731ef79d_Untitled.png]]
+
 - 문제[5]
     
     다음의 SQL문을 수행했을때 영구적으로 반영되는 col1의 값을 모두 쓰시오.
     
-    ```sql
-    INSERT INTO T2 VALUES(10);
-    INSERT INTO T2 VALUES(20);
-    INSERT INTO T2 VALUES(30);
-    SAVEPOINT S1;
-    UPDATE T2 SET col1 = 50 WHERE col1 = 20;
-    SAVEPOINT S2;
-    DELETE T2 WHERE col1 = 30;
-    SAVEPOINT S3;
-    INSERT INTO T2 VALUES(70);
-    ROLLBACK S2;
-    COMMIT;
-    ```
-    
-    - 정답
-        
-        10, 50, 30
-        
-        ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/de78eb16_Untitled.png]]
-        
-        - DML 은 자동 commit (반영) 되지 않음
-        - ROLLBACK, DROP 은 되돌릴 수 없다던 말
-        = [SQL server] 기준 DDL = auto-commit
-        
-        <aside>
-        💡 **COMMIT과 ROLLBACK 효과**
-        
-        1. 데이터 무결성을 보장할 수 있다.
-        2. 영구적인 변경 전 데이터에 대한 변동사항을 확인할 수
-        있다.
-        3. 논리적 연관성 있는 작업을 그룹화하여 처리할 수
-        있다.
-        </aside>
-        
+```sql
+INSERT INTO T2 VALUES(10);
+INSERT INTO T2 VALUES(20);
+INSERT INTO T2 VALUES(30);
+SAVEPOINT S1;
+UPDATE T2 SET col1 = 50 WHERE col1 = 20;
+SAVEPOINT S2;
+DELETE T2 WHERE col1 = 30;
+SAVEPOINT S3;
+INSERT INTO T2 VALUES(70);
+ROLLBACK S2;
+COMMIT;
+```
+
+- 정답
+
+    10, 50, 30
+
+    ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/de78eb16_Untitled.png]]
+
+    - DML 은 자동 commit (반영) 되지 않음
+    - ROLLBACK, DROP 은 되돌릴 수 없다던 말
+    = [SQL server] 기준 DDL = auto-commit
+
+    <aside>
+    💡 **COMMIT과 ROLLBACK 효과**
+
+    1. 데이터 무결성을 보장할 수 있다.
+    2. 영구적인 변경 전 데이터에 대한 변동사항을 확인할 수
+    있다.
+    3. 논리적 연관성 있는 작업을 그룹화하여 처리할 수
+    있다.
+    </aside>
+
 - 문제[6]
     
     다음의 SQL문을 수행했을때 영구적으로 반영되는 col1의 값을 모두 쓰시오.
     
-    ```sql
-    INSERT INTO T2 VALUES(10);
-    INSERT INTO T2 VALUES(20);
-    INSERT INTO T2 VALUES(30);
-    COMMIT;
-    UPDATE T2 SET col1 =50 WHERE col1=20;
-    DELETE T2 WHERE col1= 30;
-    INSERT INTO T2 VALUES(70);
-    ROLLBACK;
-    COMMIT;
-    ```
-    
-    - 정답
-        
-        10, 20, 30
-        
-        ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/3d640042_Untitled.png]]
-        
-        - SAVEPOINT 가 없을 경우 가장 최신의 COMMIT 상태로 복원된다.
-        
+```sql
+INSERT INTO T2 VALUES(10);
+INSERT INTO T2 VALUES(20);
+INSERT INTO T2 VALUES(30);
+COMMIT;
+UPDATE T2 SET col1 =50 WHERE col1=20;
+DELETE T2 WHERE col1= 30;
+INSERT INTO T2 VALUES(70);
+ROLLBACK;
+COMMIT;
+```
+
+- 정답
+
+    10, 20, 30
+
+    ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/3d640042_Untitled.png]]
+
+    - SAVEPOINT 가 없을 경우 가장 최신의 COMMIT 상태로 복원된다.
+
 - 문제[7]
     
     다음 중 데이터베이스 시스템 언어의 종류와 해당하는 명령어가 바르게 연결되지 않은 것을 모두 고르시오.
     
-    ```sql
-    1. DDL - RENAME
-    2. TCL - REVOKE
-    3. DML - UPDATE
-    4. DCL - ROLLBACK
-    5. DDL - DELETE
-    6. TCL - COMMIT
-    7. DML - DROP
-    8. DCL - GRANT
-    ```
-    
-    - 정답
-        
-        2, 4, 5, 7
-        
+```sql
+1. DDL - RENAME
+2. TCL - REVOKE
+3. DML - UPDATE
+4. DCL - ROLLBACK
+5. DDL - DELETE
+6. TCL - COMMIT
+7. DML - DROP
+8. DCL - GRANT
+```
+
+- 정답
+
+    2, 4, 5, 7
+
 
 ## [SQL 2-1강]
 
@@ -547,58 +551,58 @@ ORDER BY 컬럼명
     
     다음과 같이 정의된 C_INFO 테이블에서 2000년도에 태어난 고객의 이름과 전화번호를 조회하려고 한다. 빈칸에 알맞은 명령어를 구하시오.
     
-    ```sql
-    CREATE TABLE C_INFO ( 
-    	이름 varchar2(10) ,
-    	생년 number(4) default 9999,
-    	전화번호 varchar2(15) not null,
-    	첫방문일 date, 
-    	고객번호 varchar2(10) primary key
-    );
-    
-    [ ㄱ ] 이름, 전화번호
-    [ ㄴ ] C_INFO
-    [ ㄷ ] 생년 = 2000 ;
-    ```
-    
-    - 정답
-        
-        ```sql
-        select, from, where
-        ```
-        
-        <aside>
-        💡 조회를 하기 위한 기본 문장 구조
-        
-        **SELECT** 조회대상
-        **FROM** 테이블명
-        **WHERE** 조건문
-        
-        </aside>
-        
+```sql
+CREATE TABLE C_INFO ( 
+	이름 varchar2(10) ,
+	생년 number(4) default 9999,
+	전화번호 varchar2(15) not null,
+	첫방문일 date, 
+	고객번호 varchar2(10) primary key
+);
+
+[ ㄱ ] 이름, 전화번호
+[ ㄴ ] C_INFO
+[ ㄷ ] 생년 = 2000 ;
+```
+
+- 정답
+
+```sql
+select, from, where
+```
+
+<aside>
+💡 조회를 하기 위한 기본 문장 구조
+
+**SELECT** 조회대상
+**FROM** 테이블명
+**WHERE** 조건문
+
+</aside>
+
 - 문제[3]
     
     테이블 C_INFO에 대하여 아래와 같은 SQL문을 실행한 결과 출력 되는 행의 수를 구하시오.
     
     ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/c4ea243c_Untitled.png]]
     
-    ```sql
-    SELECT DISTINCT 성별, 연령대
-    FROM C_INFO ;
-    ```
-    
-    - 정답
-        
-        4
-        
-        ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/064ec99a_Untitled.png]]
-        
-        - C_INFO라는 테이블의 (FROM C_INFO)
-        - 성별 컬럼에서 중복을 제거하고 조회한다. (DISTINCT)
-            - 단, DISTINCT는 NULL도 단일 행으로 본다.
-        
-        ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/8c8c758a_Untitled.png]]
-        
+```sql
+SELECT DISTINCT 성별, 연령대
+FROM C_INFO ;
+```
+
+- 정답
+
+    4
+
+    ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/064ec99a_Untitled.png]]
+
+    - C_INFO라는 테이블의 (FROM C_INFO)
+    - 성별 컬럼에서 중복을 제거하고 조회한다. (DISTINCT)
+        - 단, DISTINCT는 NULL도 단일 행으로 본다.
+
+    ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/8c8c758a_Untitled.png]]
+
 - 문제[4]
     
     테이블 C_INFO에 대하여 아래의 SQL문 3가지를 실행한 결과 출력 되는 행 수를 구하시오.
@@ -648,11 +652,11 @@ LEN(‘가 나다') >> 4 |
     
     - 정답
         
-        ```sql
-        SELECT 회원코드, 연령대, UPPER(이름) 
-        FROM C_INFO ;
-        ```
-        
+```sql
+SELECT 회원코드, 연령대, UPPER(이름) 
+FROM C_INFO ;
+```
+
 - 문제[6]
     
     C_INFO를 우측의 테이블과 같이 조회하기 위한 SQL문은?
@@ -661,19 +665,19 @@ LEN(‘가 나다') >> 4 |
     
     - 정답
         
-        ```sql
-        SELECT 회원코드, RTRIM(연령대, ‘대’), UPPER(이름) 
-        FROM C_INFO ;
-        ```
-        
-        ※ 참고
-        
-        - WHERE 문에도 함수 들어갈 수 있음
-        - JOIN등과 결합한 문제 출제 가능
-        SELECT T1.*
-        FROM table_1 T1, table_2 T2
-        WHERE UPPER(T1.col1) LIKE T2.col1 ;
-        
+```sql
+SELECT 회원코드, RTRIM(연령대, ‘대’), UPPER(이름) 
+FROM C_INFO ;
+```
+
+※ 참고
+
+- WHERE 문에도 함수 들어갈 수 있음
+- JOIN등과 결합한 문제 출제 가능
+SELECT T1.*
+FROM table_1 T1, table_2 T2
+WHERE UPPER(T1.col1) LIKE T2.col1 ;
+
 
 ### 🌱  SELECT문 기본 구조 - 숫자형 함수
 
@@ -691,15 +695,15 @@ LEN(‘가 나다') >> 4 |
 - 암시적 형변환은 데이터베이스가 알아서 바꿔주는 것
     - ex. 고객번호가 number형으로 되어있고, PK값인 테이블 C_INFO에 대해 아래와 같은 조회가 발생하면 암시적 형변환 발생한다.
     
-    ```sql
-    SELECT *
-    FROM C_INFO
-    WHERE 고객번호 = ‘12345’
-    ```
-    
-    - [고객번호]는 숫자형 타입이고, PK이므로 인덱스가 됨
-        - 인덱스 : 빠른 조회를 돕는 책의 목차와 같은 기능을 함, 데이터는 인덱스 기준 자동정렬됨
-        - 인덱스에 대해 암시적 형변환이 발생한 경우, 인덱스를 사용할 수 없다.
+```sql
+SELECT *
+FROM C_INFO
+WHERE 고객번호 = ‘12345’
+```
+
+- [고객번호]는 숫자형 타입이고, PK이므로 인덱스가 됨
+    - 인덱스 : 빠른 조회를 돕는 책의 목차와 같은 기능을 함, 데이터는 인덱스 기준 자동정렬됨
+    - 인덱스에 대해 암시적 형변환이 발생한 경우, 인덱스를 사용할 수 없다.
 
 #### 문제[7]
 
@@ -713,15 +717,15 @@ LEN(‘가 나다') >> 4 |
     
     - 정답
         
-        ```sql
-        select to_char(sysdate-1,’YYYYMMDD’) from dual;
-        ```
-        
-        - DUAL
-        듀얼 테이블은 오라클에 존재하는 기본 테이블로, 하나의 열로만 이뤄져있음. 오늘 날짜를 구하거 간단한 계산을 하는 등에 사용하기 적합함.
-        - SYSDATE는 SQL을 작업하는 당일의 날짜와 시각을 알려주며, -1을 할 경우 전날의 날짜값이 출력된다.
-        - 날짜를 조회한다고 하였으니 TO_CHAR을 통해 형변환을 하여 날짜만 남긴다.
-        
+```sql
+select to_char(sysdate-1,’YYYYMMDD’) from dual;
+```
+
+- DUAL
+듀얼 테이블은 오라클에 존재하는 기본 테이블로, 하나의 열로만 이뤄져있음. 오늘 날짜를 구하거 간단한 계산을 하는 등에 사용하기 적합함.
+- SYSDATE는 SQL을 작업하는 당일의 날짜와 시각을 알려주며, -1을 할 경우 전날의 날짜값이 출력된다.
+- 날짜를 조회한다고 하였으니 TO_CHAR을 통해 형변환을 하여 날짜만 남긴다.
+
 
 ### 🌱  SELECT문 기본 구조 - DECODE , CASE WHEN
 
@@ -737,40 +741,40 @@ LEN(‘가 나다') >> 4 |
     
     ![[02 - 학습/IT/개발 메모/SQLD 정리/첨부/a9b4b886_Untitled.png]]
     
-    ```sql
-    SELECT 회원코드 AS C_ID , 연령 AS AGE, 이름 AS NAME
-    FROM C_INFO
-    ORDER BY ( CASE WHEN 회원코드 = 101 OR 회원코드 = 104 THEN 1 ELSE 2 END). 연령 DESC ;
-    ```
-    
-    - 정답
-        
-        
-        | C_ID | AGE | NAME |
-        | --- | --- | --- |
-        | 104 | 24 | paul |
-        | 101 | 20 | kate |
-        | 103 | 59 | lily |
-        | 102 | 40 | max |
-        | 105 | 11 | james |
-        - ALIAS의 줄임말로, 컬럼명을 변경하여 출력되도록 돕는다.
-        - 조회된 테이블을 정렬하는 기능이다.
-        - 조회된 테이블을 정렬하는 기능이다. 보통, 모든 테이블 제작 과정이 끝난 후 마지막으로 수행된다.
-        (현 쿼리문에서는 FROM > SELECT까지 끝난 후 수행 됨)
-        
-        ```sql
-        SELECT 회원코드 AS C_ID, 연령 AS AGE, 이름 AS NAME 
-        FROM C_INFO
-        ORDER BY
-        1. (CASE WHEN 회원코드 = 101 OR 회원코드 = 104 THEN 1 ELSE 2 END
-        2. .연령 DESC
-        ```
-        
-        <aside>
-        💡 DESC : 내림차순 ( 큰수 → 작은수)
-        
-        </aside>
-        
+```sql
+SELECT 회원코드 AS C_ID , 연령 AS AGE, 이름 AS NAME
+FROM C_INFO
+ORDER BY ( CASE WHEN 회원코드 = 101 OR 회원코드 = 104 THEN 1 ELSE 2 END). 연령 DESC ;
+```
+
+- 정답
+
+
+    | C_ID | AGE | NAME |
+    | --- | --- | --- |
+    | 104 | 24 | paul |
+    | 101 | 20 | kate |
+    | 103 | 59 | lily |
+    | 102 | 40 | max |
+    | 105 | 11 | james |
+    - ALIAS의 줄임말로, 컬럼명을 변경하여 출력되도록 돕는다.
+    - 조회된 테이블을 정렬하는 기능이다.
+    - 조회된 테이블을 정렬하는 기능이다. 보통, 모든 테이블 제작 과정이 끝난 후 마지막으로 수행된다.
+    (현 쿼리문에서는 FROM > SELECT까지 끝난 후 수행 됨)
+
+```sql
+SELECT 회원코드 AS C_ID, 연령 AS AGE, 이름 AS NAME 
+FROM C_INFO
+ORDER BY
+1. (CASE WHEN 회원코드 = 101 OR 회원코드 = 104 THEN 1 ELSE 2 END
+2. .연령 DESC
+```
+
+<aside>
+💡 DESC : 내림차순 ( 큰수 → 작은수)
+
+</aside>
+
 
 ## [SQL 2-2강]
 
@@ -805,32 +809,32 @@ LEN(‘가 나다') >> 4 |
     
     - 정답
         
-        ```sql
-        with tableName as (
-        	select *
-        	from c_info
-        	where name like '%a%'
-        );
-        ```
-        
-        <aside>
-        💡 WITH구문은
-        
-        1. 서브쿼리를 사용해서 임시테이블이나 뷰(view)처럼 사용 가능함
-        2. 별칭 지정 가능함
-        3. 인라인뷰나 임시테이블로 판단한다.
-        </aside>
-        
-        <aside>
-        💡 서브쿼리와 인라인뷰
-        - 서브쿼리 : SELECT 문 내에 SELECT문이 또 쓰여있는 쿼리
-        - 인라인뷰 : 서브쿼리가 FROM 절 내에 쓰여진 것
-        
-        SELECT *
-        FROM ( SELECT * FROM C_INFO WHERE name LIKE ‘%a%’ )
-        
-        </aside>
-        
+```sql
+with tableName as (
+	select *
+	from c_info
+	where name like '%a%'
+);
+```
+
+<aside>
+💡 WITH구문은
+
+1. 서브쿼리를 사용해서 임시테이블이나 뷰(view)처럼 사용 가능함
+2. 별칭 지정 가능함
+3. 인라인뷰나 임시테이블로 판단한다.
+</aside>
+
+<aside>
+💡 서브쿼리와 인라인뷰
+- 서브쿼리 : SELECT 문 내에 SELECT문이 또 쓰여있는 쿼리
+- 인라인뷰 : 서브쿼리가 FROM 절 내에 쓰여진 것
+
+SELECT *
+FROM ( SELECT * FROM C_INFO WHERE name LIKE ‘%a%’ )
+
+</aside>
+
 - 문제[3]
     
     다음에 기술된 목적으로 사용되는 테이블의 명칭을 적으시오.
@@ -864,17 +868,17 @@ LEN(‘가 나다') >> 4 |
     
     C_INFO 테이블에서 생년이 NULL이면 9999를 표시하고자 한다. SQL 문장의 빈칸을 채우시오.
     
-    ```sql
-    SELECT 고객명, 고객번호, [ ](생년, 9999) AS 정답컬럼
-    FROM C_INFO ;
-    ```
-    
-    - 정답
-        
-        NVL or ISNULL
-        
-        - 표현식 두 개의 데이터 타입이 같아야 함.
-        
+```sql
+SELECT 고객명, 고객번호, [ ](생년, 9999) AS 정답컬럼
+FROM C_INFO ;
+```
+
+- 정답
+
+    NVL or ISNULL
+
+    - 표현식 두 개의 데이터 타입이 같아야 함.
+
 - 문제[5]
     
     다음 SQL의 결과값을 기술하시오.
@@ -892,18 +896,18 @@ LEN(‘가 나다') >> 4 |
         
         📌 ***NULL을 제외하고 group by 하는 SQL서버일 때, 동일한 결과를 얻기 위해서는?***
         
-        ```sql
-        SELECT NVL(성별, ‘N’) AS gender, COUNT( 회원코드 ) cnt
-        FROM C_INFO
-        GROUP BY
-        ```
-        
-        ```sql
-        SELECT NVL(성별, ‘N’) AS gender, COUNT( 회원코드 ) cnt
-        FROM C_INFO
-        GROUP BY NVL(성별, ‘N’)                     [GROUP BY 내 Alias 불가]
-        ```
-        
+```sql
+SELECT NVL(성별, ‘N’) AS gender, COUNT( 회원코드 ) cnt
+FROM C_INFO
+GROUP BY
+```
+
+```sql
+SELECT NVL(성별, ‘N’) AS gender, COUNT( 회원코드 ) cnt
+FROM C_INFO
+GROUP BY NVL(성별, ‘N’)                     [GROUP BY 내 Alias 불가]
+```
+
 - 문제[6]
     
     다음 SQL의 결과값을 기술하시오.
@@ -953,45 +957,45 @@ LEN(‘가 나다') >> 4 |
         
         2. 조건에 맞는 평균연령( AVG(연령) ) 레코드만 출력해야함
         
-        ```sql
-        SELECT 성별, AVG(연령)
-        FROM C_INFO 
-        GROUP BY 성별
-        ```
-        
-        ```sql
-        SELECT 성별, AVG(연령)
-        FROM C_INFO 
-        GROUP BY 성별
-        HAVING AVG(연령) >= 30 AND AVG(연령) < 40
-        ```
-        
+```sql
+SELECT 성별, AVG(연령)
+FROM C_INFO 
+GROUP BY 성별
+```
+
+```sql
+SELECT 성별, AVG(연령)
+FROM C_INFO 
+GROUP BY 성별
+HAVING AVG(연령) >= 30 AND AVG(연령) < 40
+```
+
 - 문제[8]
     
     아래의 SQL 문장에 대해서 실행 순서를 나열하시오.
     
-    ```sql
-    SELECT 지역명 as area, count(c_id) 
-    FROM C_INFO
-    WHERE age BETWEEN 20 and 39
-    GROUP BY 지역명
-    HAVING count(c_id) <= 10
-    ORDER BY 1 ;
-    ```
-    
-    - 정답
-        
-        SELECT ALIAS > FROM > WHERE > GROUP BY > HAVING > SELECT > ORDER BY
-        
-        ```sql
-        [6] SELECT [4] 지역명 [1] as area, count(c_id) 
-        [2] FROM C_INFO
-        [3] WHERE age BETWEEN 20 and 39
-        [4] GROUP BY 지역명
-        [5] HAVING count(c_id) <= 10
-        [7] ORDER BY 1 ;
-        ```
-        
+```sql
+SELECT 지역명 as area, count(c_id) 
+FROM C_INFO
+WHERE age BETWEEN 20 and 39
+GROUP BY 지역명
+HAVING count(c_id) <= 10
+ORDER BY 1 ;
+```
+
+- 정답
+
+    SELECT ALIAS > FROM > WHERE > GROUP BY > HAVING > SELECT > ORDER BY
+
+```sql
+[6] SELECT [4] 지역명 [1] as area, count(c_id) 
+[2] FROM C_INFO
+[3] WHERE age BETWEEN 20 and 39
+[4] GROUP BY 지역명
+[5] HAVING count(c_id) <= 10
+[7] ORDER BY 1 ;
+```
+
 
 ### 🌱  SELECT문 기본 구조 - 조회되는 행 수를 제한할 때
 

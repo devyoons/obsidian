@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - JwtUtil.java"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/f1b2fa654d8946d9bf2395298f20ee0f
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
+  - "[[00 - 대시보드/주제/보안|보안]]"
 ---
 
 # 학습: JwtUtil.java
@@ -83,17 +87,17 @@ public class JwtUtil {
         - 외부 설정 파일 (application.properties 또는 application.yml)에서 값을 읽어온다.
             - 각 변수는 JWT 생성에 필요한 정보들을 담고 있다.
         
-        ```java
-        jwt:
-          token:
-            secret-key: "awasoft-2022-01-19-secret"
-            expTime: 30
-            issuer: "awasoft"
-        ```
-        
-        - **`secretKey`**: JWT를 암호화하기 위한 비밀 키를 저장합니다.
-        - **`expirationTime`**: 생성된 JWT의 만료 시간을 설정합니다. 해당 시간이 지나면 JWT는 더 이상 유효하지 않습니다.
-        - **`issuer`**: JWT의 발급자(issuer) 정보를 저장합니다. JWT의 발급자는 클레임 중에 하나로, 해당 토큰을 발급한 서비스 또는 애플리케이션의 정보를 나타냅니다.
+```java
+jwt:
+  token:
+    secret-key: "awasoft-2022-01-19-secret"
+    expTime: 30
+    issuer: "awasoft"
+```
+
+- **`secretKey`**: JWT를 암호화하기 위한 비밀 키를 저장합니다.
+- **`expirationTime`**: 생성된 JWT의 만료 시간을 설정합니다. 해당 시간이 지나면 JWT는 더 이상 유효하지 않습니다.
+- **`issuer`**: JWT의 발급자(issuer) 정보를 저장합니다. JWT의 발급자는 클레임 중에 하나로, 해당 토큰을 발급한 서비스 또는 애플리케이션의 정보를 나타냅니다.
 - **`createToken`** 메서드
     - 사용자 ID와 view 정보를 입력으로 받아 JWT를 생성하는 기능을 수행
     - 메서드 내에서는 JWT의 클레임(claims)을 설정하고, 토큰의 발급 시간과 만료 시간을 지정한다.

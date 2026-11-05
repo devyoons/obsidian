@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - node.js 다운로드"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/bb461462c7b540b6875476ba5506b55c
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 학습: node.js 다운로드

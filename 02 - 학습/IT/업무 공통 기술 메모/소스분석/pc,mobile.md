@@ -1,14 +1,17 @@
 ---
 별칭:
   - "학습 - pc,mobile"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/bf6600850db94778ba3750414ba6624d
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 학습: pc,mobile
@@ -66,15 +69,15 @@ if ( navigator.platform ) {
 1. F12를 눌러 개발자 모드 
 2. 콘솔 창에서 `navigator.userAgent`를 쓰면 자신의 userAgent 정보가 나온다.
     
-    ```jsx
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
-    ```
-    
+```jsx
+'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+```
+
 3. google_user_agent_`client_hint` 
     
-    ```jsx
-    '["Windows","15.0.0","x86","","114.0.5735.199",[],0,null,"64",[["Not.A/Brand","8.0.0.0"],["Chromium","114.0.5735.199"],["Google Chrome","114.0.5735.199"]],0]'
-    ```
+```jsx
+'["Windows","15.0.0","x86","","114.0.5735.199",[],0,null,"64",[["Not.A/Brand","8.0.0.0"],["Chromium","114.0.5735.199"],["Google Chrome","114.0.5735.199"]],0]'
+```
 
 ## 관련 노트
 

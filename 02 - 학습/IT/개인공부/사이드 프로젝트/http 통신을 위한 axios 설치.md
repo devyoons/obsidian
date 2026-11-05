@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - http 통신을 위한 axios 설치"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/b24eb27a94b64eea9f05dd3a51c6ba10
+주제:
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
+  - "[[00 - 대시보드/주제/Network|Network]]"
 ---
 
 # 학습: http 통신을 위한 axios 설치

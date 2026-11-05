@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - 자바 ORM 표준 JPA 프로그래밍 - 기본편"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/6a35881c6f1643ef97f46f2085e0c22c
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
+  - "[[00 - 대시보드/주제/JPA|JPA]]"
 ---
 
 # 학습: 자바 ORM 표준 JPA 프로그래밍 - 기본편

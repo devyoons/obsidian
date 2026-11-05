@@ -1,7 +1,7 @@
 ---
 별칭:
   - "포트폴리오 - Profile"
-태그:
+tags:
   - type/portfolio
   - context/career
   - theme/dev

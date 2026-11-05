@@ -1,15 +1,19 @@
 ---
 별칭:
   - "강의 - jQuery"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/프론트엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/f8bd04e8ace0463ab708f7cbca408ac0
+주제:
+  - "[[00 - 대시보드/주제/jQuery·Ajax|jQuery·Ajax]]"
+  - "[[00 - 대시보드/주제/JavaScript|JavaScript]]"
 ---
 
 # 강의: jQuery
@@ -43,15 +47,15 @@
         ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/899a3f16_Untitled.png]]
         
     
-    ```jsx
-    <script type=‘text/javascript’ 
-    src=‘http://code.jquery.com/jquery-버전.js’>
-    </script>
-    
-    //최신버전사용: jqeury-latest.min.js / jqeury-latest.js
-    //이전과호환이안되는경우가있어버전에유의
-    ```
-    
+```jsx
+<script type=‘text/javascript’ 
+src=‘http://code.jquery.com/jquery-버전.js’>
+</script>
+
+//최신버전사용: jqeury-latest.min.js / jqeury-latest.js
+//이전과호환이안되는경우가있어버전에유의
+```
+
 
 ### jQuery시작
 

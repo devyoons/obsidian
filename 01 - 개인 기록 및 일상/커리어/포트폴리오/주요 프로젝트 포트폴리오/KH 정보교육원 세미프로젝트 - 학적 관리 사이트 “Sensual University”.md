@@ -1,7 +1,7 @@
 ---
 별칭:
   - "포트폴리오 - KH 정보교육원 세미프로젝트 : 학적 관리 사이트 “Sensual University”"
-태그:
+tags:
   - type/portfolio
   - context/career
   - theme/dev

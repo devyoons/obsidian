@@ -1,14 +1,18 @@
 ---
 별칭:
   - "학습 - Lombok 설치 (IntelliJ)"
-태그:
+tags:
   - type/study
   - context/studies
   - theme/dev
   - status/in-progress
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 노션원본: https://www.notion.so/12024612498b805abe62eb447cad6cf8
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
+  - "[[00 - 대시보드/주제/개발 도구|개발 도구]]"
 ---
 
 # 학습: Lombok 설치 (IntelliJ)

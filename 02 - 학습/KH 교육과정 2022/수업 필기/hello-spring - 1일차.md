@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - hello-spring : 1일차"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/aaefe17fd5a14f5c886b173b0ce60cda
+주제:
+  - "[[00 - 대시보드/주제/Spring|Spring]]"
 ---
 
 # 강의: hello-spring : 1일차
@@ -84,16 +87,16 @@
         
         ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1b86bf90_Untitled.png]]
         
-        ```
-        1. Serve modules without publishing 체크 안함- tomcat 세팅에서 설정된 server path > deploy path로 의존하는 모듈들이 퍼블리싱된다.- 메인 프로젝트는 의존하는 모듈을 참조한다.- class 파일 이외에 다른 파일들은 퍼블리싱 안될 수 있다.
-        2. Server modules without publishing 체크함- 메인 프로젝트는 의존하는 모듈(프로젝트 등)을 퍼블리싱 하지 않고 직접 참조한다.
-        ```
-        
-        1. /spring 이름으로 모듈(웹) 연결이 되어있음
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a0607b65_Untitled.png]]
-        
-    
+```
+1. Serve modules without publishing 체크 안함- tomcat 세팅에서 설정된 server path > deploy path로 의존하는 모듈들이 퍼블리싱된다.- 메인 프로젝트는 의존하는 모듈을 참조한다.- class 파일 이외에 다른 파일들은 퍼블리싱 안될 수 있다.
+2. Server modules without publishing 체크함- 메인 프로젝트는 의존하는 모듈(프로젝트 등)을 퍼블리싱 하지 않고 직접 참조한다.
+```
+
+1. /spring 이름으로 모듈(웹) 연결이 되어있음
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a0607b65_Untitled.png]]
+
+
 - home.jsp : 태그라이브러리 삭제
     1. 태그 라이브러리 삭제
         
@@ -101,40 +104,40 @@
         
     2. 지시어 입력
         
-        ```java
-        <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-        ```
-        
+```java
+<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+```
+
 - 추가 파일들
     1. JS : jquery파일 추가
         - CDN으로 추가시
         
-        ```java
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        ```
-        
-    2. WEB-INF 하위에 lib 파일 생성 
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/5f8c9271_Untitled.png]]
-        
-        - jstl jar 파일 추가
-        
-        [[02 - 학습/KH 교육과정 2022/수업 필기/첨부/b89843ab_Untitled.txt|Untitled]]
-        
-        [[02 - 학습/KH 교육과정 2022/수업 필기/첨부/88d0cc13_Untitled.txt|Untitled]]
-        
-        [[02 - 학습/KH 교육과정 2022/수업 필기/첨부/c70fbc81_Untitled.txt|Untitled]]
-        
-        [[02 - 학습/KH 교육과정 2022/수업 필기/첨부/e0e21ac7_Untitled.txt|Untitled]]
-        
-    
-    <aside>
-    📖 **web app libraries 설정없이 참조가 가능한 이유**
-    : 프로젝트 우클릭 설정에 들어가면 Deployment Assembly에서 확인가능
-    maven 참조되는 것들도 결국엔 WEB-INF/lib 로 배포되어 들어감.
-    
-    </aside>
-    
+```java
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+```
+
+2. WEB-INF 하위에 lib 파일 생성 
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/5f8c9271_Untitled.png]]
+
+- jstl jar 파일 추가
+
+[[02 - 학습/KH 교육과정 2022/수업 필기/첨부/b89843ab_Untitled.txt|Untitled]]
+
+[[02 - 학습/KH 교육과정 2022/수업 필기/첨부/88d0cc13_Untitled.txt|Untitled]]
+
+[[02 - 학습/KH 교육과정 2022/수업 필기/첨부/c70fbc81_Untitled.txt|Untitled]]
+
+[[02 - 학습/KH 교육과정 2022/수업 필기/첨부/e0e21ac7_Untitled.txt|Untitled]]
+
+
+<aside>
+📖 **web app libraries 설정없이 참조가 가능한 이유**
+: 프로젝트 우클릭 설정에 들어가면 Deployment Assembly에서 확인가능
+maven 참조되는 것들도 결국엔 WEB-INF/lib 로 배포되어 들어감.
+
+</aside>
+
 
 <aside>
 📖 **src/main/resources 와 src/main/webapp/resources는 하는 역할이 전혀 다름!
@@ -152,62 +155,62 @@
 
 - **pom.xml**
     
-    ```xml
-    <properties>
-    		<java-version>1.8</java-version>
-    		<org.springframework-version>5.1.5.RELEASE</org.springframework-version>
-    		<org.aspectj-version>1.6.10</org.aspectj-version>
-    		<org.slf4j-version>1.6.6</org.slf4j-version>
-    	</properties>
-    ---------------------------------------------------------------------
-    <!-- Servlet : maven사이트에서 가져온 코드-->
-    <dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>javax.servlet-api</artifactId>
-    	<version>4.0.1</version>
-    	<scope>provided</scope>
-    </dependency>
-    <dependency>
-    	<groupId>javax.servlet.jsp</groupId>
-    	<artifactId>javax.servlet.jsp-api</artifactId>
-    	<version>2.3.1</version>
-    	<scope>provided</scope>
-    </dependency>
-    <!-- jstl 삭제 : 어차피 작동안돼서 삭제 -->
-    ---------------------------------------------------------------------
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.5.1</version>
-        <configuration>
-            <source>${java-version}</source>
-            <target>${java-version}</target>
-            <compilerArgument>-Xlint:all</compilerArgument>
-            <showWarnings>true</showWarnings>
-            <showDeprecation>true</showDeprecation>
-        </configuration>
-    </plugin>
-    ```
-    
-    → 설정 후 maven이 자동으로 업데이트가 되어야하는데 안됄 때가 있음!
-    
-    - 명시적으로 maven 업데이트하는 방법
-        
-        ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1de75d4e_Untitled.png]]
-        
+```xml
+<properties>
+		<java-version>1.8</java-version>
+		<org.springframework-version>5.1.5.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+	</properties>
+---------------------------------------------------------------------
+<!-- Servlet : maven사이트에서 가져온 코드-->
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>javax.servlet-api</artifactId>
+	<version>4.0.1</version>
+	<scope>provided</scope>
+</dependency>
+<dependency>
+	<groupId>javax.servlet.jsp</groupId>
+	<artifactId>javax.servlet.jsp-api</artifactId>
+	<version>2.3.1</version>
+	<scope>provided</scope>
+</dependency>
+<!-- jstl 삭제 : 어차피 작동안돼서 삭제 -->
+---------------------------------------------------------------------
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>2.5.1</version>
+    <configuration>
+        <source>${java-version}</source>
+        <target>${java-version}</target>
+        <compilerArgument>-Xlint:all</compilerArgument>
+        <showWarnings>true</showWarnings>
+        <showDeprecation>true</showDeprecation>
+    </configuration>
+</plugin>
+```
+
+→ 설정 후 maven이 자동으로 업데이트가 되어야하는데 안됄 때가 있음!
+
+- 명시적으로 maven 업데이트하는 방법
+
+    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/1de75d4e_Untitled.png]]
+
 - **web.xml**
     
     : 기존 시작 web-app 태그를 변경해준다. (기존 2.5 | 변경 후 4.0)
     
-    ```xml
-    <web-app 
-    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
-    	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
-    	id="WebApp_ID" 
-    	version="4.0">
-    ```
-    
+```xml
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+	id="WebApp_ID" 
+	version="4.0">
+```
+
 
 #### #2. 전역 context 설정
 

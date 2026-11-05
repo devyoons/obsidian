@@ -1,15 +1,18 @@
 ---
 별칭:
   - "강의 - DTO 관련 (lombok설치)"
-태그:
+tags:
   - type/lecture
   - context/studies
   - theme/dev
   - status/completed
+  - domain/백엔드
 생성일: 
 수정일: 2026-11-04
 과목: "KH 교육과정 2022"
 노션원본: https://www.notion.so/15afec5334d64855b578b8a2635aaa5f
+주제:
+  - "[[00 - 대시보드/주제/Java|Java]]"
 ---
 
 # 강의: DTO 관련 (lombok설치)
@@ -31,58 +34,58 @@
     1. **pom.xml 에 롬복 dependency 추가!**
         - lombok.jar 를 참조하지만 **IDE에도 lombok설치가 필수적이다.**
     
-    ```xml
-    <dependency>
-    	<groupId>org.projectlombok</groupId>
-    	<artifactId>lombok</artifactId>
-    	<version>1.18.8</version>
-    	<scope>provided</scope>
-    </dependency>
-    ```
-    
-    1. `C:\Users\사용자이름\.m2\repository\org\projectlombok\lombok\1.18.8` 경로에서 `.jar` 파일을 copy
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/acd3b53b_Untitled.png]]
-    
-    ---
-    
-    1. `C:\dev\spring 3.9.18_kh\sts-bundle\sts-3.9.18.RELEASE` STS.exe가 있는 폴더에 위 복사한 내용을 붙여넣기한다.
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/e52ecd20_Untitled.png]]
-    
-    ---
-    
-    1. cmd 를 열어준다.
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/ce43852a_Untitled.png]]
-    
-    ---
-    
-    1. `java -jar lom` + `tab키 후 enter` → lombok installer 설치창이 뜬다.
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a416efd6_Untitled.png]]
-    
-    ---
-    
-    1. 멍청해서 잘 찾지를 못함 Specify location…으로 STS 경로는 찾아준다. 
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a5899349_Untitled.png]]
-    
-    ---
-    
-    1. STS.ini 파일을보면 lombok 절대경로로 지정되어 있는데 위 설정을 함으로써 STS.ini파일에 저 코드가 추가가 된거고 STS실행시 같이 실행되도록하는것
-    - ***절대경로로 되어 있으므로 추후 STS 경로가 바뀐다면 lombok실행안됌***
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/20c39222_Untitled.png]]
-    
-    STS 위치를 옮기면 절대경로로 되어있어서 lombok실행이 안됌. 주의!
-    
-    ---
-    
-    1. STS 를 껐다키면 적용이 됌. 리스타트말고 완전히 껐다 키자
-    
-    ![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4564a797_Untitled.png]]
-    
+```xml
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+	<version>1.18.8</version>
+	<scope>provided</scope>
+</dependency>
+```
+
+1. `C:\Users\사용자이름\.m2\repository\org\projectlombok\lombok\1.18.8` 경로에서 `.jar` 파일을 copy
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/acd3b53b_Untitled.png]]
+
+---
+
+1. `C:\dev\spring 3.9.18_kh\sts-bundle\sts-3.9.18.RELEASE` STS.exe가 있는 폴더에 위 복사한 내용을 붙여넣기한다.
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/e52ecd20_Untitled.png]]
+
+---
+
+1. cmd 를 열어준다.
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/ce43852a_Untitled.png]]
+
+---
+
+1. `java -jar lom` + `tab키 후 enter` → lombok installer 설치창이 뜬다.
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a416efd6_Untitled.png]]
+
+---
+
+1. 멍청해서 잘 찾지를 못함 Specify location…으로 STS 경로는 찾아준다. 
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/a5899349_Untitled.png]]
+
+---
+
+1. STS.ini 파일을보면 lombok 절대경로로 지정되어 있는데 위 설정을 함으로써 STS.ini파일에 저 코드가 추가가 된거고 STS실행시 같이 실행되도록하는것
+- ***절대경로로 되어 있으므로 추후 STS 경로가 바뀐다면 lombok실행안됌***
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/20c39222_Untitled.png]]
+
+STS 위치를 옮기면 절대경로로 되어있어서 lombok실행이 안됌. 주의!
+
+---
+
+1. STS 를 껐다키면 적용이 됌. 리스타트말고 완전히 껐다 키자
+
+![[02 - 학습/KH 교육과정 2022/수업 필기/첨부/4564a797_Untitled.png]]
+
 
 `@Getter` : Getter 메소드를 생성해 준다.
 
