@@ -616,6 +616,7 @@ If you like Certbot, please consider supporting our work by:
     root        /var/www/html/git;
 
     # log files
+    ```bash
     access_log  /var/log/nginx/www_access.log;
     error_log   /var/log/nginx/www_error.log;
 
@@ -647,6 +648,7 @@ server {
    listen [::]:80;
     server_name git.tandanji.com;
     return 404; # managed by Certbot
+	```
 
 #### 웹사이트 비활성화하기
 
@@ -709,7 +711,7 @@ server {
 }
 ```
 
-```sql
+```shell
 //SPA (React, etc..)
 // 수정 필요
 server {
@@ -723,8 +725,6 @@ server {
         location / {
                 try_files $uri $uri/ =404;
         }
-
-```sql
 server {
         listen 80;
         listen [::]:80;
@@ -736,6 +736,8 @@ server {
         location / {
                 try_files $uri $uri/ =404;
         }
+```
+
 
 ## 관련 노트
 

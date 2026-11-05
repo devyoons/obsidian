@@ -11,14 +11,10 @@
             "id": "1017f23d5435fefc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03 - 프로젝트/진행중/안전톡2.5/awa-safetytalk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "awa-safetytalk"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -211,12 +207,23 @@
   },
   "active": "1017f23d5435fefc",
   "lastOpenFiles": [
-    "02 - 학습/IT/업무 공통 기술 메모/JAVA 8 추가 API.md",
-    "03 - 프로젝트/진행중/안전톡2.5/awa-safetytalk.md",
-    "sedEFw9Np",
+    "02 - 학습/IT/업무 공통 기술 메모/소스분석/main.md",
+    "02 - 학습/IT/업무 공통 기술 메모/소스분석/JwtUtil.java.md",
+    "02 - 학습/IT/업무 공통 기술 메모/소스분석/ImageUtil.md",
+    "02 - 학습/IT/업무 공통 기술 메모/소스분석/ApiUtil.md",
+    "02 - 학습/IT/개발 메모/cron.md",
+    "02 - 학습/IT/개발 메모/자격증 시험 계획 (SQLD·네트워크관리사).md",
+    "02 - 학습/IT/개발 메모/윈도우11/윈도우11.md",
     "02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/WAS 서버 설정.md",
     "02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/nginx.md",
+    "02 - 학습/IT/개발 메모/집 서버 (try-code.com) 접속·설정/nexus.md",
     "02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/도커 설치.md",
+    "02 - 학습/학교/데이터베이스 구축.md",
+    "02 - 학습/학교/데이터베이스/데이터베이스 기말과제.md",
+    "02 - 학습/학교/데이터베이스/데이터베이스.md",
+    "03 - 프로젝트/진행중/안전톡2.5/awa-safetytalk.md",
+    "02 - 학습/IT/업무 공통 기술 메모/JAVA 8 추가 API.md",
+    "sedEFw9Np",
     "04 - META/노션 미참조 첨부/e5630c1c_Untitled.png",
     "04 - META/노션 미참조 첨부/ec235c26_Untitled.png",
     "04 - META/노션 미참조 첨부/f2d907f6_Untitled.png",
@@ -237,17 +244,6 @@
     "02 - 학습/IT/업무 공통 기술 메모/소스분석/-.md",
     "02 - 학습/IT/개발 공부.md",
     "02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/네비게이션 가드.md",
-    "02 - 학습/IT/개발 메모/vue 짐코딩/Vue.js 3 완벽 마스터- 기초부터 실전까지 (1)/개발환경 구성.md",
-    "02 - 학습/IT/개발 메모/윈도우11/윈도우11.md",
-    "02 - 학습/IT/개발 메모/개발서버 구축 가이드 (WAS·Docker·Nginx)/새로운 nginx.md",
-    "02 - 학습/IT/학습 링크 모음.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/업무문서/Untitled.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/업무문서/프레임워크 설명.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/업무문서/제휴사 관리.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/업무문서/설명.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/업무문서/개발 공통.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/서버정보/TO-BE GIT정보.md",
-    "03 - 프로젝트/진행중/중소기업중앙회 통합 플랫폼/서버정보/ip 설정.md",
     "sedd5AZIm",
     "00 - 대시보드/주제",
     "_백업_그래프정리전/Excalidraw",
