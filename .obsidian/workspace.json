@@ -44,9 +44,18 @@
               "icon": "lucide-file",
               "title": "2026-11-10"
             }
+          },
+          {
+            "id": "8a69387481a85fcc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,7 +193,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 - 개인 기록 및 일상/일일 기록/2026/11/2026-11-10.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -204,13 +212,13 @@
             }
           },
           {
-            "id": "3c2631d52a583fa0",
+            "id": "5589f5bd20baa65c",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "task-backlog-view",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "list-todo",
+              "title": "Task backlog"
             }
           }
         ],
@@ -240,8 +248,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0cc2c465074ae147",
+  "active": "701731dfe4c2b4a8",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2026-11-10 13.27.57.excalidraw.md",
+    "Excalidraw/하핫.md",
     "01 - 개인 기록 및 일상/일일 기록/2026/11/2026-11-10.md",
     "03 - 프로젝트/진행중/안전톡2.0/안전톡 2.0.md",
     "04 - META/templates/강의 노트.md",
@@ -269,8 +279,6 @@
     "2026-11-10.md",
     "00 - 대시보드/메인 대시보드.md",
     "03 - 프로젝트/진행중/안전톡2.5/React 학습/04 컴포넌트와 JSX.md",
-    "03 - 프로젝트/진행중/안전톡2.5/React 학습/11 용어 정리.md",
-    "03 - 프로젝트/진행중/안전톡2.5/awa-safetytalk.md",
     "03 - 프로젝트/진행중/안전톡2.5/React 학습",
     "03 - 프로젝트/진행중/안전톡2.5/회의록",
     "sedEFw9Np",

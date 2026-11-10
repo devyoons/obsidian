@@ -1,11 +1,11 @@
 {
-  "activeSessionId": "session-1794273301143",
+  "activeSessionId": "session-1794284844909-v3gv",
   "sessions": [
     {
-      "id": "session-1794273301143",
-      "title": "Default session",
-      "createdAt": 1794273301143,
-      "updatedAt": 1794273867265,
+      "id": "session-1794284844909-v3gv",
+      "title": "Session 1",
+      "createdAt": 1794284844909,
+      "updatedAt": 1794284844909,
       "messages": [],
       "proposals": []
     }
