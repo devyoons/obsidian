@@ -1,0 +1,201 @@
+{
+  "sidebarConfig": {
+    "enabled": true,
+    "width": 290,
+    "isCollapsed": true,
+    "collapsedModules": {
+      "mini-month": false,
+      "up-next": false,
+      "task-backlog": true,
+      "agent": true
+    },
+    "moduleOrder": [
+      "mini-month",
+      "up-next",
+      "agent"
+    ]
+  },
+  "githubToken": null,
+  "availabilityGistId": null,
+  "availabilityExportPath": "",
+  "availabilityDefaultTimeRange": {
+    "startTime": "09:00",
+    "endTime": "17:00"
+  },
+  "useLegacyPlaintextCredentials": false,
+  "calendarSources": [
+    {
+      "type": "dailynote",
+      "id": "dailynote_1",
+      "name": "일정",
+      "heading": "할 일",
+      "format": "default",
+      "provider": "daily-notes",
+      "color": "#E3E2E0"
+    },
+    {
+      "type": "tasks",
+      "id": "tasks_1",
+      "name": "마감 할 일(📅)",
+      "color": "#FDECC8"
+    },
+    {
+      "type": "holidays",
+      "id": "holidays_1",
+      "name": "공휴일",
+      "country": "KR",
+      "holidayTypes": "public",
+      "color": "#FFE2DD"
+    }
+  ],
+  "defaultCalendarId": "dailynote_1",
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "dayGridMonth",
+    "mobile": "dayGridMonth"
+  },
+  "timeFormat24h": true,
+  "clickToCreateEventFromMonthView": true,
+  "displayTimezone": "Asia/Seoul",
+  "lastSystemTimezone": "Asia/Seoul",
+  "enableAdvancedCategorization": true,
+  "chrono_analyser_config": null,
+  "categorySettings": [
+    {
+      "name": "업무",
+      "color": "#D3E5EF"
+    },
+    {
+      "name": "개인",
+      "color": "#DBEDDB"
+    },
+    {
+      "name": "공부",
+      "color": "#FADEC9"
+    },
+    {
+      "name": "약속",
+      "color": "#E8DEEE"
+    }
+  ],
+  "useCustomGoogleClient": false,
+  "googleClientId": "",
+  "googleClientSecret": "",
+  "googleUseCopyPasteAuth": false,
+  "googleAccounts": [],
+  "useCustomMicrosoftClient": false,
+  "microsoftClientId": "",
+  "microsoftProxyBaseUrl": "",
+  "microsoftAccounts": [],
+  "businessHours": {
+    "enabled": false,
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "09:00",
+    "endTime": "17:00"
+  },
+  "enableBackgroundEvents": true,
+  "enableReminders": true,
+  "workspaces": [],
+  "activeWorkspace": null,
+  "showEventInStatusBar": false,
+  "highlightCurrentOrNextEvent": true,
+  "enableLivePreview": false,
+  "slotMinTime": "00:00",
+  "slotMaxTime": "24:00",
+  "allDaySlot": true,
+  "timeGridDayHeaderFormat": "day-mmdd",
+  "weekends": true,
+  "hiddenDays": [],
+  "dayMaxEvents": false,
+  "activityWatch": {
+    "enabled": false,
+    "apiUrl": "http://127.0.0.1:5600",
+    "lastSyncTime": 0,
+    "autoSyncEnabled": false,
+    "autoSyncIntervalMins": 10,
+    "targetCalendarId": "",
+    "syncStrategy": "auto",
+    "customDateStart": "",
+    "customDateEnd": "",
+    "profiles": []
+  },
+  "tasksIntegration": {
+    "backlogDateTarget": "dueDate",
+    "calendarDisplayDateTarget": "dueDate",
+    "openEditModalAfterBacklogDrop": false,
+    "taskDisplayFormat": "dayPlanner",
+    "includeGlobalQueryInBacklog": false,
+    "backlogQuery": ""
+  },
+  "milestones": {
+    "counters": {
+      "created.total": 4,
+      "created.dailynote": 4,
+      "meta.firstActionAt": 1794276788160,
+      "meta.lastActionAt": 1794284475205,
+      "day.action.2026-11-10": 13,
+      "day.created.2026-11-10": 4,
+      "updated.total": 6,
+      "updated.dailynote": 6,
+      "deleted.total": 3,
+      "deleted.dailynote": 3
+    },
+    "unlockedAt": {
+      "powerPlanner": 1794276788161
+    },
+    "shown": {
+      "powerPlanner": 1
+    }
+  },
+  "enableMonthlyStatsReport": false,
+  "lastMonthlyMilestonesGeneratedMonth": null,
+  "lastMonthlyMilestonesCheckDate": null,
+  "fcrReminderCompanion": {
+    "enabled": false,
+    "apiUrl": "http://127.0.0.1:45677"
+  },
+  "apiTokens": {},
+  "authorizedTokens": {},
+  "enableLocalServer": false,
+  "localServerPort": 8540,
+  "milestoneNotifierDuration": 8000,
+  "enableDefaultReminder": true,
+  "defaultReminderMinutes": 10,
+  "currentVersion": "0.13.7",
+  "linkedNotesDirectory": "",
+  "linkedNoteLinkStrategy": "deadline",
+  "taskBacklogLastProviderId": "",
+  "caldavTaskInboxLastCalendarId": "",
+  "weatherCity": "",
+  "weatherLatitude": null,
+  "weatherLongitude": null,
+  "weatherHide": true,
+  "weatherInputMode": "city",
+  "weatherUnit": "C",
+  "linkedNoteTemplate": "# {{title}}\n\n**Date**: {{date}}\n**Time**: {{timeString}}\n**Location**: {{location}}\n**Calendar**: {{calendarName}}\n\n## Description\n{{description}}\n\n## Notes\n- ",
+  "enableLinkedNoteTemplatesPreset": false,
+  "linkedNoteTemplatesPresets": [],
+  "openDailyNoteOnDateClick": false,
+  "breakTimer": {
+    "enabled": false,
+    "intervalMins": 60,
+    "idleThresholdMins": 30,
+    "breakDurationSecs": 30
+  },
+  "agent": {
+    "enabled": true,
+    "endpointUrl": "https://api.openai.com/v1",
+    "model": "gpt-4o-mini",
+    "apiKey": "",
+    "temperature": 0.2,
+    "specUrl": "https://raw.githubusercontent.com/obsidian-full-calendar-remastered/plugin-full-calendar/main/docs/architecture/api/agent-spec.md",
+    "maxRetries": 3,
+    "timeoutMs": 60000
+  }
+}

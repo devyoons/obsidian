@@ -3,6 +3,7 @@
   "cssTheme": "Things",
   "enabledCssSnippets": [
     "test",
-    "heading-black"
+    "heading-black",
+    "fullcalendar-hide-fields"
   ]
 }

@@ -25,13 +25,13 @@ tags:
 
 ## Thymeleaf와 1:1 비교
 
-| 하고 싶은 것 | Thymeleaf | JSX |
-|---|---|---|
-| 값 출력 | `th:text="${c.name}"` | `{company.name}` |
-| 조건 | `th:if="${c.waiting}"` | `{company.isWaiting && <Badge>…</Badge>}` |
-| 반복 | `th:each="c : ${list}"` | `{list.map((c) => <Node key={c.id} … />)}` |
-| 조각 불러오기 | `th:replace="~{…}"` | `<CompanyNode … />` |
-| 조각에 값 넘기기 | fragment 파라미터 | props |
+| 하고 싶은 것   | Thymeleaf               | JSX                                        |
+| --------- | ----------------------- | ------------------------------------------ |
+| 값 출력      | `th:text="${c.name}"`   | `{company.name}`                           |
+| 조건        | `th:if="${c.waiting}"`  | `{company.isWaiting && <Badge>…</Badge>}`  |
+| 반복        | `th:each="c : ${list}"` | `{list.map((c) => <Node key={c.id} … />)}` |
+| 조각 불러오기   | `th:replace="~{…}"`     | `<CompanyNode … />`                        |
+| 조각에 값 넘기기 | fragment 파라미터           | props                                      |
 
 ## props: 부모가 넘기는 값
 

@@ -1,0 +1,67 @@
+{
+  "commands": { "newEvent": "새 일정" },
+  "ui": {
+    "view": {
+      "workspace": { "switcherLabel": "작업공간" },
+      "buttons": { "analysis": "분석", "defaultView": "기본 보기" },
+      "contextMenu": {
+        "turnIntoTask": "할 일로 바꾸기",
+        "removeCheckbox": "체크박스 제거",
+        "openLinkedNote": "연결된 노트 열기",
+        "goToNote": "노트로 이동",
+        "delete": "삭제",
+        "noActions": "외부 일정에서는 사용할 수 없습니다",
+        "openLocationUrl": "위치를 브라우저에서 열기"
+      },
+      "success": { "taskScheduled": "할 일 날짜를 지정했습니다" }
+    }
+  },
+  "modals": {
+    "editEvent": {
+      "title": { "new": "새 일정", "edit": "일정 수정" },
+      "advancedOptions": "고급 옵션",
+      "buttons": { "openNote": "노트 열기", "delete": "삭제", "save": "저장" },
+      "errors": {
+        "createNoCalendars": "일정을 만들 수 없습니다: 저장할 수 있는 캘린더가 없습니다.",
+        "createError": "일정을 만드는 중 오류가 발생했습니다: {{message}}",
+        "eventNotFound": "일정을 찾을 수 없습니다.",
+        "detailsNotFound": "일정 정보를 찾을 수 없습니다.",
+        "updateError": "일정을 수정하는 중 오류가 발생했습니다: {{message}}",
+        "deleteError": "일정을 삭제하는 중 오류가 발생했습니다: {{message}}"
+      },
+      "misc": { "unknownCalendar": "알 수 없는 캘린더" },
+      "fields": {
+        "title": { "placeholder": "일정 제목" },
+        "category": { "placeholder": "분류 (선택)" },
+        "location": { "placeholder": "장소 추가..." },
+        "description": { "placeholder": "메모 추가..." },
+        "display": {
+          "label": "표시",
+          "tooltip": "달력에 어떻게 보일지 선택합니다",
+          "options": { "auto": "일반 일정", "background": "배경 일정", "none": "숨김" }
+        },
+        "inCalendar": { "label": "캘린더" },
+        "date": { "label": "날짜" },
+        "time": { "label": "시간" },
+        "options": { "label": "옵션", "allDay": "종일", "isTask": "할 일", "completed": "완료" },
+        "notification": {
+          "label": "알림",
+          "presets": { "30m": "30분 전", "1h": "1시간 전", "6h": "6시간 전", "12h": "12시간 전", "24h": "24시간 전" }
+        },
+        "repeats": {
+          "label": "반복",
+          "options": { "none": "안 함", "daily": "매일", "weekly": "매주", "monthly": "매월", "yearly": "매년" },
+          "repeatEvery": "반복 간격",
+          "day": "일", "days": "일", "week": "주", "weeks": "주",
+          "month": "개월", "months": "개월", "year": "년", "years": "년",
+          "repeatOn": "반복 요일",
+          "onDay": "{{day}}일에",
+          "endRepeat": "반복 종료"
+        }
+      },
+      "tooltips": {
+        "dailyNoteRecurring": "일간 노트 캘린더에서는 반복 일정을 만들 수 없습니다."
+      }
+    }
+  }
+}

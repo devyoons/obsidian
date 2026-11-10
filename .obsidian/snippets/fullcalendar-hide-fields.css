@@ -1,0 +1,6 @@
+/* 달력에서 추가한 일정 줄의 내부용 값(uid, allDay, timezone) 숨기기 */
+.dataview.inline-field:has(> .inline-field-key[data-dv-key="uid"]),
+.dataview.inline-field:has(> .inline-field-key[data-dv-key="allDay"]),
+.dataview.inline-field:has(> .inline-field-key[data-dv-key="timezone"]) {
+  display: none !important;
+}

@@ -1,0 +1,14 @@
+/* Full Calendar 월간 보기 요일을 한글로 표시 */
+.fc-dayGridMonth-view .fc-col-header-cell-cushion {
+  font-size: 0 !important;
+}
+.fc-dayGridMonth-view .fc-col-header-cell-cushion::after {
+  font-size: 14px;
+}
+.fc-dayGridMonth-view .fc-day-sun .fc-col-header-cell-cushion::after { content: "일"; }
+.fc-dayGridMonth-view .fc-day-mon .fc-col-header-cell-cushion::after { content: "월"; }
+.fc-dayGridMonth-view .fc-day-tue .fc-col-header-cell-cushion::after { content: "화"; }
+.fc-dayGridMonth-view .fc-day-wed .fc-col-header-cell-cushion::after { content: "수"; }
+.fc-dayGridMonth-view .fc-day-thu .fc-col-header-cell-cushion::after { content: "목"; }
+.fc-dayGridMonth-view .fc-day-fri .fc-col-header-cell-cushion::after { content: "금"; }
+.fc-dayGridMonth-view .fc-day-sat .fc-col-header-cell-cushion::after { content: "토"; }
