@@ -49,13 +49,28 @@
             "id": "8a69387481a85fcc",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "full-calendar-view",
               "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "7db09106744b32c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - 학습/IT/개인공부/클로드/10-MCP-서브에이전트-훅.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "10-MCP-서브에이전트-훅"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -193,6 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01 - 개인 기록 및 일상/일일 기록/2026/11/2026-11-10.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -219,6 +235,16 @@
               "state": {},
               "icon": "list-todo",
               "title": "Task backlog"
+            }
+          },
+          {
+            "id": "101c7e64c2c62346",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ],
@@ -250,38 +276,41 @@
   },
   "active": "701731dfe4c2b4a8",
   "lastOpenFiles": [
+    "02 - 학습/IT/개인공부/클로드/05-계획-모드와-권한.md",
+    "02 - 학습/IT/개인공부/클로드/04-CLAUDE.md와-메모리.md",
+    "02 - 학습/IT/개인공부/클로드/03-프롬프트-잘-쓰기.md",
+    "02 - 학습/IT/개인공부/클로드/02-기본-대화.md",
+    "02 - 학습/IT/개인공부/클로드/08-문서-보고서-작업.md",
+    "02 - 학습/IT/개인공부/클로드/01-시작하기.md",
+    "02 - 학습/IT/개인공부/클로드/sediIxVMR",
+    "02 - 학습/IT/개인공부/클로드/sedC1lw9Q",
+    "02 - 학습/IT/개인공부/클로드/sedrsLKzE",
+    "02 - 학습/IT/개인공부/클로드/sedqaRoLK",
+    "02 - 학습/IT/개인공부/클로드/sedqGr1SO",
+    "02 - 학습/IT/개인공부/클로드/sedX6YuAi",
+    "02 - 학습/IT/개인공부/클로드/sedMDRNB2",
+    "02 - 학습/IT/개인공부/클로드/sedD9dQlZ",
+    "02 - 학습/IT/개인공부/클로드/sedSopITd",
+    "02 - 학습/IT/개인공부/클로드/sedNsz6yk",
+    "02 - 학습/IT/개인공부/클로드/클로드.md",
+    "02 - 학습/IT/개인공부/클로드/12-고급.md",
+    "02 - 학습/IT/개인공부/클로드/11-컨텍스트와-비용.md",
+    "02 - 학습/IT/개인공부/클로드/10-MCP-서브에이전트-훅.md",
+    "02 - 학습/IT/개인공부/클로드/09-슬래시명령-스킬-플러그인.md",
+    "02 - 학습/IT/개인공부/클로드/06-개발-워크플로.md",
+    "02 - 학습/IT/개인공부/클로드/07-git-연동.md",
+    "03 - 프로젝트/진행중/안전톡2.0/안전톡 2.0.md",
+    "03 - 프로젝트/진행중/안전톡2.0/그래피파이/보고서.md",
+    "01 - 개인 기록 및 일상/일일 기록/2026/11/2026-11-10.md",
     "Excalidraw/Drawing 2026-11-10 13.27.57.excalidraw.md",
     "Excalidraw/하핫.md",
-    "01 - 개인 기록 및 일상/일일 기록/2026/11/2026-11-10.md",
-    "03 - 프로젝트/진행중/안전톡2.0/안전톡 2.0.md",
     "04 - META/templates/강의 노트.md",
     "01 - 개인 기록 및 일상/일일 기록/2026/2026-11-10.md",
-    "01 - 개인 기록 및 일상/일일 기록/2026/11",
-    "01 - 개인 기록 및 일상/일일 기록/2026",
     "04 - META/templates/기록/Weekly.md",
     "04 - META/templates/기록/Monthly.md",
     "04 - META/templates/기록/Daily.md",
     "04 - META/templates/기록/Weekly.md.md",
     "04 - META/templates/기록/월간 기록.md",
-    "04 - META/templates/기록/주간 기록.md",
-    "04 - META/templates/기록/일간 기록.md",
-    "04 - META/templates/기록/Daily.md.md",
-    "04 - META/templates/일일 기록.md",
-    "04 - META/templates/기록",
-    "04 - META/templates/무제.md",
-    "03 - 프로젝트/진행중/안전톡/회의록/2026-10-12.md",
-    "03 - 프로젝트/진행중/안전톡/회의록/2026-10-06.md",
-    "03 - 프로젝트/진행중/안전톡/회의록/2026-10-14.md",
-    "04 - META/system/People.md",
-    "2026-12-02.md",
-    "04 - META/system/YOONSEO.md",
-    "00 - 대시보드/주제/개발 도구.md",
-    "2026-11-10.md",
-    "00 - 대시보드/메인 대시보드.md",
-    "03 - 프로젝트/진행중/안전톡2.5/React 학습/04 컴포넌트와 JSX.md",
-    "03 - 프로젝트/진행중/안전톡2.5/React 학습",
-    "03 - 프로젝트/진행중/안전톡2.5/회의록",
-    "sedEFw9Np",
     "04 - META/노션 미참조 첨부/e5630c1c_Untitled.png",
     "04 - META/노션 미참조 첨부/ec235c26_Untitled.png",
     "04 - META/노션 미참조 첨부/f2d907f6_Untitled.png",
@@ -292,10 +321,6 @@
     "04 - META/노션 미참조 첨부/606a2ef3_Untitled.png",
     "04 - META/노션 미참조 첨부/26b3d942_Untitled.png",
     "04 - META/노션 미참조 첨부/9cc9fbd8_Untitled.png",
-    "sedd5AZIm",
-    "00 - 대시보드/주제",
-    "_백업_그래프정리전/Excalidraw",
-    "_백업_그래프정리전/04 - META/보안",
     "무제.canvas"
   ]
 }
