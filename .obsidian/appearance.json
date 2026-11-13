@@ -6,7 +6,8 @@
     "heading-black",
     "fullcalendar-hide-fields",
     "task-dates",
-    "calendar-center"
+    "calendar-center",
+    "text-colors"
   ],
   "showRibbon": true
 }

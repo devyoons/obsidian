@@ -1,0 +1,26 @@
+/* 굵은 글씨·기울임·인용 글씨 색을 차분한 톤으로 (Things 테마의 핑크/청록 대체) */
+body.theme-light {
+  --strong-color: #1F3A5F;   /* 굵게: 딥 네이비 */
+  --em-color: #5C6573;       /* 기울임: 슬레이트 그레이 */
+  --quote-color: #5C6573;    /* 인용 글씨: 슬레이트 그레이 */
+}
+body.theme-dark {
+  --strong-color: #B9CDEB;   /* 굵게: 밝은 블루그레이 */
+  --em-color: #A3ABB8;       /* 기울임: 밝은 회색 */
+  --quote-color: #A3ABB8;    /* 인용 글씨: 밝은 회색 */
+}
+/* 굵게는 색만으로 튀지 않게 두께로 강조 */
+body strong,
+body span.cm-strong {
+  font-weight: 700;
+}
+
+/* 인용 블록(>) 왼쪽 세로줄: 파랑 대신 은은한 웜그레이 */
+body.theme-light { --blockquote-border-color: #C9C4BC; }
+body.theme-dark  { --blockquote-border-color: #5E5A55; }
+.markdown-rendered blockquote {
+  border-left-color: var(--blockquote-border-color) !important;
+}
+.markdown-source-view.mod-cm6 .HyperMD-quote::before {
+  border-color: var(--blockquote-border-color) !important;
+}
