@@ -177,7 +177,7 @@ while(tokenizer.hasMoreTokens()) {
 ### `split` 여러문자를 동시처리하기
 
 - regex :  split의 인자는 정규표현식(문자열검색표현식)
-- [ ] 는 문자하나의 옵션 -(콤마) , 나 (역슬래시n)\n를 구분자로 사용하겠다.
+- 는 문자하나의 옵션 -(콤마) , 나 (역슬래시n)\n를 구분자로 사용하겠다.
 
 ```java
 public void test5() {

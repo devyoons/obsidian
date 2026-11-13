@@ -56,6 +56,55 @@ claude mcp list
 ```
 자세한 내용은 [[02 - 학습/IT/개인공부/클로드/10-MCP-서브에이전트-훅|10. MCP, 서브에이전트, 훅]] 참고.
 
+## 그림으로 이해하기
+
+### 1. 쉬운 비유: 만능 어댑터
+- **AI 앱** = 노트북
+- **MCP** = USB-C 같은 공통 규격
+- **MCP 서버** = 각 기기(GitHub, Notion, 파일, DB)에 붙는 USB-C 어댑터
+
+노트북은 기기마다 다른 케이블을 몰라도 USB-C 하나로 연결한다. 마찬가지로 AI 앱은 서비스마다 연동 코드를 따로 만들 필요 없이, MCP 규격만 알면 어떤 MCP 서버든 붙여 쓸 수 있다.
+
+### 2. 전체 구조
+```mermaid
+flowchart LR
+    U["사용자"] --> H["AI 앱 (호스트)<br/>Claude Desktop, Claude Code"]
+    H --> C1["MCP 클라이언트"]
+    H --> C2["MCP 클라이언트"]
+    H --> C3["MCP 클라이언트"]
+    H --> C4["MCP 클라이언트"]
+    C1 <-->|"MCP 규격<br/>(JSON-RPC)"| S1["GitHub MCP 서버"]
+    C2 <-->|"MCP 규격"| S2["Notion MCP 서버"]
+    C3 <-->|"MCP 규격"| S3["파일시스템 MCP 서버"]
+    C4 <-->|"MCP 규격"| S4["DB MCP 서버"]
+    S1 --> E1[("GitHub")]
+    S2 --> E2[("Notion")]
+    S3 --> E3[("내 PC 파일")]
+    S4 --> E4[("데이터베이스")]
+```
+- 호스트 안의 클라이언트는 서버 **하나와 1:1**로 연결된다.
+- 서버는 실제 서비스(GitHub API, DB 등)와 AI 앱 사이의 **통역사** 역할을 한다.
+
+### 3. 요청 흐름 (예: "내 GitHub 이슈 목록 보여줘")
+```mermaid
+sequenceDiagram
+    actor U as 사용자
+    participant AI as AI 앱 (Claude)
+    participant MCP as GitHub MCP 서버
+    participant GH as GitHub
+
+    Note over AI,MCP: 연결 시점에 서버가 제공하는 도구 목록을 미리 받아 둠
+    U->>AI: 내 GitHub 이슈 목록 보여줘
+    AI->>AI: 도구 목록에서 알맞은 도구 선택 (예: 이슈 목록 조회)
+    AI->>MCP: 도구 호출 요청 (JSON-RPC)
+    MCP->>GH: GitHub API 호출
+    GH-->>MCP: 이슈 데이터
+    MCP-->>AI: 결과 반환
+    AI-->>U: 결과를 정리해서 답변
+```
+- AI가 직접 GitHub에 접속하는 게 아니라, **MCP 서버가 대신 호출**하고 결과만 돌려준다.
+- 어떤 도구를 쓸지는 **AI(모델)가 판단**하고, 앱 설정에 따라 실행 전에 사용자 승인을 받기도 한다.
+
 ## 관련 노트
 - [[02 - 학습/IT/개인공부/클로드/클로드|클로드 로드맵]]
 - [[02 - 학습/IT/개인공부/클로드/10-MCP-서브에이전트-훅|10. MCP, 서브에이전트, 훅]]

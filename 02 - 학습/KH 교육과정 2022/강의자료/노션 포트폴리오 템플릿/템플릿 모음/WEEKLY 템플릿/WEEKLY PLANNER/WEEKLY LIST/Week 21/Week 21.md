@@ -20,13 +20,13 @@ tags:
 
 - [x]  아이패드 프로 5세대는 언제 나온다고? 📱
 - [x]  Weekly Planner 템플릿 만들기 📅
-- [ ]  운동 빼먹지 않기 🏃‍♂️
+-  운동 빼먹지 않기 🏃‍♂️
 
 ### 🌟 DAILY ROUTINE
 
 - [x]  네이버 카페 신규 가입인사하기
 - [x]  [‣](https://app.notion.com/p/7d1ceb1161af47d1ac9e4306a7e560f7) 책 읽기
-- [ ]  
+-  
 
 **Wait...**
 
@@ -66,7 +66,7 @@ tags:
 - [x]  인스타그램 서평 작성하기
 - [x]  도서관 가는 방법 알아보기
 - [x]  근처 간단한 저녁 밥집 알아보기
-- [ ]  [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/한양대학교 노션 강의|한양대학교 노션 강의]] 준비하기
+-  [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/한양대학교 노션 강의|한양대학교 노션 강의]] 준비하기
 
 ### WEDNESDAY
 
@@ -82,7 +82,7 @@ tags:
 - [x]  온라인 스터디 준비하기
 - [x]  푸라닭 위치 알아보기
 - [x]  [‣](https://app.notion.com/p/04d9ae7a92fd47b8908361a5b7b2b891) 오늘안에 끝내야해 집에는가야지
-- [ ]  [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/연세대학교 노션 강의|연세대학교 노션 강의]]
+-  [[02 - 학습/KH 교육과정 2022/강의자료/노션 포트폴리오 템플릿/템플릿 모음/WEEKLY 템플릿/WEEKLY PLANNER/WEEKLY LIST/Week 21/MY PROJECT/연세대학교 노션 강의|연세대학교 노션 강의]]
 
 ### THURSDAY
 
@@ -144,9 +144,9 @@ tags:
 ---
 
 - [x]  자바스크립트 발표자료 만들기
-- [ ]  구글 애널리틱스 글 읽기
-- [ ]  필기 정리하기
-- [ ]  루트임팩트 메일 답변하기
+-  구글 애널리틱스 글 읽기
+-  필기 정리하기
+-  루트임팩트 메일 답변하기
     
     
 

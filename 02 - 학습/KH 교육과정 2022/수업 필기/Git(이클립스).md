@@ -324,11 +324,11 @@ fetch 가져오기 , push내보내기
 
 ---
 
-- [ ]  1. 새 branch를 만들수 있다.
-- [ ]  2. 체크아웃해서 작업할 수 있다.
-- [ ]  3. 완료된 작업을 master에 반영할 수 있다. `merge`
-- [ ]  4. fast-forward-merge 와 non-fast-forward-merge 를 구분할 수 있다.
-- [ ]  5. conflict 발생시 해결할 수 있다.
+-  1. 새 branch를 만들수 있다.
+-  2. 체크아웃해서 작업할 수 있다.
+-  3. 완료된 작업을 master에 반영할 수 있다. `merge`
+-  4. fast-forward-merge 와 non-fast-forward-merge 를 구분할 수 있다.
+-  5. conflict 발생시 해결할 수 있다.
 
 ### 📍 github에서 나만의 라이센스템플릿 추가하기
 

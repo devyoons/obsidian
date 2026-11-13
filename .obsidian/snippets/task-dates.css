@@ -1,0 +1,31 @@
+/* 할 일 날짜 표시: [start:: ] [due:: ] 같은 글자 필드에서 키 이름을 숨기고 날짜만 보이게 */
+
+/* 1) Dataview가 그리는 인라인 필드 (라이브 프리뷰 / 읽기 모드) */
+.dataview.inline-field-key[data-dv-key="start"],
+.dataview.inline-field-key[data-dv-key="due"],
+.dataview.inline-field-key[data-dv-key="scheduled"],
+.dataview.inline-field-key[data-dv-key="completion"],
+.dataview.inline-field-key[data-dv-key="created"],
+.dataview.inline-field-key[data-dv-key="cancelled"] {
+  display: none !important;
+}
+
+/* 시작일 바로 뒤에 마감일이 오면 "시작일 ~ 마감일" */
+.dataview.inline-field:has(> .inline-field-key[data-dv-key="start"])
+  + .dataview.inline-field:has(> .inline-field-key[data-dv-key="due"])
+  > .inline-field-value::before {
+  content: "~ ";
+}
+
+/* 2) Tasks 플러그인이 그리는 할 일 (쿼리 결과): 시작일과 마감일 사이에 ~ */
+.task-start + .task-due::before {
+  content: "~ ";
+}
+
+/* 3) 캘린더 기간 일정용 [endDate:: ] : 이름 숨기고 "~ 날짜"로 표시 */
+.dataview.inline-field-key[data-dv-key="endDate"] {
+  display: none !important;
+}
+.dataview.inline-field:has(> .inline-field-key[data-dv-key="endDate"]) > .inline-field-value::before {
+  content: "~ ";
+}

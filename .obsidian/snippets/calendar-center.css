@@ -1,0 +1,48 @@
+/* Full Calendar: 막대(하루 종일) 일정의 글자를 막대 가운데에 표시 */
+.fc .fc-daygrid-block-event .fc-event-main,
+.fc .fc-daygrid-block-event .fc-event-main-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  min-width: 0;
+}
+.fc .fc-daygrid-block-event .fc-event-title-container {
+  flex-grow: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+/* 칸보다 긴 제목은 칸 안에서 … 로 줄임 */
+.fc .fc-daygrid-block-event .fc-event-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* "일정"(기간 할 일) 캘린더 색: 회색(#E3E2E0) → 연보라 파스텔 */
+.fc .fc-event[style*="rgb(227, 226, 224)"],
+.fc .fc-event[style*="#E3E2E0"],
+.fc .fc-event[style*="#e3e2e0"] {
+  background-color: #E8DEEE !important;
+  border-color: #D5C4E0 !important;
+}
+
+/* 주말 칸: 칙칙한 회색 대신 밝은 파스텔 (일요일 연분홍, 토요일 연하늘) */
+.fc td.fc-daygrid-day.fc-day-sun,
+.fc .fc-timegrid-col.fc-day-sun {
+  background: #FFE8EC !important;
+}
+.fc td.fc-daygrid-day.fc-day-sat,
+.fc .fc-timegrid-col.fc-day-sat {
+  background: #E3F0FF !important;
+}
+/* 칸 안쪽 레이어가 회색을 덮지 않게 투명 처리 */
+.fc .fc-day-sun .fc-daygrid-day-frame,
+.fc .fc-day-sat .fc-daygrid-day-frame,
+.fc .fc-day-sun .fc-daygrid-day-bg,
+.fc .fc-day-sat .fc-daygrid-day-bg {
+  background: transparent !important;
+}
+.fc .fc-day-sun .fc-daygrid-day-number { color: #E0465A !important; }
+.fc .fc-day-sat .fc-daygrid-day-number { color: #2F7BE5 !important; }

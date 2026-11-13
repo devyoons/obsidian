@@ -28,7 +28,7 @@
       "type": "dailynote",
       "id": "dailynote_1",
       "name": "일정",
-      "heading": "할 일",
+      "heading": "기간 할 일",
       "format": "default",
       "provider": "daily-notes",
       "color": "#E3E2E0"

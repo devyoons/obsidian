@@ -4,6 +4,9 @@
   "enabledCssSnippets": [
     "test",
     "heading-black",
-    "fullcalendar-hide-fields"
-  ]
+    "fullcalendar-hide-fields",
+    "task-dates",
+    "calendar-center"
+  ],
+  "showRibbon": true
 }

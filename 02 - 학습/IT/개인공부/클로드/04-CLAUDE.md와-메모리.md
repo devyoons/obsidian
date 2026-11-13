@@ -107,12 +107,12 @@ CLAUDE.local.md를 만들어 "답변은 짧게, 결론부터"를 적고 .gitigno
 
 ## 확인 체크리스트
 
-- [ ] 사용자·프로젝트·로컬 CLAUDE.md의 차이를 설명할 수 있다.
-- [ ] `/init`으로 만든 CLAUDE.md를 직접 다듬었다.
-- [ ] CLAUDE.md 규칙이 새 세션에 반영되는 것을 확인했다.
-- [ ] CLAUDE.local.md를 만들고 git에서 뺐다.
-- [ ] `/memory`와 `/context all`로 불러온 메모리를 확인했다.
-- [ ] "꼭 지켜야 할 규칙은 CLAUDE.md가 아니라 권한·훅으로" 이유를 안다.
+- 사용자·프로젝트·로컬 CLAUDE.md의 차이를 설명할 수 있다.
+- `/init`으로 만든 CLAUDE.md를 직접 다듬었다.
+- CLAUDE.md 규칙이 새 세션에 반영되는 것을 확인했다.
+- CLAUDE.local.md를 만들고 git에서 뺐다.
+- `/memory`와 `/context all`로 불러온 메모리를 확인했다.
+- "꼭 지켜야 할 규칙은 CLAUDE.md가 아니라 권한·훅으로" 이유를 안다.
 
 ## 출처
 
